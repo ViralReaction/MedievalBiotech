@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==================== Demonkin ==================== -->
+	<!-- ========== Body ========== -->
+	<GeneDef ParentName="GeneBodyBase">
+		<defName>MB_Body_Demonic</defName>
+		<label>demonic body</label>
+		<description>Carriers can have muscular, fit, humanoid bodies. A person can have more than one body type gene; one body type will be chosen among those that are allowed.</description>
+		<iconPath>UI/Icons/Genes/Body_Demonic_Icon</iconPath>
+			<modExtensions>
+				<li Class="VanillaGenesExpanded.GeneExtension">
+					<forcedBodyType>Male</forcedBodyType>
+					<bodyNakedGraphicPath>Races/Demonic/Body/Demonic</bodyNakedGraphicPath>
+					<!--bodyDessicatedGraphicPath>Races/Demonic/Body/Male</bodyDessicatedGraphicPath-->
+				</li>
+			</modExtensions>
+		<displayOrderInCategory>40</displayOrderInCategory>
+	</GeneDef>
+
+	<!-- ========== Headtypes ========== -->
+	<HeadTypeDef ParentName="AverageBase" Name="MB_DemonicHeadBase" Abstract="True">
+		<randomChosen>false</randomChosen>
+		<requiredGenes>
+			<li>MB_Head_Demonic</li>
+		</requiredGenes>
+	</HeadTypeDef>
+	<!-- ====== Male ====== -->
+	<HeadTypeDef ParentName="MB_DemonicHeadBase">
+		<defName>MB_Head_Demonic_Male</defName>
+		<graphicPath>Races/Demonic/Head/Demonic</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+	<!-- ====== Female ====== -->
+	<HeadTypeDef ParentName="MB_DemonicHeadBase">
+		<defName>MB_Head_Demonic_Female</defName>
+		<graphicPath>Races/Demonic/Head/Demonic</graphicPath>
+    	<gender>Female</gender>
+	</HeadTypeDef>
+
+	<!-- ========== Head Gene ========== -->
+		<GeneDef ParentName="GeneJawBase">
+		<defName>MB_Head_Demonic</defName>
+		<label>demonic head</label>
+		<description>Carriers of this gene usually have an insectoid head.</description>
+		<iconPath>UI/Icons/Genes/Head_Demonic_Icon</iconPath>
+		<forcedHeadTypes>
+			<li>MB_Head_Demonic_Male</li>
+			<li>MB_Head_Demonic_Female</li>
+		</forcedHeadTypes>
+		<displayOrderInCategory>98</displayOrderInCategory>
+	</GeneDef>
+
+	<!-- ========== Horns ========== -->
+		<GeneDef ParentName="GeneEarsBase">
+		<defName>MB_ElongatedHorn</defName>
+		<label>elongated horn</label>
+		<description>Carriers of this gene grow two elongated horns protruding from the forehead.</description>
+		<iconPath>UI/Icons/Genes/Gene_ElongatedHorns</iconPath>
+		<graphicData Inherit="false">
+			<graphicPath>Races/Demonic/ElongatedHorns/ElongatedHorns</graphicPath>
+			<!--shaderType>CutoutComplex</shaderType>
+			<colorType>Skin</colorType-->
+			<layer>PostHair</layer>
+			<drawNorthAfterHair>true</drawNorthAfterHair>
+			<drawLoc>HeadTop</drawLoc>
+		</graphicData>
+		<displayOrderInCategory>98</displayOrderInCategory>
+	</GeneDef>
+	<!-- ==================== Necrarch ==================== -->
+	<!-- ========== Body ========== -->
+	<GeneDef ParentName="GeneBodyBase">
+    <defName>MB_Body_Necrarch</defName>
+    <label>necrarch body</label>
+    <description>Carriers can have sickly, famished, humanoid bodies. A person can have more than one body type gene; one body type will be chosen among those that are allowed.</description>
+    <iconPath>UI/Icons/Genes/Body_Necrarch_Icon</iconPath>
+		<modExtensions>
+			  <li Class="VanillaGenesExpanded.GeneExtension">
+				<forcedBodyType>Male</forcedBodyType>
+				<bodyNakedGraphicPath>Races/Necrarch/Body/Necrarch</bodyNakedGraphicPath>
+				<!--bodyDessicatedGraphicPath>Races/Necrarch/Body/Male</bodyDessicatedGraphicPath-->
+			</li>
+		</modExtensions>
+    <displayOrderInCategory>40</displayOrderInCategory>
+  </GeneDef>
+
+  	<!-- ========== Headtypes ========== -->
+	<HeadTypeDef ParentName="AverageBase" Name="MB_NecrarchHeadBase" Abstract="True">
+		<randomChosen>false</randomChosen>
+		<requiredGenes>
+			<li>MB_Head_Necrarch</li>
+		</requiredGenes>
+	</HeadTypeDef>
+	<!-- ====== Male ====== -->
+	<HeadTypeDef ParentName="MB_NecrarchHeadBase">
+		<defName>MB_Head_Necrarch_Male</defName>
+		<graphicPath>Races/Necrarch/Head/Necrarch</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+	<!-- ====== Female ====== -->
+	<HeadTypeDef ParentName="MB_NecrarchHeadBase">
+		<defName>MB_Head_Necrarch_Female</defName>
+		<graphicPath>Races/Necrarch/Head/Necrarch</graphicPath>
+    	<gender>Female</gender>
+	</HeadTypeDef>
+
+	<!-- ========== Head Gene ========== -->
+		<GeneDef ParentName="GeneJawBase">
+		<defName>MB_Head_Necrarch</defName>
+		<label>necrarch head</label>
+		<description>Carriers of this gene usually have an insectoid head.</description>
+		<iconPath>UI/Icons/Genes/Head_Necrarch_Icon</iconPath>
+		<forcedHeadTypes>
+			<li>MB_Head_Necrarch_Male</li>
+			<li>MB_Head_Necrarch_Female</li>
+		</forcedHeadTypes>
+		<displayOrderInCategory>98</displayOrderInCategory>
+	</GeneDef>
+
+	<!-- ==================== Wight ==================== -->
+	<!-- ========== Body ========== -->
+	<GeneDef ParentName="GeneBodyBase">
+    <defName>MB_Body_Wight</defName>
+    <label>wight body</label>
+    <description>Carriers can have sickly, famished, humanoid bodies. A person can have more than one body type gene; one body type will be chosen among those that are allowed.</description>
+    <iconPath>UI/Icons/Genes/Body_Wight_Icon</iconPath>
+		<modExtensions>
+			  <li Class="VanillaGenesExpanded.GeneExtension">
+				<forcedBodyType>Male</forcedBodyType>
+				<bodyNakedGraphicPath>Races/Wight/Body/Wight</bodyNakedGraphicPath>
+				<!--bodyDessicatedGraphicPath>Races/Wight/Body/Male</bodyDessicatedGraphicPath-->
+			</li>
+		</modExtensions>
+    <displayOrderInCategory>40</displayOrderInCategory>
+  </GeneDef>
+
+  	<!-- ========== Headtypes ========== -->
+	<HeadTypeDef ParentName="AverageBase" Name="MB_WightHeadBase" Abstract="True">
+		<randomChosen>false</randomChosen>
+		<requiredGenes>
+			<li>MB_Head_Wight</li>
+		</requiredGenes>
+	</HeadTypeDef>
+	<!-- ====== Male ====== -->
+	<HeadTypeDef ParentName="MB_WightHeadBase">
+		<defName>MB_Head_Wight_Male</defName>
+		<graphicPath>Races/Wight/Head/Wight</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+	<!-- ====== Female ====== -->
+	<HeadTypeDef ParentName="MB_WightHeadBase">
+		<defName>MB_Head_Wight_Female</defName>
+		<graphicPath>Races/Wight/Head/Wight</graphicPath>
+    	<gender>Female</gender>
+	</HeadTypeDef>
+
+	<!-- ========== Head Gene ========== -->
+		<GeneDef ParentName="GeneJawBase">
+		<defName>MB_Head_Wight</defName>
+		<label>wight head</label>
+		<description>Carriers of this gene usually have an insectoid head.</description>
+		<iconPath>UI/Icons/Genes/Head_Wight_Icon</iconPath>
+		<forcedHeadTypes>
+			<li>MB_Head_Wight_Male</li>
+			<li>MB_Head_Wight_Female</li>
+		</forcedHeadTypes>
+		<displayOrderInCategory>98</displayOrderInCategory>
+	</GeneDef>
+
+	<!-- ==================== Cosmetic ==================== -->
+	<!-- ========== Skin ========== -->
+	<GeneDef ParentName="GeneSkinColorOverride">
+    <defName>MB_Skin_Grim</defName>
+    <label>grim skin</label>
+    <labelShortAdj>slate</labelShortAdj>
+    <description>Carriers of this gene produce a pigment that turns their skin dark gray.</description>
+    <skinColorOverride>(112, 112, 112)</skinColorOverride>
+    <displayOrderInCategory>97</displayOrderInCategory>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>gray</symbol></li>
+        <li><symbol>slate</symbol></li>
+        <li><symbol>fog</symbol></li>
+        <li><symbol>gloom</symbol></li>
+        <li><symbol>smoke</symbol></li>
+        <li><symbol>grim</symbol></li>
+        <li><symbol>murk</symbol></li>
+        <li><symbol>mist</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>wisp</symbol></li>
+        <li><symbol>ghost</symbol></li>
+        <li><symbol>murk</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+</Defs>

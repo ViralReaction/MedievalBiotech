@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Relabel signal chips-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Mechlink"]/label</xpath>
+		<value>
+			<label>artificer hand</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Mechlink"]/description</xpath>
+		<value>
+			<description>PLACEHOLDER</description>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Mechlink"]/comps/li[@Class="CompProperties_UseEffectInstallImplant"]/bodyPart</xpath>
+		<value>
+			<bodyPart>Hand</bodyPart>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/HediffDef[defName="MechlinkImplant"]</xpath>
+		<value>
+			<HediffDef ParentName="ImplantHediffBase">
+      <defName>MechlinkImplant</defName>
+      <hediffClass>Hediff_Mechlink</hediffClass>
+      <label>artificer hand</label>
+      <description>An ancient mechanical hand that allows direct control of automatons. Artificer hands are used by the precusor master craftsmen to create legendary automatons that are tasked to do labour or protect their masters. People whose hands are made out of what seems to be brass, are recognized as artificers. \n\nMechlinks are self-installable. Pressed into the back of the throat, the unit injects itself through the flesh to clamp inside the base of the skull where it meets the spinal cord. There, it threads a web of ultrafine wires throughout nearby neuronal tissue to make the direct mental link between the user and the mechanoid control band.\n\nMechlinks are not simply devices for sending radio signals to mechanoids, because mechanoids are not merely robots. In addition to traditional computers, mechanoids have a dim psychic presence, so fluently controlling them requires a psychic connection. By linking mechanitor and mechanoid both psychically and electromagnetically, the mechlink permits deeper control than screen-and-button interfaces.\n\nSince the mechlink interlaces deep within the brain tissue, it can only be removed after death.\n\nNote: An artificer must be capable of smithing work to craft automatons.</description>
+      <descriptionShort>A bionic implant that allows direct control of mechanoids. Can only be removed after death.</descriptionShort>
+      <isBad>false</isBad>
+      <removeOnRedressIfNotOfKind>
+        <li>Mechanitor</li>
+        <li>Mechanitor_Basic</li>
+      </removeOnRedressIfNotOfKind>
+      <stages>
+        <li>
+          <statOffsets>
+            <MechBandwidth>6</MechBandwidth>
+            <MechControlGroups>2</MechControlGroups>
+			<WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+			<ConstructionSpeed>0.10</ConstructionSpeed>
+          </statOffsets>
+        </li>
+      </stages>
+      <comps>
+        <li Class="HediffCompProperties_LetterOnDeath">
+          <letterDef>NeutralEvent</letterDef>
+          <letterLabel>Reusable {HEDIFF_label} available.</letterLabel>
+          <letterText>{PAWN} has died with a {HEDIFF_label} installed. This can be removed and installed by someone else.</letterText>
+          <onlyIfNoMechanitorDied>true</onlyIfNoMechanitorDied>
+        </li>
+      </comps>
+    </HediffDef>
+		</value>
+	</Operation>
+	
+</Patch>

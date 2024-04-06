@@ -3,3 +3,4 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\MedievalBiotech\Sour
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\MedievalBiotech\Source\obj\Debug\MedievalBiotech.csproj.CoreCompileInputs.cache
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\MedievalBiotech\Source\obj\Debug\MedievalBiotech.csproj.CopyComplete
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\MedievalBiotech\Source\obj\Debug\MedievalBiotech.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\MedievalBiotech\1.5\Assemblies\MedievalBiotech.dll

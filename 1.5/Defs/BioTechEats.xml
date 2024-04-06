@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--ThingDef>
+    <defName>Example</defName>
+    <label>example</label>
+    <description>This is an example.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <possessionCount>5</possessionCount>
+    <drawerType>MapMeshOnly</drawerType>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>10</stackLimit>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <descriptionHyperlinks>
+      <GeneDef>Hair_LongOnly</GeneDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <WorkToMake>450</WorkToMake>
+      <MarketValue>1000</MarketValue>
+      <Mass>0.05</Mass>
+      <DeteriorationRate>6</DeteriorationRate>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>14</pathCost>
+    <graphicData>
+      <texPath>Things/Item/Drug/Joint</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <techLevel>Spacer</techLevel>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <chairSearchRadius>8</chairSearchRadius>
+      <foodType>Processed</foodType>
+      <baseIngestTicks>720</baseIngestTicks>
+      <nurseable>true</nurseable>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestEffectEat>EatVegetarian</ingestEffectEat>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.27,0,0.08)</offset>
+          <behind>true</behind>
+        </northDefault>
+        <east>
+          <offset>(0.45,0,0.08)</offset>
+        </east>
+        <south>
+          <offset>(0.27,0,0.08)</offset>
+        </south>
+        <west>
+          <offset>(-0.50,0,0.08)</offset>
+          <flip>true</flip>
+        </west>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Consume {0}</ingestCommandString>
+      <ingestReportString>Consumes {0}.</ingestReportString>
+      <ingestReportStringEat>Consuming {0}.</ingestReportStringEat>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+    </ingestible>
+    <thingCategories>
+      <li>Drugs</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Drugs</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="BioTechEats.CompProperties_BiotechEat">
+        <genes>
+          <li>Hair_LongOnly</li>
+        </genes>
+      </li>
+    </comps>
+    <allowedArchonexusCount>50</allowedArchonexusCount>
+  </ThingDef-->
+</Defs>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Remove electricity from every Biotech Building-->
+    <Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="GeneExtractor" or 
+							defName="GeneBank" or 
+							defName="GeneAssembler" or
+							defName="GeneProcessor"]/comps/li[@Class = "CompProperties_Power"]</xpath>
+	</Operation>
+	
+    <Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="GeneExtractor" or 
+							defName="GeneBank" or 
+							defName="GeneAssembler" or
+							defName="GeneProcessor"]/comps/li[@Class = "CompProperties_Flickable"]</xpath>
+	</Operation>
+
+	<!-- ===== Gene Extractor =====-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="GeneExtractor"]/graphicData</xpath>
+		<value>
+			<shaderType>CutoutComplex</shaderType>
+		</value>
+	</Operation>
+
+    <Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GeneExtractor"]/label</xpath>
+		<value>
+			<label>mutagen harvester</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GeneExtractor"]/description</xpath>
+		<value>
+			<description>A crude surgical table designated for pawns to extract a person's genes and create a gene potions from them. The extracted genes will be randomly selected from the person's xenogenes and germline genes. You can force someone into the machine, but they won't like it.\n\nExtracting a person's genes while their genes are currently regrowing will kill them. Otherwise, gene extraction causes no lasting harm.\n\nGenes that require archite capsules are too complex to be extracted.</description>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GeneExtractor"]/costList</xpath>
+		<value>
+			<costList>
+				<DankPyon_ComponentBasic>15</DankPyon_ComponentBasic>
+			</costList>
+		</value>
+	</Operation>
+
+    <Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="GeneExtractor"]</xpath>
+		<value>
+			<costStuffCount>100</costStuffCount>
+            <stuffCategories>
+                    <li>DankPyon_RawWood</li>
+                    <li>Woody</li>
+					<li>Metallic</li>
+					<li>Stony</li>
+            </stuffCategories>
+		</value>
+	</Operation>
+
+
+	<!-- ===== Gene Bank =====-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GeneBank"]/costList</xpath>
+		<value>
+			<costList>
+				<DankPyon_ComponentBasic>5</DankPyon_ComponentBasic>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GeneBank"]/description</xpath>
+		<value>
+			<description>This building can store gene potions and make them usable to create new xenogerms, when placed near a gene assembler. Large gene libraries require many gene potion banks.\n\nWhen filled with insect jelly, gene banks prevent genepacks from deteriorating and will slowly repair deterioration.</description>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GeneBank"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(2, 2)</drawSize>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="GeneBank"]</xpath>
+		<value>
+			<costStuffCount>50</costStuffCount>
+            <stuffCategories>
+                    <li>DankPyon_RawWood</li>
+                    <li>Woody</li>
+					<li>Metallic</li>
+					<li>Stony</li>
+            </stuffCategories>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GeneBank"]/tickerType</xpath>
+		<value>
+			<tickerType>Normal</tickerType>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="GeneBank"]/comps</xpath>
+		<value>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>0.5</fuelConsumptionRate>
+				<fuelCapacity>5</fuelCapacity>
+				<fuelFilter>
+				<thingDefs>
+					<li>InsectJelly</li>
+				</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>0</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- ===== Gene Assembler =====-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GeneAssembler"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(5, 4)</drawSize>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="GeneAssembler"]/graphicData</xpath>
+		<value>
+			<shaderType>CutoutComplex</shaderType>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GeneAssembler"]/label</xpath>
+		<value>
+			<label>mutagen assembler</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="GeneAssembler"]</xpath>
+		<value>
+			<costStuffCount>200</costStuffCount>
+            <stuffCategories>
+					<li>Metallic</li>
+					<li>Stony</li>
+            </stuffCategories>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/EffecterDef[defName="GeneAssembler_Working"]/children</xpath>
+		<value>
+			<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>0.3~0.7</scale>
+				<ticksBetweenMotes>20</ticksBetweenMotes>
+				<positionLerpFactor>0.6</positionLerpFactor>
+				<positionRadius>0.6</positionRadius>
+				<moteDef>Mote_CookBit</moteDef>
+			</li>
+			</children>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GeneAssembler"]/costList</xpath>
+		<value>
+			<costList>
+				<DankPyon_ComponentBasic>10</DankPyon_ComponentBasic>
+			</costList>
+		</value>
+	</Operation>
+	
+	<!-- ===== Gene Processor =====-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GeneProcessor"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(4, 4)</drawSize>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="GeneProcessor"]/graphicData</xpath>
+		<value>
+			<shaderType>CutoutComplex</shaderType>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GeneProcessor"]/label</xpath>
+		<value>
+			<label>mutagen distillery</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GeneProcessor"]/costList</xpath>
+		<value>
+			<costList>
+				<DankPyon_ComponentBasic>10</DankPyon_ComponentBasic>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="GeneProcessor"]</xpath>
+		<value>
+			<costStuffCount>200</costStuffCount>
+            <stuffCategories>
+					<li>Metallic</li>
+					<li>Stony</li>
+            </stuffCategories>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="GeneProcessor"]</xpath>
+		<value>
+			<tickerType>Normal</tickerType>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="GeneProcessor"]/comps</xpath>
+		<value>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>0.5</fuelConsumptionRate>
+				<fuelCapacity>10</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>0</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+		</value>
+	</Operation>
+	
+	<!-- ===== Gene Pack =====-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RulePackDef[defName="NamerGenepack"]/rulePack</xpath>
+		<value>
+			<rulePack>
+			<rulesStrings>
+				<li>r_name->mutagen potion ([geneWord][otherGenesInfo])</li>
+		
+				<li>otherGenesInfo(geneCount==1)-></li>
+				<li>otherGenesInfo(geneCount>=2)-> +[geneCountMinusOne]</li>
+			</rulesStrings>
+			</rulePack>
+		</value>
+	</Operation>
+</Patch>

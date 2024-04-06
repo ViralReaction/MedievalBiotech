@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<GeneDef>
+		<defName>MB_SoulStarved</defName>
+		<label>soul starved</label>
+		<description>Carriers of this gene have a reserve of dark magical strength powered by souls. dark arcana can be gained by consuming the souls of the unfortunate and spent in various ways, all of which are unlocked by other genes.\n\nCarriers lose 2 dark arcana per day from magical entropy.</description>
+		<geneClass>Gene_Hemogen</geneClass>
+		<resourceGizmoType>GeneGizmo_ResourceHemogen</resourceGizmoType>
+		<resourceLabel>dark arcana</resourceLabel>
+		<resourceGizmoThresholds>
+		<li>0.25</li>
+		<li>0.5</li>
+		<li>0.75</li>
+		</resourceGizmoThresholds>
+		<showGizmoOnWorldView>true</showGizmoOnWorldView>
+		<showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+		<resourceDescription>A reserve of dark magical strength which can be gained and spent in a variety of ways.\n\nHemogen can be increased by consuming souls from a human or consuming soul-trapped objects. You can obtain dark arcana using the 'extract soul' operation on a non-undead human.\n\nIf dark arcana reaches zero, {PAWN_nameDef} will become very unhappy.</resourceDescription>
+		<iconPath>UI/Icons/Genes/Gene_SoulStarved</iconPath>
+		<selectionWeight>0</selectionWeight>
+		<displayCategory>MB_DarkEnergy</displayCategory>
+		<displayOrderInCategory>-2</displayOrderInCategory>
+		<customEffectDescriptions>
+		<li>Gives dark arcana supply.</li>
+		</customEffectDescriptions>
+		<symbolPack>
+		<prefixSymbols>
+			<li><symbol>undead</symbol></li>
+		</prefixSymbols>
+		</symbolPack>
+		<minAgeActive>3</minAgeActive>
+		<resourceLossPerDay>0.01</resourceLossPerDay>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>1</biostatMet>
+	</GeneDef>
+
+	<GeneDef>
+		<defName>MB_SoulDrain</defName>
+		<label>soul drain</label>
+		<labelShortAdj>draining</labelShortAdj>
+		<description>Carriers lose an additional 2 dark arcana per day from magical entropy.</description>
+		<resourceLabel>hemogen</resourceLabel>
+		<geneClass>Gene_HemogenDrain</geneClass>
+		<iconPath>UI/Icons/Genes/Gene_SoulDrain</iconPath>
+		<prerequisite>MB_SoulStarved</prerequisite>
+		<resourceLossPerDay>0.08</resourceLossPerDay>
+		<displayCategory>MB_DarkEnergy</displayCategory>
+		<displayOrderInCategory>-1</displayOrderInCategory>
+		<minAgeActive>3</minAgeActive>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>6</biostatMet>
+	</GeneDef>
+</Defs>

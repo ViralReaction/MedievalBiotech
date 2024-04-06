@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef Name="MB_BaseUndeadRecipe" Abstract="True">
+		<jobString>Resurrecting pawn.</jobString>
+		<workAmount>1800</workAmount>
+		<gestationCycles>1</gestationCycles>
+		<formingTicks>120000</formingTicks><!-- 2 days;     1 day : 60 000 ticks -->
+		<mechanitorOnlyRecipe>true</mechanitorOnlyRecipe>
+		<workSpeedStat>MechFormingSpeed</workSpeedStat>
+		<soundWorking>MechGestatorCycle_Initiating</soundWorking>
+	</RecipeDef>
+
+	<RecipeDef Name="MB_LightUndeadRecipe" ParentName="MB_BaseUndeadRecipe" Abstract="True">
+		<researchPrerequisite>BasicMechtech</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Corpse_Human</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+	</RecipeDef>
+
+	<RecipeDef ParentName="MB_LightUndeadRecipe">
+		<defName>MB_Restless</defName>
+		<label>summon restless</label>
+		<description>Summon a restless.</description>
+		<products>
+			<MB_Undead_Restless>1</MB_Undead_Restless>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>MB_Undead_Restless</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+</Defs>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="ExtractHemogenPack"]</xpath>
+		<value>
+			<RecipeDef ParentName="SurgeryFlesh">
+				<defName>ExtractHemogenPack</defName>
+				<label>extract potion of blood</label>
+				<description>Extract a potion of blood from the target. The operation will fail to produce a potion of blood if the target does not have enough blood.\n\Potion of blood packs can be administered to others to reduce blood loss or to satiate those who feed on blood.</description>
+				<workerClass>Recipe_ExtractHemogen</workerClass>
+				<jobString>Extracting potion of blood.</jobString>
+				<workAmount>500</workAmount>
+				<hideBodyPartNames>true</hideBodyPartNames>
+				<targetsBodyPart>false</targetsBodyPart>
+				<isViolation>true</isViolation>
+				<descriptionHyperlinks>
+					<ThingDef>HemogenPack</ThingDef>
+				</descriptionHyperlinks>
+				<uiIconThing>HemogenPack</uiIconThing>
+				<anesthetize>false</anesthetize>
+				<workSkillLearnFactor>2</workSkillLearnFactor>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	
+</Patch>

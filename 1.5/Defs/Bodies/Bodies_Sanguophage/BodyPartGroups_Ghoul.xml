@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<BodyPartGroupDef>
+    <defName>MB_LeftGhoulHand</defName>
+    <label>left claws</label>
+    <labelShort>fist</labelShort>
+    <listOrder>79</listOrder>
+  </BodyPartGroupDef>
+  
+  <BodyPartGroupDef>
+    <defName>MB_RightGhoulHand</defName>
+    <label>right claws</label>
+    <labelShort>fist</labelShort>
+    <listOrder>78</listOrder>
+  </BodyPartGroupDef>
+	
+</Defs>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef Name="MB_CorruptedSoulGemBase" ParentName="ResourceBase" Abstract="True">
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>10</stackLimit>
+		<graphicData>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>200</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0.6</Flammability>
+			<DeteriorationRate>2.0</DeteriorationRate>
+		</statBases>
+		<intricate>true</intricate>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+
+		<ingestible>
+			<foodType>Fluid</foodType>
+			<preferability>NeverForNutrition</preferability>
+			<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+			<tasteThought>MB_AbosorbedCorruptedSoulGem</tasteThought>
+			<ingestSound>HemogenPack_Consume</ingestSound>
+		</ingestible>
+	</ThingDef>
+	
+	<ThingDef ParentName="MB_CorruptedSoulGemBase">
+		<defName>MB_CorruptedSoulGemBasic</defName>
+		<label>corrupted basic soul gem</label>
+		<description>PLACEHOLDER</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/CorruptedSoulBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techHediffsTags>
+			<li>SubcoreBasic</li>
+		</techHediffsTags>
+		<statBases>
+			<WorkToMake>3000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>BasicMechtech</researchPrerequisite>
+			<workSpeedStat>SubcoreEncodingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<recipeUsers>
+				<li>SubcoreEncoder</li>
+			</recipeUsers>
+			<mechanitorOnlyRecipe>true</mechanitorOnlyRecipe>
+			<unfinishedThingDef>UnfinishedSubcore</unfinishedThingDef>
+			<soundWorking>SubcoreEncoder_Working</soundWorking>
+		</recipeMaker>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+
+		<ingestible>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_OffsetHemogen">
+				<offset>0.2</offset>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+	</ThingDef>
+
+	<ThingDef ParentName="MB_CorruptedSoulGemBase">
+		<defName>MB_CorruptedSoulGemRegular</defName>
+		<label>corrupted standard soul gem</label>
+		<description>PLACEHOLDER</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/CorruptedSoulRegular</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>300</MarketValue>
+		</statBases>
+
+		<ingestible>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_OffsetHemogen">
+				<offset>0.4</offset>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+	</ThingDef>
+
+	<ThingDef ParentName="MB_CorruptedSoulGemBase">
+		<defName>MB_CorruptedSoulGemHigh</defName>
+		<label>corrupted high soul gem</label>
+		<description>PLACEHOLDER</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/CorruptedSoulHigh</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+		</statBases>
+
+		<ingestible>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_OffsetHemogen">
+				<offset>2.0</offset>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+	</ThingDef>
+</Defs>

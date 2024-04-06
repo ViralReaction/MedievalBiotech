@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<XenotypeDef>
+		<defName>MB_Necrarch</defName>
+		<label>necrarch</label>
+		<description>PLACEHOLDER</description>
+		<descriptionShort>Necrarchs are ageless, deathless arcane masters powered by the mythical dark energy in their body. They are horrifying and extremely intelligent. They can heal any injury, and never suffer from disease or poison. In combat, they can cast dark fire and curse enemies. The price is that necrarchs must consume souls derived from human sacrifices to survive, and they must periodically deathrest for long periods. They're easily destroyed by fire, and slowed down by UV light.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Necrarch</iconPath>
+		<soundDefOnImplant>PawnBecameSanguophage</soundDefOnImplant>
+		<combatPowerFactor>2.5</combatPowerFactor>
+		<displayPriority>-1000</displayPriority>
+		<factionlessGenerationWeight>0</factionlessGenerationWeight>
+		<nameMaker>NamerPersonWaster</nameMaker>
+		<genes>
+			<li>Ageless</li>
+			<li>Deathless</li>
+			<li>DiseaseFree</li>
+			<li>ArchiteMetabolism</li>
+			<li>PerfectImmunity</li>
+			<li>TotalHealing</li>
+			<li>WoundHealing_SuperFast</li>
+			<li>ToxResist_Total</li>
+			<li>FireWeakness</li>
+			<li>UVSensitivity_Mild</li>
+			<li>LowSleep</li>
+			<li>DarkVision</li>
+			<li>Sterile</li>
+			<li>MinTemp_SmallDecrease</li>
+			<li>PsychicAbility_Extreme</li>
+			<li>Beauty_VeryUgly</li>
+			<li>AptitudeStrong_Intellectual</li>
+
+			<li>MB_Head_Necrarch</li>
+			<li>MB_Body_Necrarch</li>
+			<li>Hair_BaldOnly</li>
+			<li>Beard_NoBeardOnly</li>
+			<li>MB_Skin_Grim</li>
+			
+			<li>MB_SoulStarved</li>
+			<li>MB_SoulDrain</li>
+		</genes>
+	</XenotypeDef>
+
+	<XenotypeDef>
+		<defName>MB_Wight</defName>
+		<label>wight</label>
+		<description>PLACEHOLDER</description>
+		<descriptionShort>PLACEHOLDER</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Necrarch</iconPath>
+		<soundDefOnImplant>PawnBecameSanguophage</soundDefOnImplant>
+		<combatPowerFactor>2.5</combatPowerFactor>
+		<displayPriority>-1000</displayPriority>
+		<factionlessGenerationWeight>0</factionlessGenerationWeight>
+		<nameMaker>NamerPersonWaster</nameMaker>
+		<genes>
+			<li>Ageless</li>
+			<li>Deathless</li>
+			<li>DiseaseFree</li>
+			<li>ArchiteMetabolism</li>
+			<li>PerfectImmunity</li>
+			<li>TotalHealing</li>
+			<li>WoundHealing_SuperFast</li>
+			<li>ToxResist_Total</li>
+			<li>FireWeakness</li>
+			<li>UVSensitivity_Mild</li>
+			<li>LowSleep</li>
+			<li>DarkVision</li>
+			<li>Sterile</li>
+			<li>MinTemp_SmallDecrease</li>
+			<li>PsychicAbility_Extreme</li>
+			<li>Beauty_VeryUgly</li>
+			<li>AptitudeStrong_Intellectual</li>
+
+			<li>MB_Head_Wight</li>
+			<li>MB_Body_Wight</li>
+			<li>Hair_BaldOnly</li>
+			<li>Beard_NoBeardOnly</li>
+			<li>MB_Skin_Grim</li>
+
+			<li>MB_SoulStarved</li>
+			<li>MB_SoulDrain</li>
+		</genes>
+	</XenotypeDef>
+
+	<XenotypeDef>
+		<defName>MB_Demonkin</defName>
+		<label>demonkin</label>
+		<description>PLACEHOLDER</description>
+		<descriptionShort>PLACEHOLDER</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Demonkin</iconPath>
+		<soundDefOnImplant>PawnBecameSanguophage</soundDefOnImplant>
+		<combatPowerFactor>2.5</combatPowerFactor>
+		<displayPriority>-1000</displayPriority>
+		<factionlessGenerationWeight>0</factionlessGenerationWeight>
+		<genes>
+			<li>Ageless</li>
+			<li>Deathless</li>
+			<li>DiseaseFree</li>
+			<li>ArchiteMetabolism</li>
+			<li>PerfectImmunity</li>
+			<li>TotalHealing</li>
+			<li>WoundHealing_SuperFast</li>
+			<li>ToxResist_Total</li>
+			<li>FireWeakness</li>
+			<li>UVSensitivity_Mild</li>
+			<li>LowSleep</li>
+			<li>DarkVision</li>
+			<li>Sterile</li>
+			<li>MinTemp_SmallDecrease</li>
+			<li>PsychicAbility_Extreme</li>
+			<li>Beauty_VeryUgly</li>
+			<li>AptitudeStrong_Intellectual</li>
+
+			<li>MB_Head_Demonic</li>
+			<li>MB_Body_Demonic</li>
+			<li>MB_ElongatedHorn</li>
+			<li>Skin_DeepRed</li>
+			<li>Hair_ShortOnly</li>
+		</genes>
+	</XenotypeDef>
+</Defs>

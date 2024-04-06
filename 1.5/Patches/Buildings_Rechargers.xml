@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Remove electricity from every Biotech Building-->
+    <Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="BasicRecharger" or 
+							defName="StandardRecharger"]/comps/li[@Class = "CompProperties_Power"]</xpath>
+	</Operation>
+	
+    <Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[@Name="BaseMechCharger"]/comps/li[@Class = "CompProperties_Flickable"]</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="BasicRecharger"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Things/Building/SteamMachines/BasicRecharger</texPath>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="BasicRecharger"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(4,2)</drawSize>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="StandardRecharger"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Things/Building/SteamMachines/StandardRecharger</texPath>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="StandardRecharger"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(4,3)</drawSize>
+		</value>
+	</Operation>
+
+
+	<!-- Have rechargers use steam as fuel -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="BasicRecharger"]/comps</xpath>
+		<value>
+			<li Class="PipeSystem.CompProperties_ResourceTrader">
+				<pipeNet>MB_SteamNet</pipeNet>
+				<consumptionPerTick>3</consumptionPerTick>
+			</li>
+
+			<li Class="CompProperties_Power">
+				<transmitsPower>true</transmitsPower>
+				<!-- Specify the comp class -->
+				<compClass>PipeSystem.CompPowerPlantNeedResource</compClass>
+				<basePowerConsumption>-1000</basePowerConsumption>
+			</li>
+		</value>
+	</Operation>
+</Patch>

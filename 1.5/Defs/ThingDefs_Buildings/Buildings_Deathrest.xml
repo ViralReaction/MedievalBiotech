@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="DeathrestBuildingHemogenFueled">
+    <defName>MB_AltarImmortalKing</defName>
+    <label>altar of the immortal king</label>
+    <description>PLACEHOLDER</description>
+    <graphicData>
+      <texPath>Things/Building/Misc/AltarImmortalKing/AltarImmortalKing</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4,4)</drawSize>
+      <shadowData>
+        <volume>(0.9, 0.3, 1.8)</volume>
+      </shadowData>
+    </graphicData>
+	<uiIconScale>0.5</uiIconScale>
+    <castEdgeShadows>true</castEdgeShadows>
+    <defaultPlacingRot>South</defaultPlacingRot>
+
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>30000</WorkToBuild>
+	  <Beauty>100</Beauty>
+      <Mass>30</Mass>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+
+	<costStuffCount>100</costStuffCount>
+	<stuffCategories>
+			<li>DankPyon_RawWood</li>
+			<li>Woody</li>
+			<li>Metallic</li>
+			<li>Stony</li>
+	</stuffCategories>
+
+    <costList>
+      <Gold>25</Gold>
+      <HemogenPack>5</HemogenPack>
+    </costList>
+
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <comps>
+	
+    </comps>
+  </ThingDef>
+
+	<ThingDef ParentName="FurnitureWithQualityBase">
+		<defName>MB_RoyalDeathrestCasket</defName>
+		<label>royal deathrest casket</label>
+		<description>An enclosed med-casket that accelerates the process of deathrest. It can connect to other devices which confer additional bonuses on the deathrester. The number of devices that can connect depends on the person's deathrest capacity, which can be seen by selecting them.\n\nOnly those with the deathrest gene can use the deathrest casket.</description>
+		<thingClass>Building_Bed</thingClass>
+		<tickerType>Rare</tickerType>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>42</pathCost>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<canOverlapZones>false</canOverlapZones>
+		<passability>PassThroughOnly</passability>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<thingCategories Inherit="False">
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Building/Misc/RoyalDeathrestCasket/RoyalDeathrestCasket</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<building>
+			<bed_showSleeperBody>true</bed_showSleeperBody>
+			<ai_chillDestination>false</ai_chillDestination>
+			<bed_healPerDay>5</bed_healPerDay>
+			<bed_canBeMedical>false</bed_canBeMedical>
+			<bed_DisplayOwnerType>false</bed_DisplayOwnerType>
+			<bed_DisplayOwnersInInspectString>false</bed_DisplayOwnersInInspectString>
+			<bed_countsForBedroomOrBarracks>false</bed_countsForBedroomOrBarracks>
+			<buildingTags>
+				<li>Bed</li>
+				<li>Biotech</li>
+			</buildingTags>
+			<relatedBuildCommands>
+				<li>DeathrestAccelerator</li>
+				<li>Hemopump</li>
+				<li>HemogenAmplifier</li>
+				<li>GlucosoidPump</li>
+				<li>PsychofluidPump</li>
+			</relatedBuildCommands>
+		</building>
+		<designationCategory>Biotech</designationCategory>
+		<uiOrder>2001</uiOrder>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>20000</WorkToBuild>
+			<Mass>50</Mass>
+			<Flammability>0.5</Flammability>
+			<Beauty>75</Beauty>
+			<BedRestEffectiveness>1.05</BedRestEffectiveness>
+			<Comfort>0.9</Comfort>
+			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+		</statBases>
+		<size>(1,2)</size>
+		<costList>
+			<Gold>50</Gold>
+			<DankPyon_Silk>50</DankPyon_Silk>
+		</costList>
+		<comps>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn_DeathrestCasket</compClass>
+			</li>
+			<li Class="CompProperties_DeathrestBindable">
+				<stackLimit>1</stackLimit>
+				<countsTowardsBuildingLimit>false</countsTowardsBuildingLimit>
+				<deathrestEffectivenessFactor>1.2</deathrestEffectivenessFactor>
+				<mustBeLayingInToBind>true</mustBeLayingInToBind>
+				<displayTimeActive>false</displayTimeActive>
+				<soundStart>DeathrestCasket_Enter</soundStart>
+				<soundEnd>DeathrestCasket_Exit</soundEnd>
+			</li>
+		</comps>
+		<researchPrerequisites><li>Deathrest</li></researchPrerequisites>
+		<placeWorkers>
+			<li>PlaceWorker_DrawLinesToDeathrestBuildings</li>
+		</placeWorkers>
+	</ThingDef>
+</Defs>

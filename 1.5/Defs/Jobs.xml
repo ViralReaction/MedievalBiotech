@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <WorkGiverDef>
+    <defName>MB_OperateOnPawn</defName>
+    <label>operate</label>
+    <giverClass>MedievalBiotech.WorkGiver_OperateOnPawn</giverClass>
+    <workType>Doctor</workType>
+    <verb>operate</verb>
+    <gerund>operate</gerund>
+    <priorityInType>80</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+  <JobDef>
+    <defName>MB_OperateOnPawn</defName>
+    <driverClass>MedievalBiotech.JobDriver_OperateOnPawn</driverClass>
+    <reportString>operating on TargetB.</reportString>
+  </JobDef>
+  
+  <JobDef>
+    <defName>MB_CarryCorpseToTable</defName>
+    <driverClass>MedievalBiotech.JobDriver_CarryCorpseToTable</driverClass>
+    <reportString>carrying TargetB to TargetA.</reportString>
+  </JobDef>
+</Defs>

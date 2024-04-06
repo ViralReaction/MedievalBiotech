@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingCategoryDef>
+		<defName>MB_CorpsesUndead</defName>
+		<label>undead corpses</label>
+		<parent>Corpses</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>MB_CorpsesSanguine</defName>
+		<label>sanguine corpses</label>
+		<parent>Corpses</parent>
+	</ThingCategoryDef>
+</Defs>

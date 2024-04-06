@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HemogenPack"]/label</xpath>
+		<value>
+			<label>potion of blood</label>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HemogenPack"]/description</xpath>
+		<value>
+			<description>A potion of refined hemogen in a glass container to prevent spoilage. Hemogenic humans can consume it to restore their internal hemogen stores. It can be administered during an operation to reverse blood loss.</description>
+		</value>
+	</Operation>
+</Patch>

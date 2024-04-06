@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef Name="MB_LightSangSummon" ParentName="BaseMechanoid" Abstract="True">
+		<statBases>
+			<MarketValue>800</MarketValue>
+			<MoveSpeed>3.4</MoveSpeed>
+			<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+			<MechEnergyLossPerHP>0.66</MechEnergyLossPerHP>
+
+			<Flammability>1</Flammability>
+			<ComfyTemperatureMin>-55</ComfyTemperatureMin>
+      		<ComfyTemperatureMax>45</ComfyTemperatureMax>
+		</statBases>
+
+		<race>
+			<body>MB_Ghoul</body>
+			<fleshType>MB_SanguinophageFleshType</fleshType>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<baseBodySize>0.7</baseBodySize>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<mechWeightClass>Light</mechWeightClass>
+		</race>
+
+		<butcherProducts>
+			<!--MB_GhoulFlesh>40</MB_GhoulFlesh-->
+			<Steel>10</Steel>
+		</butcherProducts>
+
+		<tools>
+			<li>
+			<label>head</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>6</power>
+			<cooldownTime>2.6</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+
+		<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+    </ThingDef>
+
+    <PawnKindDef Name="MB_LightSangSummonKind" ParentName="BaseMechanoidKind" Abstract="True">
+		<defaultFactionType>Mechanoid</defaultFactionType> <!-- Change to sanguophage cult -->
+		<weaponMoney>9999~9999</weaponMoney>
+		<combatPower>10</combatPower>
+		<weaponTags></weaponTags>
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>9999~9999</techHediffsMoney>
+		<controlGroupPortraitZoom>1.8</controlGroupPortraitZoom>
+    </PawnKindDef>
+
+	<!-- ==================== Summons ==================== -->    
+    <!-- ========== Ghoul ========== -->    
+    <ThingDef ParentName="MB_LightSangSummon">
+		<defName>MB_Sang_Ghoul</defName>
+		<label>ghoul</label>
+		<description>PLACEHOLDER</description>
+		<statBases>
+			<MarketValue>1750</MarketValue>
+			<MoveSpeed>4.8</MoveSpeed>
+		</statBases>
+		<race>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Militor_Death</soundDeath>
+					<soundCall>Pawn_Mech_Militor_Call</soundCall>
+				</li>
+			</lifeStageAges>
+		</race>
+		<tools>
+			<li>
+				<label>left claw</label>
+				<capacities>
+				<li>Cut</li>
+				<li>Stab</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>MB_LeftGhoulHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+				<li>Cut</li>
+				<li>Stab</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>MB_RightGhoulHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+        		<soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+				<chanceFactor>0.9</chanceFactor>
+				<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+					<def>Stun</def>
+					<amount>14</amount>
+					</li>
+				</extraMeleeDamages>
+				</surpriseAttack>
+			</li>	
+		</tools>
+    </ThingDef>
+
+	<PawnKindDef ParentName="MB_LightSangSummonKind">
+		<defName>MB_Sang_Ghoul</defName>
+		<label>ghoul</label>
+		<race>MB_Sang_Ghoul</race>
+		<combatPower>45</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/SanguophageSummon/SangGhoul/SangGhoul</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.62</drawSize>
+					<shadowData>
+					<volume>(0.3, 0.4, 0.3)</volume>
+					<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+    </PawnKindDef>
+</Defs>

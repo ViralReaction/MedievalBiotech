@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>MB_AbosorbedCorruptedSoulGem</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>5</durationDays>
+		<stackLimit>5</stackLimit>
+		
+		<stages>
+			<li>
+				<label>abosrbed soul gem</label>
+				<description>I abosrbed a corrupted soul gem. It felt exhilerating and rejuvenated my soul.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+</Defs>

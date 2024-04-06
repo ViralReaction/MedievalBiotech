@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef Name="MB_BaseSangRecipe" Abstract="True">
+		<jobString>Mutating pawn.</jobString>
+		<workAmount>1800</workAmount>
+		<gestationCycles>1</gestationCycles>
+		<formingTicks>120000</formingTicks><!-- 2 days -->
+		<mechanitorOnlyRecipe>true</mechanitorOnlyRecipe>
+		<workSpeedStat>MechFormingSpeed</workSpeedStat>
+		<soundWorking>MechGestatorCycle_Initiating</soundWorking>
+	</RecipeDef>
+
+	<!--RecipeDef Name="MB_LightSanguophageRecipe" ParentName="MB_BaseSangRecipe" Abstract="True">
+		<researchPrerequisite>BasicMechtech</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Corpse_Human</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Corpse_Human</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+	</RecipeDef>
+
+	<RecipeDef ParentName="LightMechanoidRecipe">
+		<defName>Militor</defName>
+		<label>gestate militor</label>
+		<description>Gestate a militor mechanoid.</description>
+		<products>
+			<Mech_Militor>1</Mech_Militor>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>Mech_Militor</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef-->
+</Defs>
