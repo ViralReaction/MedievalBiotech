@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+
 	<!-- Relabel signal chips-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="SignalChip"]/label</xpath>

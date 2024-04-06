@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 	<!-- Remove electricity from every Biotech Building-->
-    <Operation Class="PatchOperationRemove">
+	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/ThingDef[defName="DeathrestCasket" or 
 							defName="Hemopump" or 
 							defName="HemogenAmplifier" or 
 							defName="GlucosoidPump" or 
 							defName="PsychofluidPump" or 
-							defName="DeathrestAccelerator"]/comps/li[@Class = "CompProperties_Power"]</xpath>
+							defName="DeathrestAccelerator"]/comps/li[@Class = "CompProperties_Power"]		</xpath>
 	</Operation>
 
-    <Operation Class="PatchOperationRemove">
+	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/ThingDef[defName="DeathrestCasket" or 
 							defName="Hemopump" or 
 							defName="HemogenAmplifier" or 
 							defName="GlucosoidPump" or 
 							defName="PsychofluidPump" or 
-							defName="DeathrestAccelerator"]/comps/li[@Class = "CompProperties_Flickable"]</xpath>
+							defName="DeathrestAccelerator"]/comps/li[@Class = "CompProperties_Flickable"]		</xpath>
 	</Operation>
 	
 	<Operation Class="PatchOperationRemove">
@@ -25,6 +25,45 @@
 	
 	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/ThingDef[@Name="DeathrestBuildingHemogenFueled"]/comps/li[@Class = "CompProperties_Flickable"]</xpath>
+	</Operation>
+	
+	<!-- ====== Ensure Deathrest is Medieval ===== -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[
+		defName="DeathrestCasket" or 
+		defName="Hemopump" or 
+		defName="HemogenAmplifier" or 
+		defName="GlucosoidPump" or 
+		defName="PsychofluidPump" or 
+		defName="DeathrestAccelerator"]/techLevel
+		</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[
+		defName="DeathrestCasket" or 
+		defName="Hemopump" or 
+		defName="HemogenAmplifier" or 
+		defName="GlucosoidPump" or 
+		defName="PsychofluidPump" or 
+		defName="DeathrestAccelerator"]/techLevel
+			</xpath>
+			<value>
+				<techLevel>Medieval</techLevel>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[
+		defName="DeathrestCasket" or 
+		defName="Hemopump" or 
+		defName="HemogenAmplifier" or 
+		defName="GlucosoidPump" or 
+		defName="PsychofluidPump" or 
+		defName="DeathrestAccelerator" or
+		defName="DeathrestCasket"]
+			</xpath>
+			<value>
+				<techLevel>Medieval</techLevel>
+			</value>
+		</nomatch>
 	</Operation>
 
 	<!-- ===== Deathrest Casket =====-->
@@ -48,10 +87,10 @@
 		<xpath>Defs/ThingDef[defName="DeathrestCasket"]</xpath>
 		<value>
 			<costStuffCount>100</costStuffCount>
-            <stuffCategories>
-                    <li>DankPyon_RawWood</li>
-                    <li>Woody</li>
-            </stuffCategories>
+			<stuffCategories>
+				<li>DankPyon_RawWood</li>
+				<li>Woody</li>
+			</stuffCategories>
 		</value>
 	</Operation>
 
@@ -81,12 +120,12 @@
 		<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]</xpath>
 		<value>
 			<costStuffCount>100</costStuffCount>
-            <stuffCategories>
-                    <li>DankPyon_RawWood</li>
-                    <li>Woody</li>
-					<li>Metallic</li>
-					<li>Stony</li>
-            </stuffCategories>
+			<stuffCategories>
+				<li>DankPyon_RawWood</li>
+				<li>Woody</li>
+				<li>Metallic</li>
+				<li>Stony</li>
+			</stuffCategories>
 		</value>
 	</Operation>
 
@@ -151,22 +190,22 @@
 		<xpath>Defs/ThingDef[defName="Hemopump" or defName="PsychofluidPump"]</xpath>
 		<value>
 			<costStuffCount>100</costStuffCount>
-            <stuffCategories>
-                    <li>DankPyon_RawWood</li>
-                    <li>Woody</li>
-					<li>Metallic</li>
-					<li>Stony</li>
-            </stuffCategories>
+			<stuffCategories>
+				<li>DankPyon_RawWood</li>
+				<li>Woody</li>
+				<li>Metallic</li>
+				<li>Stony</li>
+			</stuffCategories>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Hemopump" or defName="PsychofluidPump"]/costList</xpath>
 		<value>
-            <costList>
+			<costList>
 				<Gold>25</Gold>
 				<HemogenPack>5</HemogenPack>
-            </costList>
+			</costList>
 		</value>
 	</Operation>
 
@@ -236,7 +275,7 @@
 		</value>
 	</Operation>
 
-		<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="GlucosoidPump"]/label</xpath>
 		<value>
 			<label>blood circle</label>

@@ -21,7 +21,7 @@
 			<thinkTreeMain>Mechanoid</thinkTreeMain>
 			<baseBodySize>1</baseBodySize>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding_Stone</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 			<mechWeightClass>Light</mechWeightClass>
 		</race>

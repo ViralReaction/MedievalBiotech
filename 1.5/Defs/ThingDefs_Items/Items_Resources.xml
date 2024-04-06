@@ -36,7 +36,6 @@
 			<color>(112,112,112)</color>
 			<constructEffect>ConstructWood</constructEffect>
 			<appearance>Metal</appearance>
-			<soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
 			<soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
 			<soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
 			<statFactors>

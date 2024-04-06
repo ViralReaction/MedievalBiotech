@@ -1,49 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
 	<ThingDef ParentName="DeathrestBuildingHemogenFueled">
-    <defName>MB_AltarImmortalKing</defName>
-    <label>altar of the immortal king</label>
-    <description>PLACEHOLDER</description>
-    <graphicData>
-      <texPath>Things/Building/Misc/AltarImmortalKing/AltarImmortalKing</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-      <drawSize>(4,4)</drawSize>
-      <shadowData>
-        <volume>(0.9, 0.3, 1.8)</volume>
-      </shadowData>
-    </graphicData>
-	<uiIconScale>0.5</uiIconScale>
-    <castEdgeShadows>true</castEdgeShadows>
-    <defaultPlacingRot>South</defaultPlacingRot>
-
-    <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>30000</WorkToBuild>
-	  <Beauty>100</Beauty>
-      <Mass>30</Mass>
-      <Flammability>0.4</Flammability>
-    </statBases>
-    <size>(1,1)</size>
-
-	<costStuffCount>100</costStuffCount>
-	<stuffCategories>
+		<defName>MB_AltarImmortalKing</defName>
+		<label>altar of the immortal king</label>
+		<description>PLACEHOLDER</description>
+		<graphicData>
+			<texPath>Things/Building/Misc/AltarImmortalKing/AltarImmortalKing</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,4)</drawSize>
+			<shadowData>
+				<volume>(0.9, 0.3, 1.8)</volume>
+			</shadowData>
+		</graphicData>
+		<uiIconScale>0.5</uiIconScale>
+		<castEdgeShadows>true</castEdgeShadows>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>30000</WorkToBuild>
+			<Beauty>100</Beauty>
+			<Mass>30</Mass>
+			<Flammability>0.4</Flammability>
+		</statBases>
+		<size>(1,1)</size>
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
 			<li>DankPyon_RawWood</li>
 			<li>Woody</li>
 			<li>Metallic</li>
 			<li>Stony</li>
-	</stuffCategories>
-
-    <costList>
-      <Gold>25</Gold>
-      <HemogenPack>5</HemogenPack>
-    </costList>
-
-    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-    <comps>
-	
-    </comps>
-  </ThingDef>
+		</stuffCategories>
+		<costList>
+			<Gold>25</Gold>
+			<HemogenPack>5</HemogenPack>
+		</costList>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<comps>
+		</comps>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
 
 	<ThingDef ParentName="FurnitureWithQualityBase">
 		<defName>MB_RoyalDeathrestCasket</defName>
@@ -123,5 +120,6 @@
 		<placeWorkers>
 			<li>PlaceWorker_DrawLinesToDeathrestBuildings</li>
 		</placeWorkers>
+		<techLevel>Medieval</techLevel>
 	</ThingDef>
 </Defs>
