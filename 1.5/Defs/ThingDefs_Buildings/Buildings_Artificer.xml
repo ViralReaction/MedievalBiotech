@@ -2,6 +2,7 @@
 <Defs>
 
 	<!-- Mech gestators -->
+	<!-- Mech gestators -->
 	<ThingDef Abstract="True" Name="DankPyon_MechGestatorBase" ParentName="BuildingBase">
 		<thingClass>Building_MechGestator</thingClass>
 		<containedPawnsSelectable>true</containedPawnsSelectable>
@@ -33,14 +34,13 @@
 			<li>PlaceWorker_MechGestatorTop</li>
 		</placeWorkers>
 		<comps>
-			<li Class="CompProperties_WasteProducer"/>
+			<li Class="CompProperties_Flickable"/>
 		</comps>
-		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
 	<ThingDef ParentName="DankPyon_MechGestatorBase">
-		<defName>DankPyon_MechGestator</defName>
-		<label>mech gestator</label>
+		<defName>DankPyon_ArtificeGestator</defName>
+		<label>artificing platform</label>
 		<description>A tank of mechanite-rich fluid with support tubes for feeding in materials and nutrients. Mechanitors can use it to produce new mechanoids or to resurrect dead mechanoids. This basic type of mech gestator is only capable of generating light-weight mechs.\n\nThe process uses harsh chemicals which are stored in toxic wastepacks. Haulers must remove the wastepacks from time to time.</description>
 		<graphicData>
 			<texPath>Things/Building/Production/MechGestatorStandard</texPath>
@@ -54,14 +54,12 @@
 		<uiIconScale>1.85</uiIconScale>
 		<interactionCellOffset>(1,0,2)</interactionCellOffset>
 		<recipes>
-			<li>Militor</li>
-			<li>Lifter</li>
-			<li>Constructoid</li>
-			<li>Agrihand</li>
-			<li>Cleansweeper</li>
-			<li>Fabricor</li>
-			<li>Paramedic</li>
-			<li>ResurrectLightMech</li>
+			<li>DankPyon_Artifice_Lifter</li>
+			<li>DankPyon_Artifice_Constructoid</li>
+			<li>DankPyon_Artifice_Agrihand</li>
+			<li>DankPyon_Artifice_Cleansweeper</li>
+			<li>DankPyon_Artifice_Paramedic</li>
+			<li>DankPyon_ResurrectLightArtifice</li>
 		</recipes>
 		<statBases>
 			<MaxHitPoints>250</MaxHitPoints>
@@ -75,7 +73,7 @@
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<researchPrerequisites>
-			<li>BasicMechtech</li>
+			<li>DankPyon_Artifice</li>
 		</researchPrerequisites>
 		<building>
 			<barDrawData>
@@ -144,137 +142,10 @@
 			</li>
 			<li Class="CompProperties_Power">
 				<transmitsPower>true</transmitsPower>
-				<!-- Specify the comp class -->
 				<compClass>PipeSystem.CompPowerPlantNeedResource</compClass>
 				<basePowerConsumption>-1000</basePowerConsumption>
 			</li>
 		</comps>
-		<techLevel>Medieval</techLevel>
-	</ThingDef>
-  
-	<ThingDef ParentName="DankPyon_MechGestatorBase">
-		<defName>DankPyon_LargeMechGestator</defName>
-		<label>large mech gestator</label>
-		<description>A tank of mechanite-rich fluid with support tubes for feeding in materials and nutrients. Mechanitors can use it to produce new mechanoids or to resurrect dead mechanoids. This tier of mech gestator is capable of generating medium, heavy, and ultraheavy mechs.\n\nThe process uses harsh chemicals which are stored in toxic wastepacks. Haulers must remove the wastepacks from time to time.</description>
-		<graphicData>
-			<texPath>Things/Building/Production/MechGestatorLarge</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(6, 5)</drawSize>
-			<shadowData>
-				<volume>(3.8, 3, 2.7)</volume>
-			</shadowData>
-		</graphicData>
-		<uiIconPath>Things/Building/Production/MechGestatorLarge_MenuIcon</uiIconPath>
-		<uiIconScale>1.5</uiIconScale>
-		<interactionCellOffset>(2,0,2)</interactionCellOffset>
-		<statBases>
-			<MaxHitPoints>350</MaxHitPoints>
-			<WorkToBuild>16000</WorkToBuild>
-			<Mass>35</Mass>
-			<Flammability>0.5</Flammability>
-		</statBases>
-		<size>(4,3)</size>
-		<costList>
-			<Steel>300</Steel>
-			<ComponentIndustrial>6</ComponentIndustrial>
-		</costList>
-		<researchPrerequisites>
-			<li>StandardMechtech</li>
-		</researchPrerequisites>
-		<building>
-			<barDrawData>
-				<north>
-					<preRotationOffset>(-1.59, 1.4)</preRotationOffset>
-					<size>(0.72, 0.12)</size>
-				</north>
-				<south>
-					<preRotationOffset>(-1.59, 1.33)</preRotationOffset>
-					<size>(0.72, 0.12)</size>
-				</south>
-				<east>
-					<preRotationOffset>(1.59, -1.4)</preRotationOffset>
-					<size>(0.72, 0.12)</size>
-				</east>
-				<west>
-					<preRotationOffset>(-1.59, -1.4)</preRotationOffset>
-					<size>(0.72, 0.12)</size>
-				</west>
-			</barDrawData>
-			<formingGraphicData>
-				<texPath>Things/Pawn/Mechanoid/HalfGestatedMechLarge</texPath>
-				<graphicClass>Graphic_Single</graphicClass>
-				<drawSize>(1.65,1.65)</drawSize>
-			</formingGraphicData>
-			<formingMechBobSpeed>0.0005</formingMechBobSpeed>
-			<formingMechYBobDistance>0.08</formingMechYBobDistance>
-			<formingMechPerRotationOffset>
-				<li>(0, 0, 0.225)</li>
-				<li>(-0.15, 0, 0.225)</li>
-				<li>(0, 0, 0.225)</li>
-				<li>(0.15, 0, 0.225)</li>
-			</formingMechPerRotationOffset>
-			<mechGestatorCylinderGraphic>
-				<texPath>Things/Building/Production/MechGestatorLargeGlass</texPath>
-				<graphicClass>Graphic_Multi</graphicClass>
-				<drawSize>(6, 5)</drawSize>
-				<shaderType>Transparent</shaderType>
-			</mechGestatorCylinderGraphic>
-			<mechGestatorTopGraphic>
-				<texPath>Things/Building/Production/MechGestatorLargeTop</texPath>
-				<graphicClass>Graphic_Multi</graphicClass>
-				<drawSize>(6, 5)</drawSize>
-			</mechGestatorTopGraphic>
-			<gestatorFormingMote>
-				<north>MechGestatorFormingLarge_North</north>
-				<east>MechGestatorFormingLarge_East</east>
-				<west>MechGestatorFormingLarge_West</west>
-				<south>MechGestatorFormingLarge_South</south>
-			</gestatorFormingMote>
-			<gestatorCycleCompleteMote>
-				<north>MechGestatorCycleCompleteLarge_North</north>
-				<east>MechGestatorCycleCompleteLarge_East</east>
-				<west>MechGestatorCycleCompleteLarge_West</west>
-				<south>MechGestatorCycleCompleteLarge_South</south>
-			</gestatorCycleCompleteMote>
-			<gestatorFormedMote>
-				<north>MechGestatorFormedLarge_North</north>
-				<east>MechGestatorFormedLarge_East</east>
-				<west>MechGestatorFormedLarge_West</west>
-				<south>MechGestatorFormedLarge_South</south>
-			</gestatorFormedMote>
-		</building>
-		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-		<recipes>
-			<li>Pikeman</li>
-			<li>Scorcher</li>
-			<li>Scyther</li>
-			<li>Tunneler</li>
-			<li>Lancer</li>
-			<li>Tesseron</li>
-			<li>Legionary</li>
-			<li>CentipedeGunner</li>
-			<li>CentipedeBurner</li>
-			<li>CentipedeBlaster</li>
-			<li>Diabolus</li>
-			<li>Centurion</li>
-			<li>Warqueen</li>
-			<li>ResurrectMediumMech</li>
-			<li>ResurrectHeavyMech</li>
-			<li>ResurrectUltraheavyMech</li>
-		</recipes>
-		<comps>
-			<li Class="PipeSystem.CompProperties_ResourceTrader">
-				<pipeNet>MB_SteamNet</pipeNet>
-				<consumptionPerTick>3</consumptionPerTick>
-			</li>
-			<li Class="CompProperties_Power">
-				<transmitsPower>true</transmitsPower>
-				<!-- Specify the comp class -->
-				<compClass>PipeSystem.CompPowerPlantNeedResource</compClass>
-				<basePowerConsumption>-1000</basePowerConsumption>
-			</li>
-		</comps>
-		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
 	<!-- Subcore -->
@@ -316,7 +187,7 @@
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<researchPrerequisites>
-			<li>BasicMechtech</li>
+			<li>DankPyon_Artifice</li>
 		</researchPrerequisites>
 		<hasInteractionCell>true</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
@@ -436,7 +307,7 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
 		<researchPrerequisites>
-			<li>StandardMechtech</li>
+			<li>DankPyon_Artifice</li>
 		</researchPrerequisites>
 		<building>
 			<subcoreScannerOutputDef>SubcoreRegular</subcoreScannerOutputDef>
@@ -468,7 +339,7 @@
 			<ComponentIndustrial>6</ComponentIndustrial>
 		</costList>
 		<researchPrerequisites>
-			<li>HighMechtech</li>
+			<li>DankPyon_Artifice</li>
 		</researchPrerequisites>
 		<building>
 			<subcoreScannerOutputDef>SubcoreHigh</subcoreScannerOutputDef>
@@ -484,7 +355,7 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>DankPyon_BandNode</defName>
-		<label>soul amplifier</label>
+		<label>control amplifier</label>
 		<description>PLACEHOLDER</description>
 		<tickerType>Normal</tickerType>
 		<rotatable>false</rotatable>
@@ -492,7 +363,7 @@
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<fillPercent>0.4</fillPercent>
 		<graphicData>
-			<texPath>Things/Building/Misc/SoulAmp</texPath>
+			<texPath>Things/Building/Misc/ControlledAmplifier</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(2,2)</drawSize>
 			<shadowData>
@@ -523,7 +394,7 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
 		<researchPrerequisites>
-			<li>BasicMechtech</li>
+			<li>DankPyon_Artifice</li>
 		</researchPrerequisites>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
@@ -536,6 +407,72 @@
 				<compClass>PipeSystem.CompPowerPlantNeedResource</compClass>
 				<basePowerConsumption>-1000</basePowerConsumption>
 			</li>
+			<li Class="CompProperties_BandNode">
+				<hediff>BandNode</hediff>
+				<untunedEffect>BandNodeUntuned</untunedEffect>
+				<tuningEffect>BandNodeTuning</tuningEffect>
+				<tunedEffect>BandNodeTuned</tunedEffect>
+				<retuningEffect>BandNodeRetuning</retuningEffect>
+				<tuningCompleteSound>BandNodeTuning_Complete</tuningCompleteSound>
+				<powerConsumptionIdle>100</powerConsumptionIdle>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_BandNode</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>MB_ControlledAmplifier</defName>
+		<label>controlled amplifier</label>
+		<description>PLACEHOLDER</description>
+		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<canOverlapZones>false</canOverlapZones>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<fillPercent>0.4</fillPercent>
+		<graphicData>
+			<texPath>Things/Building/Misc/ControlledAmplifier</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+			<shadowData>
+				<volume>(1.5, 0.35, 1.2)</volume>
+				<offset>(0, 0, -0.15)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<buildingTags>
+				<li>Biotech</li>
+			</buildingTags>
+		</building>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<designationCategory>Biotech</designationCategory>
+		<uiOrder>2440</uiOrder>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>8000</WorkToBuild>
+			<Mass>25</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<size>(2,2)</size>
+		<costList>
+			<Steel>200</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<researchPrerequisites>
+			<li>BasicMechtech</li>
+		</researchPrerequisites>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>300</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_BandNode">
 				<hediff>BandNode</hediff>
 				<untunedEffect>BandNodeUntuned</untunedEffect>

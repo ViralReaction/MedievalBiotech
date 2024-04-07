@@ -12,5 +12,9 @@ Once the gene potion bank is fueled. it will slowly reverse the deterioration of
 	<MB_CommandToggleGas_Desc>Designate steam flow to be toggle on or off. A colonist will come soon to flick the switch.</MB_CommandToggleGas_Desc>
 	<MB_InfiniteDeposit>A small infinite steam deposit has been found!</MB_InfiniteDeposit>
 	<MB_InfiniteDepositLabel>steam gas deposit</MB_InfiniteDepositLabel>
+	
+	<!-- Blood Chalice -->
+	<DankPyon_InstallBloodChaliceHemogenRequired>Missing required gene</DankPyon_InstallBloodChaliceHemogenRequired>
+	<DankPyon_InstallNecronomiconHemogenRequired></DankPyon_InstallNecronomiconHemogenRequired>
 
 </LanguageData>

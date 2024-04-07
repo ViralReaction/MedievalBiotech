@@ -8,39 +8,45 @@
 		<mechanitorOnlyRecipe>true</mechanitorOnlyRecipe>
 		<workSpeedStat>MechFormingSpeed</workSpeedStat>
 		<soundWorking>MechGestatorCycle_Initiating</soundWorking>
+		
 	</RecipeDef>
 
-	<!--RecipeDef Name="MB_LightSanguophageRecipe" ParentName="MB_BaseSangRecipe" Abstract="True">
+	<RecipeDef Name="MB_LightSanguophageRecipe" ParentName="MB_BaseSangRecipe" Abstract="True">
 		<researchPrerequisite>BasicMechtech</researchPrerequisite>
 		<ingredients>
 			<li>
 				<filter>
-					<thingDefs>
-						<li>Corpse_Human</li>
-					</thingDefs>
-				</filter>
-				<count>50</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Corpse_Human</li>
-					</thingDefs>
+					<categories>
+						<li>DankPyon_RawWood</li>
+					 </categories>
 				</filter>
 				<count>1</count>
 			</li>
 		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>DankPyon_RawWood</li>
+			</categories>
+			<specialFiltersToDisallow>
+				<li>AllowRotten</li>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter Inherit="False">
+			<categories>
+				<li>DankPyon_RawWood</li>
+			</categories>
+		</defaultIngredientFilter>
 	</RecipeDef>
 
-	<RecipeDef ParentName="LightMechanoidRecipe">
-		<defName>Militor</defName>
-		<label>gestate militor</label>
+	<RecipeDef ParentName="MB_LightSanguophageRecipe">
+		<defName>DankPyon_CreateGhoul</defName>
+		<label>create ghoul</label>
 		<description>Gestate a militor mechanoid.</description>
 		<products>
-			<Mech_Militor>1</Mech_Militor>
+			<MB_Sang_Ghoul>1</MB_Sang_Ghoul>
 		</products>
 		<descriptionHyperlinks>
-			<ThingDef>Mech_Militor</ThingDef>
+			<ThingDef>MB_Sang_Ghoul</ThingDef>
 		</descriptionHyperlinks>
-	</RecipeDef-->
+	</RecipeDef>
 </Defs>

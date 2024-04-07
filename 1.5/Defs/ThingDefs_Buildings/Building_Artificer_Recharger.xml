@@ -76,7 +76,7 @@
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<researchPrerequisites>
-			<li>BasicMechtech</li>
+			<li>DankPyon_Artifice</li>
 		</researchPrerequisites>
 		<comps>
 			<li Class="CompProperties_ThingContainer">
@@ -151,7 +151,7 @@
 			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<researchPrerequisites>
-			<li>StandardMechtech</li>
+			<li>DankPyon_Artifice</li>
 		</researchPrerequisites>
 		<comps>
 			<li Class="CompProperties_ThingContainer">

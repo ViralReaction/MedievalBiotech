@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef Name="MB_BaseArtificeRecipe" Abstract="True">
+		<jobString>Gestating mech.</jobString>
+		<workAmount>1800</workAmount>
+		<gestationCycles>1</gestationCycles>
+		<formingTicks>120000</formingTicks><!-- 2 days -->
+		<mechanitorOnlyRecipe>true</mechanitorOnlyRecipe>
+		<workSpeedStat>MechFormingSpeed</workSpeedStat>
+		<soundWorking>MechGestatorCycle_Initiating</soundWorking>
+	</RecipeDef>
+
+	<RecipeDef Name="LightArtificeRecipe" ParentName="MB_BaseArtificeRecipe" Abstract="True">
+		<researchPrerequisite>DankPyon_Artifice</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SubcoreBasic</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+	</RecipeDef>
+
+	<RecipeDef ParentName="LightArtificeRecipe">
+		<defName>DankPyon_Artifice_Lifter</defName>
+		<label>gestate lifter</label>
+		<description>Gestate a lifter mechanoid.</description>
+		<products>
+			<DankPyon_Artifice_Lifter>1</DankPyon_Artifice_Lifter>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>DankPyon_Artifice_Lifter</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+	<RecipeDef ParentName="LightArtificeRecipe">
+		<defName>DankPyon_Artifice_Constructoid</defName>
+		<label>gestate constructoid</label>
+		<description>Gestate a constructoid mechanoid.</description>
+		<products>
+			<DankPyon_Artifice_Constructoid>1</DankPyon_Artifice_Constructoid>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>DankPyon_Artifice_Constructoid</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+	<RecipeDef ParentName="LightArtificeRecipe">
+		<defName>DankPyon_Artifice_Agrihand</defName>
+		<label>gestate agrihand</label>
+		<description>Gestate an agrihand mechanoid.</description>
+		<researchPrerequisite>DankPyon_Artifice</researchPrerequisite>
+		<products>
+			<DankPyon_Artifice_Agrihand>1</DankPyon_Artifice_Agrihand>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>DankPyon_Artifice_Agrihand</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+	<RecipeDef ParentName="LightArtificeRecipe">
+		<defName>DankPyon_Artifice_Cleansweeper</defName>
+		<label>gestate cleansweeper</label>
+		<description>Gestate a cleansweeper mechanoid.</description>
+		<researchPrerequisite>DankPyon_Artifice</researchPrerequisite>
+		<products>
+			<DankPyon_Artifice_Cleansweeper>1</DankPyon_Artifice_Cleansweeper>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>DankPyon_Artifice_Cleansweeper</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+	<RecipeDef ParentName="LightArtificeRecipe">
+		<defName>DankPyon_Artifice_Paramedic</defName>
+		<label>gestate paramedic</label>
+		<description>Gestate a paramedic mechanoid.</description>
+		<researchPrerequisite>DankPyon_Artifice</researchPrerequisite>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SubcoreHigh</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<DankPyon_Artifice_Paramedic>1</DankPyon_Artifice_Paramedic>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>DankPyon_Artifice_Paramedic</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+</Defs>

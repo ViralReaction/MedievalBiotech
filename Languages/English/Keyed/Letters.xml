@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+	<!-- Implants -->
+	<LetterLabelNecronomiconInstalled>Read the Necronomicon</LetterLabelNecronomiconInstalled>
+	<LetterNecronomiconInstalled>{PAWN_labelShort} has read from the Necronomicon! Now a necrarch, {PAWN_pronoun} wields mastery over the undead, poised to raise and command them.</LetterNecronomiconInstalled>
+	
+	<LetterLabelBloodChaliceInstalled>Drank from Blood Chalice</LetterLabelBloodChaliceInstalled>
+	<LetterBloodChaliceInstalled>{PAWN_labelShort} has drank from a Blood Chalice! Now a sanguinmage, {PAWN_pronoun} wields mastery over creatures of the night, poised to create and command them.</LetterBloodChaliceInstalled>
+
+</LanguageData>

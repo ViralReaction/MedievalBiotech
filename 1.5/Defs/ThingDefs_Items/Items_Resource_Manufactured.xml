@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Name="MB_CorruptedSoulGemBase" ParentName="ResourceBase" Abstract="True">
+
+	<!-- Abstracts -->
+	<ThingDef Name="MB_SoulGemBase" ParentName="ResourceBase" Abstract="True">
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Standard_Drop</soundDrop>
 		<stackLimit>10</stackLimit>
@@ -19,7 +21,9 @@
 		<thingCategories>
 			<li>Manufactured</li>
 		</thingCategories>
+	</ThingDef>
 
+	<ThingDef Name="MB_CorruptedSoulGemBase" ParentName="MB_SoulGemBase" Abstract="True">
 		<ingestible>
 			<foodType>Fluid</foodType>
 			<preferability>NeverForNutrition</preferability>
@@ -29,12 +33,32 @@
 		</ingestible>
 	</ThingDef>
 	
-	<ThingDef ParentName="MB_CorruptedSoulGemBase">
-		<defName>MB_CorruptedSoulGemBasic</defName>
-		<label>corrupted basic soul gem</label>
-		<description>PLACEHOLDER</description>
+	<ThingDef Name="MB_ArtificeResourceBase" ParentName="ResourceBase" Abstract="True">
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>10</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>500</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0.25</Flammability>
+			<DeteriorationRate>2.0</DeteriorationRate>
+		</statBases>
+		<intricate>true</intricate>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<isTechHediff>true</isTechHediff>
+	</ThingDef>
+	
+	<!-- Soulgems -->
+	<ThingDef ParentName="MB_SoulGemBase">
+		<defName>MB_SoulGemBasic</defName>
+		<label>basic subcore</label>
+		<description>A crystalline vessel, pulsating with ethereal energy, capturing the essence of life's energy. Within its depths lies the potential to drive the simplest of artifice constructs. \n\Occasionally, the personality and quirks of the soul within the gem manifest in the construct. \n\These soul gems serve as conduits for mystical power, coveted by mages and sorcerers alike for their ability to channel the forces of life and death.</description>
 		<graphicData>
-			<texPath>Things/Item/Resource/CorruptedSoulBasic</texPath>
+			<texPath>Things/Item/Resource/SoulgemBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<techHediffsTags>
@@ -58,11 +82,202 @@
 			<Steel>50</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
+	</ThingDef>
+
+	<ThingDef ParentName="MB_SoulGemBase">
+		<defName>MB_SoulGemRegular</defName>
+		<label>standard subcore</label>
+		<description>A A shimmering prism, pulsing with the captured essence of departed souls. Within its depths lies the potential to drive the standard artifice constructs. \n\Occasionally, the personality and quirks of the soul within the gem manifest in the construct. \n\These soul gems serve as conduits for mystical power, coveted by mages and sorcerers alike for their ability to channel the forces of life and death.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/SoulgemRegular</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>300</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="MB_SoulGemBase">
+		<defName>MB_SoulGemHigh</defName>
+		<label>high subcore</label>
+		<description>An iridescent vessel of unparalleled potency, radiating with the boundless energies of a body forced into transcendence before being shoved within. Within its depths lies the potential to drive the most complex of artifice constructs. \n\These prestigious soul gems are coveted treasures among the arcane elite, serving as conduits for unparalleled feats of magic and the invocation of forces beyond mortal comprehension.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/SoulgemHigh</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<!-- Powercore "Chips" -->
+	<ThingDef ParentName="MB_ArtificeResourceBase">
+		<defName>MB_PowercoreBasic</defName>
+		<label>basic powercore</label>
+		<description>A mechanoid-band synchronization micro-organ. It is necessary to produce certain advanced types of mechanoids and equipment.\n\nA mechanitor can study this chip to help unlock higher tiers of mechtech research.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/PowercoreBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Flammability>0</Flammability>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>92349061</analysisID>
+				<requiresMechanitor>true</requiresMechanitor>
+
+				<!-- Analyzable -->
+
+				<analysisDurationHours>0.5</analysisDurationHours>
+				<destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+				<completedLetterLabel>Signal chip studied: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>By studying the signal chip, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+
+				<!-- Interactable -->
+
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>Analyze the signal chip.</activateDescString>
+				<jobString>Analyze signal chip</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Can be analyzed by a colonist.</inspectString>
+
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="MB_ArtificeResourceBase">
+		<defName>MB_PowercoreRegular</defName>
+		<label>powercore regular</label>
+		<description>An energy-focusing mechanoid micro-organ. It is necessary to produce certain advanced types of mechanoids and equipment.\n\nA mechanitor can study this chip to help unlock higher tiers of mechtech research.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/PowercoreRegular</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>652343245</analysisID>
+				<requiresMechanitor>true</requiresMechanitor>
+
+				<!-- Analyzable -->
+
+				<analysisDurationHours>0.5</analysisDurationHours>
+				<destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+				<completedLetterLabel>Powerfocus chip studied: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>By studying the powerfocus chip, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+
+				<!-- Interactable -->
+
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>Analyze the powerfocus chip.</activateDescString>
+				<jobString>Analyze powerfocus chip</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Can be analyzed by a colonist.</inspectString>
+
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="MB_ArtificeResourceBase">
+		<defName>MB_PowercoreHigh</defName>
+		<label>powercore high</label>
+		<description>A molecular-restructing mechanoid micro-organ. It is necessary to produce certain advanced mechanoids and equipment.\n\nA mechanitor can study this chip to help unlock higher tiers of mechtech research.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/PowercoreHigh</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1500</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>123417683</analysisID>
+				<requiresMechanitor>true</requiresMechanitor>
+
+				<!-- Analyzable -->
+
+				<analysisDurationHours>0.5</analysisDurationHours>
+				<destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+				<completedLetterLabel>Nano structuring chip studied: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>By studying the nano structuring chip, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+
+				<!-- Interactable -->
+
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>Analyze the nano structuring chip.</activateDescString>
+				<jobString>Analyze nano structuring chip</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Can be analyzed by a colonist.</inspectString>
+
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- Corrupted SoulGems -->
+	<ThingDef ParentName="MB_CorruptedSoulGemBase">
+		<defName>MB_CorruptedSoulGemBasic</defName>
+		<label>corrupted basic soul gem</label>
+		<description>PLACEHOLDER</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/CorruptedSoulBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techHediffsTags>
+			<li>SubcoreBasic</li>
+		</techHediffsTags>
+		<statBases>
+			<WorkToMake>3000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>DankPyon_Artifice</researchPrerequisite>
+			<workSpeedStat>SubcoreEncodingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<recipeUsers>
+				<li>SubcoreEncoder</li>
+			</recipeUsers>
+			<mechanitorOnlyRecipe>true</mechanitorOnlyRecipe>
+			<unfinishedThingDef>UnfinishedSubcore</unfinishedThingDef>
+			<soundWorking>SubcoreEncoder_Working</soundWorking>
+		</recipeMaker>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
 
 		<ingestible>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_OffsetHemogen">
-				<offset>0.2</offset>
+					<offset>0.2</offset>
 				</li>
 			</outcomeDoers>
 		</ingestible>
@@ -83,7 +298,7 @@
 		<ingestible>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_OffsetHemogen">
-				<offset>0.4</offset>
+					<offset>0.4</offset>
 				</li>
 			</outcomeDoers>
 		</ingestible>
@@ -104,7 +319,7 @@
 		<ingestible>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_OffsetHemogen">
-				<offset>2.0</offset>
+					<offset>2.0</offset>
 				</li>
 			</outcomeDoers>
 		</ingestible>

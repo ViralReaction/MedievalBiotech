@@ -37,18 +37,31 @@
       <HintPath>..\..\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PipeSystem">
+      <HintPath>..\..\VanillaExpandedFramework-main\1.5\Assemblies\PipeSystem.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HarmonyPatches\GeneAssembler_Patches.cs" />
-    <Compile Include="HarmonyPatches\GenePack_Patches.cs" />
-    <Compile Include="HarmonyPatches\GeneExtractor_Patches.cs" />
-    <Compile Include="MB_DefOf.cs" />
-    <Compile Include="ConsumableGenepack.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatches.cs" />
-    <Compile Include="JobDriver_CarryCorpseToTable.cs" />
-    <Compile Include="JobDriver_OperateOnPawn.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\GeneAssembler_Patches.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\GenePack_Patches.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\GeneExtractor_Patches.cs" />
+    <Compile Include="New Mech\Harmony Patches\MechBill_ShouldDoNow_Patch.cs" />
+    <Compile Include="New Mech\ThingClass\Building.cs" />
+    <Compile Include="New Mech\Comps\CompProperties\CompProperties_MB_InstallImplant.cs" />
+    <Compile Include="New Mech\Comps\CompUseEffect_MB_InstallImplant.cs" />
+    <Compile Include="New Mech\WorkGiver_Artifice.cs" />
+    <Compile Include="Utility\Utility.cs" />
+    <Compile Include="Utility\MB_DefOf.cs" />
+    <Compile Include="Gene Stuff\ConsumableGenepack.cs" />
+    <Compile Include="Utility\HarmonyPatches.cs" />
+    <Compile Include="Gene Stuff\JobDriver_CarryCorpseToTable.cs" />
+    <Compile Include="Gene Stuff\JobDriver_OperateOnPawn.cs" />
+    <Compile Include="New Mech\Harmony Patches\MechanitorUtility_ShouldBeMechanitor_Patch.cs" />
+    <Compile Include="New Mech\HediffDef\Hediff_NecrarchBrain.cs" />
+    <Compile Include="New Mech\Gizmos\SanguineBandwidthGizmo.cs" />
+    <Compile Include="New Mech\HediffDef\Hediff_SaguineMage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WorkGiver_OperateOnPawn.cs" />
+    <Compile Include="Gene Stuff\WorkGiver_OperateOnPawn.cs" />
   </ItemGroup>
   <ItemGroup>
     <Publicize Include="Assembly-CSharp" />
@@ -63,5 +76,6 @@
       <Version>1.5.4055-beta</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef Name="BaseArtificeResurrectionRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+		<mechResurrection>true</mechResurrection>
+		<jobString>Resurrecting mech.</jobString>
+		<fixedIngredientFilter>
+			<specialFiltersToAllow>
+				<li>AllowCorpsesMechFriendly</li>
+			</specialFiltersToAllow>
+		</fixedIngredientFilter>
+		<forceHiddenSpecialFilters>
+			<li>AllowCorpsesMechFriendly</li>
+		</forceHiddenSpecialFilters>
+	</RecipeDef>
+
+	<RecipeDef ParentName="BaseArtificeResurrectionRecipe">
+		<defName>DankPyon_ResurrectLightArtifice</defName>
+		<label>resurrect light artifice</label>
+		<description>Resurrect a friendly artifice of the light weight class. So long as the artifice's body is not completely destroyed, it can be resurrected.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Corpses</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Corpse_DankPyon_Artifice_Lifter</li>
+				<li>Corpse_DankPyon_Artifice_Constructoid</li>
+				<li>Corpse_DankPyon_Artifice_Agrihand</li>
+				<li>Corpse_DankPyon_Artifice_Cleansweeper</li>
+				<li>Corpse_DankPyon_Artifice_Paramedic</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+</Defs>

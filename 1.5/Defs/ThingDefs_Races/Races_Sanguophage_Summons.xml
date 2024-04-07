@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
 	<ThingDef Name="MB_LightSangSummon" ParentName="BaseMechanoid" Abstract="True">
 		<statBases>
 			<MarketValue>800</MarketValue>
@@ -12,7 +13,6 @@
 			<ComfyTemperatureMin>-55</ComfyTemperatureMin>
       		<ComfyTemperatureMax>45</ComfyTemperatureMax>
 		</statBases>
-
 		<race>
 			<body>MB_Ghoul</body>
 			<fleshType>MB_SanguinophageFleshType</fleshType>
@@ -24,12 +24,10 @@
 			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 			<mechWeightClass>Light</mechWeightClass>
 		</race>
-
 		<butcherProducts>
 			<!--MB_GhoulFlesh>40</MB_GhoulFlesh-->
 			<Steel>10</Steel>
 		</butcherProducts>
-
 		<tools>
 			<li>
 			<label>head</label>
@@ -42,7 +40,6 @@
 			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 			</li>
 		</tools>
-
 		<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
     </ThingDef>
 
@@ -143,4 +140,5 @@
 			</li>
 		</lifeStages>
     </PawnKindDef>
+
 </Defs>

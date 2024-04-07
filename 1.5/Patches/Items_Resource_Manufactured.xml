@@ -1,99 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<!-- Relabel signal chips-->
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="SignalChip"]/label</xpath>
-		<value>
-			<label>basic powercore</label>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="PowerfocusChip"]/label</xpath>
-		<value>
-			<label>standard powercore</label>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="NanostructuringChip"]/label</xpath>
-		<value>
-			<label>high powercore</label>
-		</value>
-	</Operation>
-
-	<!-- Relabel subcores -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="SubcoreBasic"]/label</xpath>
-		<value>
-			<label>basic soulgem</label>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="SubcoreRegular"]/label</xpath>
-		<value>
-			<label>standard soulgem</label>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="SubcoreHigh"]/label</xpath>
-		<value>
-			<label>high soulgem</label>
-		</value>
-	</Operation>
-
-
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="DeathrestCapacitySerum"]/label</xpath>
 		<value>
 			<label>deathrest capacity elixir</label>
-		</value>
-	</Operation>
-
-
-	<!-- description subcores and signal chips-->
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="SignalChip"]/description</xpath>
-		<value>
-			<description>PLACEHOLDER</description>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="PowerfocusChip"]/description</xpath>
-		<value>
-			<description>PLACEHOLDER</description>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="NanostructuringChip"]/description</xpath>
-		<value>
-			<description>PLACEHOLDER</description>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="SubcoreBasic"]/description</xpath>
-		<value>
-			<description>PLACEHOLDER</description>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="SubcoreRegular"]/description</xpath>
-		<value>
-			<description>PLACEHOLDER</description>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="SubcoreHigh"]/description</xpath>
-		<value>
-			<description>PLACEHOLDER</description>
 		</value>
 	</Operation>
 

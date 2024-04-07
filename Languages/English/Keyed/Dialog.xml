@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+	<!-- Implant Stuff -->
+	<DankPyon_ConfirmInstallImplant_Smithing>A {SUMMONER} must be capable of smithing to create constructs.\n\nAre you sure you want to continue?</DankPyon_ConfirmInstallImplant_Smithing>
+	<DankPyon_ConfirmInstallImplant_Intellectual>A {SUMMONER} must be capable of intellectual tasks to unlock {SUMMONER} research.\n\nAre you sure you want to continue?</DankPyon_ConfirmInstallImplant_Intellectual>
+	
+</LanguageData>
