@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
 	<GeneDef>
 		<defName>MB_SoulStarved</defName>
 		<label>soul starved</label>
 		<description>Carriers of this gene have a reserve of dark magical strength powered by souls. dark arcana can be gained by consuming the souls of the unfortunate and spent in various ways, all of which are unlocked by other genes.\n\nCarriers lose 2 dark arcana per day from magical entropy.</description>
-		<geneClass>Gene_Hemogen</geneClass>
-		<resourceGizmoType>GeneGizmo_ResourceHemogen</resourceGizmoType>
+		<geneClass>MedievalBiotech.Gene_Soul</geneClass>
+		<resourceGizmoType>MedievalBiotech.GeneGizmo_ResourceSoulStarve</resourceGizmoType>
 		<resourceLabel>dark arcana</resourceLabel>
 		<resourceGizmoThresholds>
-		<li>0.25</li>
-		<li>0.5</li>
-		<li>0.75</li>
+			<li>0.25</li>
+			<li>0.5</li>
+			<li>0.75</li>
 		</resourceGizmoThresholds>
 		<showGizmoOnWorldView>true</showGizmoOnWorldView>
 		<showGizmoWhenDrafted>true</showGizmoWhenDrafted>
@@ -20,12 +21,12 @@
 		<displayCategory>MB_DarkEnergy</displayCategory>
 		<displayOrderInCategory>-2</displayOrderInCategory>
 		<customEffectDescriptions>
-		<li>Gives dark arcana supply.</li>
+			<li>Gives dark arcana supply.</li>
 		</customEffectDescriptions>
 		<symbolPack>
-		<prefixSymbols>
-			<li><symbol>undead</symbol></li>
-		</prefixSymbols>
+			<prefixSymbols>
+				<li><symbol>undead</symbol></li>
+			</prefixSymbols>
 		</symbolPack>
 		<minAgeActive>3</minAgeActive>
 		<resourceLossPerDay>0.01</resourceLossPerDay>
@@ -38,8 +39,8 @@
 		<label>soul drain</label>
 		<labelShortAdj>draining</labelShortAdj>
 		<description>Carriers lose an additional 2 dark arcana per day from magical entropy.</description>
-		<resourceLabel>hemogen</resourceLabel>
-		<geneClass>Gene_HemogenDrain</geneClass>
+		<resourceLabel>soul</resourceLabel>
+		<geneClass>MedievalBiotech.Gene_SoulDrain</geneClass>
 		<iconPath>UI/Icons/Genes/Gene_SoulDrain</iconPath>
 		<prerequisite>MB_SoulStarved</prerequisite>
 		<resourceLossPerDay>0.08</resourceLossPerDay>
@@ -49,4 +50,37 @@
 		<biostatCpx>1</biostatCpx>
 		<biostatMet>6</biostatMet>
 	</GeneDef>
+	
+	<GeneDef ParentName="GeneSleepBase">
+		<defName>MB_NeverEats</defName>
+		<label>never eat</label>
+		<description>Carriers of this gene have a unique metabolic process which allows them to never need to eat.</description>
+		<iconPath>UI/Icons/Genes/Gene_NeverEat</iconPath>
+		<marketValueFactor>1.25</marketValueFactor>
+		<displayOrderInCategory>30</displayOrderInCategory>
+		<disablesNeeds>
+			<li>Food</li>
+		</disablesNeeds>
+		<biostatMet>-6</biostatMet>
+		<biostatCpx>3</biostatCpx>
+	</GeneDef>
+	
+	<GeneDef ParentName="GeneSleepBase">
+		<defName>MB_Mindless</defName>
+		<label>mindless</label>
+		<description>Carriers of this gene have a unique metabolic process which allows them to never need to eat.</description>
+		<iconPath>UI/Icons/Genes/Gene_Mindless</iconPath>
+		<marketValueFactor>1.25</marketValueFactor>
+		<displayOrderInCategory>30</displayOrderInCategory>
+		<disablesNeeds>
+			<li>Joy</li>
+			<li>Beauty</li>
+			<li>Comfort</li>
+			<li>Outdoors</li>
+			<li>Indoors</li>
+		</disablesNeeds>
+		<biostatMet>-6</biostatMet>
+		<biostatCpx>3</biostatCpx>
+	</GeneDef>
+
 </Defs>

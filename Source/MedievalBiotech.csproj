@@ -45,11 +45,20 @@
     <Compile Include="Gene Stuff\HarmonyPatches\GeneAssembler_Patches.cs" />
     <Compile Include="Gene Stuff\HarmonyPatches\GenePack_Patches.cs" />
     <Compile Include="Gene Stuff\HarmonyPatches\GeneExtractor_Patches.cs" />
+    <Compile Include="New Mech\Comps\CompProperties\CompProperties_AbilitySoulCost.cs" />
+    <Compile Include="New Mech\Comps\CompAbilityEffect_SoulCost.cs" />
+    <Compile Include="New Mech\Comps\CompProperties\CompProperties_AbilitySoulDrain.cs" />
+    <Compile Include="New Mech\Comps\CompAbilityEffect_SoulDrain.cs" />
+    <Compile Include="New Mech\Gizmos\GeneGizmo_ResourceSoulStarve.cs" />
     <Compile Include="New Mech\Harmony Patches\MechBill_ShouldDoNow_Patch.cs" />
-    <Compile Include="New Mech\ThingClass\Building.cs" />
     <Compile Include="New Mech\Comps\CompProperties\CompProperties_MB_InstallImplant.cs" />
     <Compile Include="New Mech\Comps\CompUseEffect_MB_InstallImplant.cs" />
-    <Compile Include="New Mech\WorkGiver_Artifice.cs" />
+    <Compile Include="New Mech\HediffDef\CompProperties\HediffCompProperties_SeverityFromSoul.cs" />
+    <Compile Include="New Mech\HediffDef\Hediff_SoulCraving.cs" />
+    <Compile Include="New Mech\SoulDrainStuff\FileName.cs" />
+    <Compile Include="New Mech\SoulDrainStuff\Gene_SoulDrain.cs" />
+    <Compile Include="New Mech\SoulDrainStuff\Gene_Soul.cs" />
+    <Compile Include="Utility\FileName.cs" />
     <Compile Include="Utility\Utility.cs" />
     <Compile Include="Utility\MB_DefOf.cs" />
     <Compile Include="Gene Stuff\ConsumableGenepack.cs" />
@@ -76,6 +85,8 @@
       <Version>1.5.4055-beta</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="New Mech\Ability\CompProps\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

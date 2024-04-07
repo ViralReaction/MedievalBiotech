@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<HediffDef>
+		<defName>MB_SoulCraving</defName>
+		<label>soul craving</label>
+		<description>PLACEHOLDER</description>
+		<hediffClass>Hediff_HemogenCraving</hediffClass>
+		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
+		<initialSeverity>0.01</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<everCurableByItem>false</everCurableByItem>
+		<stages>
+			<li>
+				<label>minor</label>
+				<painOffset>0.05</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.9</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>moderate</label>
+				<minSeverity>0.35</minSeverity>
+				<painOffset>0.1</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.8</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>major</label>
+				<minSeverity>0.7</minSeverity>
+				<painOffset>0.15</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.5</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="MedievalBiotech.HediffCompProperties_SeverityFromSoul">
+				<severityPerHourEmpty>0.05</severityPerHourEmpty>
+				<severityPerHourSoul>-0.1</severityPerHourSoul>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<GeneDef>
+		<defName>MB_SoulFeeder</defName>
+		<label>souldrainer</label>
+		<description>PLACEHOLDER</description>
+		<iconPath>UI/Icons/Genes/Gene_SoulStarved</iconPath>
+		<geneClass>Gene_Bloodfeeder</geneClass>
+		<prerequisite>MB_SoulStarved</prerequisite>
+		<displayCategory>MB_DarkEnergy</displayCategory>
+		<deathHistoryEvent>BloodfeederDied</deathHistoryEvent>
+		<abilities>
+			<li>MB_SoulFeeding</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>MB_SoulFeeding</AbilityDef>
+		</descriptionHyperlinks>
+		<biostatMet>-1</biostatMet>
+		<minAgeActive>3</minAgeActive>
+		<!-- <symbolPack> -->
+		<!-- <wholeNameSymbols> -->
+		<!-- <li><symbol>bloodfeeder</symbol></li> -->
+		<!-- </wholeNameSymbols> -->
+		<!-- <prefixSymbols> -->
+		<!-- <li><symbol>hemo</symbol></li> -->
+		<!-- <li><symbol>blood</symbol></li> -->
+		<!-- <li><symbol>vamp</symbol></li> -->
+		<!-- <li><symbol>fang</symbol></li> -->
+		<!-- </prefixSymbols> -->
+		<!-- <suffixSymbols> -->
+		<!-- <li><symbol>fang</symbol></li> -->
+		<!-- <li><symbol>eater</symbol></li> -->
+		<!-- <li><symbol>ubus</symbol></li> -->
+		<!-- </suffixSymbols> -->
+		<!-- </symbolPack> -->
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>MB_DarknessBolt</defName>
+		<label>darkness bolt</label>
+		<description>Carriers grow an opening in their upper chest along with a quiver of keratin spines. Using a hemogen-powered chemical reaction, they can fire these spines at high speed at nearby targets with surprising accuracy.</description>
+		<iconPath>UI/Icons/Genes/Gene_DarknessBolt_Icon</iconPath>
+		<prerequisite>MB_SoulStarved</prerequisite>
+		<displayCategory>MB_DarkEnergy</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<abilities>
+			<li>MB_DarknessBolt</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>MB_DarknessBolt</AbilityDef>
+		</descriptionHyperlinks>
+		<biostatMet>-1</biostatMet>
+		<!-- <symbolPack> -->
+			<!-- <wholeNameSymbols> -->
+				<!-- <li><symbol>spiner</symbol></li> -->
+			<!-- </wholeNameSymbols> -->
+			<!-- <prefixSymbols> -->
+				<!-- <li><symbol>spine</symbol></li> -->
+				<!-- <li><symbol>thorn</symbol></li> -->
+				<!-- <li><symbol>bolt</symbol></li> -->
+			<!-- </prefixSymbols> -->
+		<!-- </symbolPack> -->
+	</GeneDef>
+ 
+</Defs>

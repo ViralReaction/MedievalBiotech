@@ -22,7 +22,6 @@
 			<li>ToxResist_Total</li>
 			<li>FireWeakness</li>
 			<li>UVSensitivity_Mild</li>
-			<li>LowSleep</li>
 			<li>DarkVision</li>
 			<li>Sterile</li>
 			<li>MinTemp_SmallDecrease</li>
@@ -38,6 +37,13 @@
 			
 			<li>MB_SoulStarved</li>
 			<li>MB_SoulDrain</li>
+			
+			<li>MB_NeverEats</li>
+			<li>MB_Mindless</li>
+			
+			<!-- Abilities -->
+			<li>MB_SoulFeeder</li>
+			<li>MB_DarknessBolt</li>
 		</genes>
 	</XenotypeDef>
 
