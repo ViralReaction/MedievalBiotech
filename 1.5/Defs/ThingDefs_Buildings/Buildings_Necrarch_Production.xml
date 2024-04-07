@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="BenchBase">
+		<defName>MB_Necrarch_Workbench</defName>
+		<label>necromantic altar</label>
+		<description>PLACEHOLDER</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Misc/Necrarch/NecromancerAltar</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(5,4)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>2000</WorkToBuild>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<size>(3,2)</size>
+		<designationCategory>Production</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<techLevel>Medieval</techLevel>
+		<placeWorkers>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<costList>
+			<WoodLog>60</WoodLog>
+		</costList>
+		<costStuffCount>20</costStuffCount>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<recipes>
+		</recipes>
+		<comps>
+		</comps>
+		<building>
+			<isMealSource>true</isMealSource>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="BenchBase">
+		<defName>MB_ResurrectionCircle</defName>
+		<label>summoning circle</label>
+		<description>PLACEHOLDER</description>
+		<graphicData>
+			<texPath>Things/Building/Misc/Necrarch/SummoningCircle</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3, 3)</drawSize>
+			<damageData>
+					<rect>(0.3,0.2,0.7,1.8)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.8</uiIconScale>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<castEdgeShadows>true</castEdgeShadows>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>4000</WorkToBuild>
+			<Mass>2</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
+		<size>(3,3)</size>
+		<designationCategory>Production</designationCategory>
+		<costList>
+			<Steel>150</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<HemogenPack>5</HemogenPack>
+		</costList>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-2)</interactionCellOffset>
+		<placeWorkers>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<comps>
+		</comps>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
+
+</Defs>

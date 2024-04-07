@@ -15,5 +15,8 @@ namespace MedievalBiotech
 
         public static HediffDef MB_BloodChaliceImplant;
         public static HediffDef MB_NecronomiconImplant;
+
+        public static StatDef SoulGainFactor;
+        public static GeneDef MB_SoulStarved;
     }
 }

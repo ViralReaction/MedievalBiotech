@@ -51,5 +51,22 @@
 			</li>
 		</comps>
 	</HediffDef>
+	
+	<HediffDef ParentName="DeathrestHediffBase">
+		<defName>MB_SoulAmplified</defName>
+		<label>soul amplified</label>
+		<description>All dark arcana gains are multiplied up because this person used a soul pentagram while deathresting. This effect lasts until the next deathrest.</description>
+		<descriptionHyperlinks>
+			<ThingDef>HemogenAmplifier</ThingDef>
+		</descriptionHyperlinks>
+		<stages>
+			<li>
+				<multiplyStatChangesBySeverity>true</multiplyStatChangesBySeverity>
+				<statOffsets>
+					<HemogenGainFactor>0.25</HemogenGainFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
 
 </Defs>

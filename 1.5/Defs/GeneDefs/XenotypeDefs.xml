@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
 	<XenotypeDef>
 		<defName>MB_Necrarch</defName>
 		<label>necrarch</label>
@@ -37,13 +38,12 @@
 			
 			<li>MB_SoulStarved</li>
 			<li>MB_SoulDrain</li>
-			
-			<li>MB_NeverEats</li>
-			<li>MB_Mindless</li>
-			
+						
 			<!-- Abilities -->
-			<li>MB_SoulFeeder</li>
+			<!-- <li>MB_SoulFeeder</li> -->
 			<li>MB_DarknessBolt</li>
+			<li>MB_BaleFire</li>
+			<li>MB_Decrepify</li>
 		</genes>
 	</XenotypeDef>
 
@@ -88,40 +88,40 @@
 		</genes>
 	</XenotypeDef>
 
-	<XenotypeDef>
-		<defName>MB_Demonkin</defName>
-		<label>demonkin</label>
-		<description>PLACEHOLDER</description>
-		<descriptionShort>PLACEHOLDER</descriptionShort>
-		<iconPath>UI/Icons/Xenotypes/Demonkin</iconPath>
-		<soundDefOnImplant>PawnBecameSanguophage</soundDefOnImplant>
-		<combatPowerFactor>2.5</combatPowerFactor>
-		<displayPriority>-1000</displayPriority>
-		<factionlessGenerationWeight>0</factionlessGenerationWeight>
-		<genes>
-			<li>Ageless</li>
-			<li>Deathless</li>
-			<li>DiseaseFree</li>
-			<li>ArchiteMetabolism</li>
-			<li>PerfectImmunity</li>
-			<li>TotalHealing</li>
-			<li>WoundHealing_SuperFast</li>
-			<li>ToxResist_Total</li>
-			<li>FireWeakness</li>
-			<li>UVSensitivity_Mild</li>
-			<li>LowSleep</li>
-			<li>DarkVision</li>
-			<li>Sterile</li>
-			<li>MinTemp_SmallDecrease</li>
-			<li>PsychicAbility_Extreme</li>
-			<li>Beauty_VeryUgly</li>
-			<li>AptitudeStrong_Intellectual</li>
+	<!-- <XenotypeDef> -->
+		<!-- <defName>MB_Demonkin</defName> -->
+		<!-- <label>demonkin</label> -->
+		<!-- <description>PLACEHOLDER</description> -->
+		<!-- <descriptionShort>PLACEHOLDER</descriptionShort> -->
+		<!-- <iconPath>UI/Icons/Xenotypes/Demonkin</iconPath> -->
+		<!-- <soundDefOnImplant>PawnBecameSanguophage</soundDefOnImplant> -->
+		<!-- <combatPowerFactor>2.5</combatPowerFactor> -->
+		<!-- <displayPriority>-1000</displayPriority> -->
+		<!-- <factionlessGenerationWeight>0</factionlessGenerationWeight> -->
+		<!-- <genes> -->
+			<!-- <li>Ageless</li> -->
+			<!-- <li>Deathless</li> -->
+			<!-- <li>DiseaseFree</li> -->
+			<!-- <li>ArchiteMetabolism</li> -->
+			<!-- <li>PerfectImmunity</li> -->
+			<!-- <li>TotalHealing</li> -->
+			<!-- <li>WoundHealing_SuperFast</li> -->
+			<!-- <li>ToxResist_Total</li> -->
+			<!-- <li>FireWeakness</li> -->
+			<!-- <li>UVSensitivity_Mild</li> -->
+			<!-- <li>LowSleep</li> -->
+			<!-- <li>DarkVision</li> -->
+			<!-- <li>Sterile</li> -->
+			<!-- <li>MinTemp_SmallDecrease</li> -->
+			<!-- <li>PsychicAbility_Extreme</li> -->
+			<!-- <li>Beauty_VeryUgly</li> -->
+			<!-- <li>AptitudeStrong_Intellectual</li> -->
 
-			<li>MB_Head_Demonic</li>
-			<li>MB_Body_Demonic</li>
-			<li>MB_ElongatedHorn</li>
-			<li>Skin_DeepRed</li>
-			<li>Hair_ShortOnly</li>
-		</genes>
-	</XenotypeDef>
+			<!-- <li>MB_Head_Demonic</li> -->
+			<!-- <li>MB_Body_Demonic</li> -->
+			<!-- <li>MB_ElongatedHorn</li> -->
+			<!-- <li>Skin_DeepRed</li> -->
+			<!-- <li>Hair_ShortOnly</li> -->
+		<!-- </genes> -->
+	<!-- </XenotypeDef> -->
 </Defs>

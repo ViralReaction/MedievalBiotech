@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="DeathrestBuildingHemogenFueled">
+		<defName>MB_AltarImmortalKing_Necrarch</defName>
+		<label>altar of the immortal king</label>
+		<description>PLACEHOLDER</description>
+		<graphicData>
+			<texPath>Things/Building/Misc/Necrarch/AltarImmortalKing</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(3,3)</drawSize>
+			<shadowData>
+				<volume>(0.9, 0.3, 1.8)</volume>
+			 </shadowData>
+			 <damageData>
+				<rect>(0.1,0.1,0.9,1.8)</rect>
+			 </damageData>
+		</graphicData>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<uiIconScale>0.5</uiIconScale>
+		<castEdgeShadows>true</castEdgeShadows>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>30000</WorkToBuild>
+			<Beauty>100</Beauty>
+			<Mass>30</Mass>
+			<Flammability>0.4</Flammability>
+		</statBases>
+		<size>(1,1)</size>
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+			<li>DankPyon_RawWood</li>
+			<li>Woody</li>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costList>
+			<Gold>25</Gold>
+			<HemogenPack>5</HemogenPack>
+		</costList>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<comps>
+			<li Class="CompProperties_DeathrestBindable">
+				<hemogenLimitOffset>0.25</hemogenLimitOffset>
+				<soundStart>Hemopump_Start</soundStart>
+				<soundEnd>Hemopump_Stop</soundEnd>
+				<soundWorking>Hemopump_Ambience</soundWorking>
+			</li>
+		</comps>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
+
+	<ThingDef ParentName="FurnitureWithQualityBase">
+		<defName>MB_RoyalNecrarchSarcophagus</defName>
+		<label>royal necrarch sarcophagus</label>
+		<description>PLACEHOLDER</description>
+		<thingClass>Building_Bed</thingClass>
+		<tickerType>Rare</tickerType>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>42</pathCost>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<canOverlapZones>false</canOverlapZones>
+		<passability>PassThroughOnly</passability>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<thingCategories Inherit="False">
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Building/Misc/Necrarch/RoyalNecrarchSarcophagus_Open</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<building>
+			<bed_showSleeperBody>true</bed_showSleeperBody>
+			<ai_chillDestination>false</ai_chillDestination>
+			<bed_healPerDay>5</bed_healPerDay>
+			<bed_canBeMedical>false</bed_canBeMedical>
+			<bed_DisplayOwnerType>false</bed_DisplayOwnerType>
+			<bed_DisplayOwnersInInspectString>false</bed_DisplayOwnersInInspectString>
+			<bed_countsForBedroomOrBarracks>false</bed_countsForBedroomOrBarracks>
+			<buildingTags>
+				<li>Bed</li>
+				<li>Biotech</li>
+			</buildingTags>
+			<relatedBuildCommands>
+				<li>MB_AltarImmortalKing_Necrarch</li><!-- Increases Max Dark Arcana -->
+				<li>MB_DreadlightCandelabra</li><!-- Increases Dark Arcana gain from sources -->
+				<li>MB_NecrarchPentagram</li><!-- Gives Glucosoid Rush -->
+				<li>MB_DeathrestIncense</li><!-- Increases Deathrest Speed -->
+				<li>MB_MagusAltar</li> <!-- Gives Psychofluid Rush -->
+			</relatedBuildCommands>
+		</building>
+		<designationCategory>Biotech</designationCategory>
+		<uiOrder>2001</uiOrder>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>20000</WorkToBuild>
+			<Mass>50</Mass>
+			<Flammability>0.5</Flammability>
+			<Beauty>75</Beauty>
+			<BedRestEffectiveness>1.05</BedRestEffectiveness>
+			<Comfort>0.9</Comfort>
+			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+		</statBases>
+		<size>(1,2)</size>
+		<costList>
+			<Gold>50</Gold>
+			<DankPyon_Silk>50</DankPyon_Silk>
+		</costList>
+		<comps>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn_DeathrestCasket</compClass>
+			</li>
+			<li Class="CompProperties_DeathrestBindable">
+				<stackLimit>1</stackLimit>
+				<countsTowardsBuildingLimit>false</countsTowardsBuildingLimit>
+				<deathrestEffectivenessFactor>1.2</deathrestEffectivenessFactor>
+				<mustBeLayingInToBind>true</mustBeLayingInToBind>
+				<displayTimeActive>false</displayTimeActive>
+				<soundStart>DeathrestCasket_Enter</soundStart>
+				<soundEnd>DeathrestCasket_Exit</soundEnd>
+			</li>
+			<li Class="MedievalBiotech.CompProperties_UsedGraphic">
+				<graphicData>
+					<texPath>Things/Building/Misc/Necrarch/RoyalNecrarchSarcophagus</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>(2,2)</drawSize>
+				</graphicData>
+			</li>
+		</comps>
+		<researchPrerequisites><li>Deathrest</li></researchPrerequisites>
+		<placeWorkers>
+			<li>PlaceWorker_DrawLinesToDeathrestBuildings</li>
+		</placeWorkers>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
+	
+	<ThingDef ParentName="DeathrestBuildingBase">
+		<defName>MB_DeathrestIncense</defName>
+		<label>deathrest incense</label>
+		<description>PLACEHOLDER</description>
+		<graphicData>
+			<texPath>Things/Building/Misc/Necrarch/UndeadIncense</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(3,4)</drawSize>
+			<shadowData>
+				<volume>(0.6, 0.3, 1.8)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.3,0.2,0.7,1.8)</rect>
+			</damageData>
+		</graphicData>
+		<defaultPlacingRot>East</defaultPlacingRot>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>4000</WorkToBuild>
+			<Mass>50</Mass>
+			<Flammability>0.4</Flammability>
+		</statBases>
+		<size>(1,2)</size>
+		<costList>
+			<Steel>300</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+			<li>DankPyon_RawWood</li>
+			<li>Woody</li>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_DeathrestBindable">
+				<stackLimit>2</stackLimit>
+				<deathrestEffectivenessFactor>1.2</deathrestEffectivenessFactor>
+				<displayTimeActive>false</displayTimeActive>
+				<soundWorking>DeathrestAccelerator_Ambience</soundWorking>
+			</li>
+		</comps>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
+	
+	<ThingDef ParentName="DeathrestBuildingHemogenFueled">
+		<defName>MB_DreadlightCandelabra</defName>
+		<label>dreadlight candelabra</label>
+		<description>PLACEHOLDER</description>
+		<graphicData>
+			<texPath>Things/Building/Misc/Necrarch/HemogenAmplifier</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<uiIconScale>0.5</uiIconScale>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<rotatable>false</rotatable>
+		<castEdgeShadows>true</castEdgeShadows>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>5000</WorkToBuild>
+			<Mass>5</Mass>
+			<Flammability>0.4</Flammability>
+		</statBases>
+		<size>(1,1)</size>
+		<costList>
+			<Gold>50</Gold>
+			<HemogenPack>5</HemogenPack>
+		</costList>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<descriptionHyperlinks>
+			<HediffDef>HemogenAmplified</HediffDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="CompProperties_DeathrestBindable">
+				<hediffToApply>MB_SoulAmplified</hediffToApply>
+				<soundStart>HemogenAmplifier_Start</soundStart>
+				<soundEnd>HemogenAmplifier_Stop</soundEnd>
+				<soundWorking>HemogenAmplifier_Ambience</soundWorking>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>10</glowRadius>
+				<glowColor>(174, 88, 173, 0)</glowColor>
+			</li>
+			<li Class="CompProperties_SanguophageMeetingFire">
+				<fireSize>0.75</fireSize>
+				<offset>(0,0,0.50)</offset>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>3.5</heatPerSecond>
+				<heatPushMaxTemperature>23</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes><li>Flame</li></focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_Lit">
+						<offset>0.1</offset>
+					</li>
+					<li Class="FocusStrengthOffset_BuildingDefsLit">
+						<defs>
+							<li>Campfire</li>
+							<li>TorchLamp</li>
+							<li>DankPyon_Candles</li>
+							<li>DankPyon_CandleStand</li>
+							<li MayRequire="Ludeon.RimWorld.Royalty">Brazier</li>
+							<li MayRequire="Ludeon.RimWorld.Ideology">Darktorch</li>
+							<li MayRequire="Ludeon.RimWorld.Ideology">DarktorchFungus</li>
+						</defs>
+						<offsetPerBuilding>0.01</offsetPerBuilding>
+						<radius>9.9</radius>
+						<maxBuildings>8</maxBuildings>
+						<explanationKey>MeditationFocusPerFlame</explanationKey>
+						<explanationKeyAbstract>MeditationFocusPerFlameAbstract</explanationKeyAbstract>
+					</li>
+				</offsets>
+			</li>
+		</comps>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
+	
+	<ThingDef ParentName="DeathrestBuildingHemogenFueled">
+		<defName>MB_NecrarchPentagram</defName>
+		<label>soul pentagram</label>
+		<description>PLACEHOLDER</description>
+		<graphicData>
+			<texPath>Things/Building/Misc/Necrarch/DarkPentagram</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3, 3)</drawSize>
+			<damageData>
+					<rect>(0.3,0.2,0.7,1.8)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.8</uiIconScale>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<castEdgeShadows>true</castEdgeShadows>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>4000</WorkToBuild>
+			<Mass>2</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
+		<size>(1,2)</size>
+		<costList>
+			<Steel>150</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<HemogenPack>5</HemogenPack>
+		</costList>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<descriptionHyperlinks>
+			<HediffDef>GlucosoidRush</HediffDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="CompProperties_DeathrestBindable">
+				<stackLimit>4</stackLimit>
+				<hediffToApply>GlucosoidRush</hediffToApply>
+				<soundStart>GlucosoidPump_Start</soundStart>
+				<soundEnd>GlucosoidPump_Stop</soundEnd>
+				<soundWorking>GlucosoidPump_Ambience</soundWorking>
+			</li>
+		</comps>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
+
+	<ThingDef ParentName="DeathrestBuildingHemogenFueled">
+		<defName>MB_MagusAltar</defName>
+		<label>altar of the magus</label>
+		<description>PLACEHOLDER</description>
+		<graphicData>
+			<texPath>Things/Building/Misc/Necrarch/Undead_AltarMagi</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,4)</drawSize>
+			<shadowData>
+				<volume>(0.9, 0.3, 1.8)</volume>
+			 </shadowData>
+			 <damageData>
+				<rect>(0.1,0.1,0.9,1.8)</rect>
+			 </damageData>
+		</graphicData>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<uiIconScale>0.5</uiIconScale>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>30000</WorkToBuild>
+			<Beauty>100</Beauty>
+			<Mass>50</Mass>
+			<Flammability>0.4</Flammability>
+		</statBases>
+		<size>(1,1)</size>
+		<costList>
+			<Gold>25</Gold>
+			<HemogenPack>5</HemogenPack>
+		</costList>
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+			<li>DankPyon_RawWood</li>
+			<li>Woody</li>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<descriptionHyperlinks>
+			<HediffDef>PsychofluidRush</HediffDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="CompProperties_DeathrestBindable">
+				<stackLimit>4</stackLimit>
+				<hediffToApply>PsychofluidRush</hediffToApply>
+				<soundStart>PsychofluidPump_Start</soundStart>
+				<soundEnd>PsychofluidPump_Stop</soundEnd>
+				<soundWorking>PsychofluidPump_Ambience</soundWorking>
+			</li>
+		</comps>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
+ 
+</Defs>

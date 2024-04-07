@@ -37,7 +37,7 @@ namespace MedievalBiotech
             }
             if (offset > 0f && applyStatFactor)
             {
-                offset *= pawn.GetStatValue(StatDefOf.HemogenGainFactor, true, -1);
+                offset *= pawn.GetStatValue(MB_DefOf.SoulGainFactor, true, -1);
             }
             Pawn_GeneTracker genes = pawn.genes;
             Gene_SoulDrain gene_SoulDrain = (genes != null) ? genes.GetFirstGeneOfType<Gene_SoulDrain>() : null;

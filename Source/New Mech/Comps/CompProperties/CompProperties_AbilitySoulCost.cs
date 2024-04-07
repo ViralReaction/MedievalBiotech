@@ -18,7 +18,7 @@ namespace MedievalBiotech
 
         public override IEnumerable<string> ExtraStatSummary()
         {
-            yield return "AbilitySoulCost".Translate() + ": " + Mathf.RoundToInt(this.soulCost * 100f);
+            yield return "DankPyon_AbilitySoulCost".Translate() + ": " + Mathf.RoundToInt(this.soulCost * 100f);
             yield break;
         }
 

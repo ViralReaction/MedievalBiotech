@@ -7,7 +7,7 @@
 		<description>Carriers of this gene have a reserve of dark magical strength powered by souls. dark arcana can be gained by consuming the souls of the unfortunate and spent in various ways, all of which are unlocked by other genes.\n\nCarriers lose 2 dark arcana per day from magical entropy.</description>
 		<geneClass>MedievalBiotech.Gene_Soul</geneClass>
 		<resourceGizmoType>MedievalBiotech.GeneGizmo_ResourceSoulStarve</resourceGizmoType>
-		<resourceLabel>dark arcana</resourceLabel>
+		<resourceLabel>Dark Arcana</resourceLabel>
 		<resourceGizmoThresholds>
 			<li>0.25</li>
 			<li>0.5</li>

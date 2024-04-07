@@ -289,6 +289,15 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GlucosoidPump"]/defaultPlacingRot</xpath>
+		<value>
+			<defaultPlacingRot>North</defaultPlacingRot>
+		</value>
+	</Operation>
+	
+	
+
 	<!-- ===== Hemogen Amplifier (candleholder)=====-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="HemogenAmplifier"]/defaultPlacingRot</xpath>

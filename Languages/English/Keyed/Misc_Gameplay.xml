@@ -17,4 +17,7 @@ Once the gene potion bank is fueled. it will slowly reverse the deterioration of
 	<DankPyon_InstallBloodChaliceHemogenRequired>Missing required gene</DankPyon_InstallBloodChaliceHemogenRequired>
 	<DankPyon_InstallNecronomiconHemogenRequired></DankPyon_InstallNecronomiconHemogenRequired>
 
+	<!-- Ability -->
+	<DankPyon_AbilitySoulCost>Soul cost</DankPyon_AbilitySoulCost>
+
 </LanguageData>
