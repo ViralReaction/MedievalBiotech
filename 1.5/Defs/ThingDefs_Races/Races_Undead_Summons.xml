@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
 	<ThingDef Name="MB_LightUndeadSummon" ParentName="BaseMechanoid" Abstract="True">
 		<statBases>
 			<MarketValue>800</MarketValue>
@@ -7,12 +8,10 @@
 			<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.20</ArmorRating_Sharp>
 			<MechEnergyLossPerHP>0.66</MechEnergyLossPerHP>
-
 			<Flammability>1</Flammability>
 			<ComfyTemperatureMin>-105</ComfyTemperatureMin>
-      		<ComfyTemperatureMax>45</ComfyTemperatureMax>
+			<ComfyTemperatureMax>45</ComfyTemperatureMax>
 		</statBases>
-
 		<race>
 			<body>MB_Body_Restless</body>
 			<baseHealthScale>1.5</baseHealthScale>
@@ -25,14 +24,11 @@
 			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 			<mechWeightClass>Light</mechWeightClass>
 		</race>
-
 		<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
-
 		<butcherProducts>
 			<!--MB_GhoulFlesh>40</MB_GhoulFlesh-->
 			<Steel>10</Steel>
 		</butcherProducts>
-
 		<tools>
 			<li>
 				<label>head</label>
@@ -45,7 +41,7 @@
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 			</li>
 		</tools>
-    </ThingDef>
+	</ThingDef>
 
 	<!-- Skeleton -->
 	<ThingDef Name="MB_LightSkeletonSummon" ParentName="MB_LightUndeadSummon" Abstract="True">
@@ -58,9 +54,8 @@
 
 			<Flammability>0</Flammability>
 			<ComfyTemperatureMin>-105</ComfyTemperatureMin>
-      		<ComfyTemperatureMax>100</ComfyTemperatureMax>
+			<ComfyTemperatureMax>100</ComfyTemperatureMax>
 		</statBases>
-
 		<race>
 			<body>MB_Body_Skeleton</body>
 			<baseHealthScale>1</baseHealthScale>
@@ -73,40 +68,39 @@
 			<!--MB_GhoulFlesh>40</MB_GhoulFlesh-->
 			<Steel>10</Steel>
 		</butcherProducts>
-    </ThingDef>
-
-    <PawnKindDef Name="MB_LightUndeadSummonKind" ParentName="BaseMechanoidKind" Abstract="True">
-		<defaultFactionType>Mechanoid</defaultFactionType> <!-- Change to undead cult -->
+	</ThingDef>
+	<PawnKindDef Name="MB_LightUndeadSummonKind" ParentName="BaseMechanoidKind" Abstract="True">
+		<defaultFactionType>Mechanoid</defaultFactionType><!-- Change to undead cult -->
 		<weaponMoney>9999~9999</weaponMoney>
 		<combatPower>10</combatPower>
-		<weaponTags></weaponTags>
+		<weaponTags/>
 		<techHediffsChance>1</techHediffsChance>
 		<techHediffsMoney>9999~9999</techHediffsMoney>
 		<controlGroupPortraitZoom>1.8</controlGroupPortraitZoom>
-    </PawnKindDef>
+	</PawnKindDef>
 
-	<!-- ==================== Summons ==================== -->    
-    <!-- ========== Restless ========== -->    
-    <ThingDef ParentName="MB_LightUndeadSummon">
-      <defName>MB_Undead_Restless</defName>
-      <label>restless</label>
-      <description>PLACEHOLDER</description>
-      <statBases>
-	  	<MarketValue>800</MarketValue>
-        <MoveSpeed>4.0</MoveSpeed>
-      </statBases>
-      <race>
-        <lifeStageAges>
-			<li>
-				<def>MechanoidFullyFormed</def>
-				<minAge>0</minAge>
-				<soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
-				<soundDeath>Pawn_Mech_Militor_Death</soundDeath>
-				<soundCall>Pawn_Mech_Militor_Call</soundCall>
-			</li>
-        </lifeStageAges>
-      </race>
-    </ThingDef>
+	<!-- ==================== Summons ==================== -->
+	<!-- ========== Restless ========== -->
+	<ThingDef ParentName="MB_LightUndeadSummon">
+		<defName>MB_Undead_Restless</defName>
+		<label>restless</label>
+		<description>PLACEHOLDER</description>
+		<statBases>
+			<MarketValue>800</MarketValue>
+			<MoveSpeed>4.0</MoveSpeed>
+		</statBases>
+		<race>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Militor_Death</soundDeath>
+					<soundCall>Pawn_Mech_Militor_Call</soundCall>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
 
 	<PawnKindDef ParentName="MB_LightUndeadSummonKind">
 		<defName>MB_Undead_Restless</defName>
@@ -121,35 +115,35 @@
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.50</drawSize>
 					<shadowData>
-					<volume>(0.3, 0.4, 0.3)</volume>
-					<offset>(0,0,-0.25)</offset>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
 					</shadowData>
 				</bodyGraphicData>
 			</li>
 		</lifeStages>
-    </PawnKindDef>
+	</PawnKindDef>
 
-	<!-- ========== Skeleton ========== -->    
-    <ThingDef ParentName="MB_LightSkeletonSummon">
-      <defName>MB_Undead_Skeleton</defName>
-      <label>skeleton</label>
-      <description>PLACEHOLDER</description>
-      <statBases>
-	  	<MarketValue>1750</MarketValue>
-        <MoveSpeed>4.6</MoveSpeed>
-      </statBases>
-      <race>
-        <lifeStageAges>
-			<li>
-				<def>MechanoidFullyFormed</def>
-				<minAge>0</minAge>
-				<soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
-				<soundDeath>Pawn_Mech_Militor_Death</soundDeath>
-				<soundCall>Pawn_Mech_Militor_Call</soundCall>
-			</li>
-        </lifeStageAges>
-      </race>
-    </ThingDef>
+	<!-- ========== Skeleton ========== -->
+	<ThingDef ParentName="MB_LightSkeletonSummon">
+		<defName>MB_Undead_Skeleton</defName>
+		<label>skeleton</label>
+		<description>PLACEHOLDER</description>
+		<statBases>
+			<MarketValue>1750</MarketValue>
+			<MoveSpeed>4.6</MoveSpeed>
+		</statBases>
+		<race>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Militor_Death</soundDeath>
+					<soundCall>Pawn_Mech_Militor_Call</soundCall>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
 
 	<PawnKindDef ParentName="MB_LightUndeadSummonKind">
 		<defName>MB_Undead_Skeleton</defName>
@@ -164,11 +158,12 @@
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.50</drawSize>
 					<shadowData>
-					<volume>(0.3, 0.4, 0.3)</volume>
-					<offset>(0,0,-0.25)</offset>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
 					</shadowData>
 				</bodyGraphicData>
 			</li>
 		</lifeStages>
-    </PawnKindDef>
+	</PawnKindDef>
+
 </Defs>

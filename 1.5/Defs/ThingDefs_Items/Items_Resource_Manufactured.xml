@@ -80,7 +80,7 @@
 		</recipeMaker>
 		<costList>
 			<Steel>50</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<DankPyon_ComponentBasic>2</DankPyon_ComponentBasic>
 		</costList>
 	</ThingDef>
 
@@ -252,31 +252,15 @@
 			<texPath>Things/Item/Resource/CorruptedSoulBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<techHediffsTags>
-			<li>SubcoreBasic</li>
-		</techHediffsTags>
+		<!-- <techHediffsTags> -->
+			<!-- <li>SubcoreBasic</li> -->
+		<!-- </techHediffsTags> -->
 		<statBases>
 			<WorkToMake>3000</WorkToMake>
 		</statBases>
-		<recipeMaker>
-			<researchPrerequisite>DankPyon_Artifice</researchPrerequisite>
-			<workSpeedStat>SubcoreEncodingSpeed</workSpeedStat>
-			<workSkill>Crafting</workSkill>
-			<recipeUsers>
-				<li>SubcoreEncoder</li>
-			</recipeUsers>
-			<mechanitorOnlyRecipe>true</mechanitorOnlyRecipe>
-			<unfinishedThingDef>UnfinishedSubcore</unfinishedThingDef>
-			<soundWorking>SubcoreEncoder_Working</soundWorking>
-		</recipeMaker>
-		<costList>
-			<Steel>50</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
-		</costList>
-
 		<ingestible>
 			<outcomeDoers>
-				<li Class="IngestionOutcomeDoer_OffsetHemogen">
+				<li Class="MedievalBiotech.IngestionOutcomeDoer_OffsetSoul">
 					<offset>0.2</offset>
 				</li>
 			</outcomeDoers>
@@ -294,10 +278,9 @@
 		<statBases>
 			<MarketValue>300</MarketValue>
 		</statBases>
-
 		<ingestible>
 			<outcomeDoers>
-				<li Class="IngestionOutcomeDoer_OffsetHemogen">
+				<li Class="MedievalBiotech.IngestionOutcomeDoer_OffsetSoul">
 					<offset>0.4</offset>
 				</li>
 			</outcomeDoers>
@@ -315,13 +298,13 @@
 		<statBases>
 			<MarketValue>1000</MarketValue>
 		</statBases>
-
 		<ingestible>
 			<outcomeDoers>
-				<li Class="IngestionOutcomeDoer_OffsetHemogen">
+				<li Class="MedievalBiotech.IngestionOutcomeDoer_OffsetSoul">
 					<offset>2.0</offset>
 				</li>
 			</outcomeDoers>
 		</ingestible>
 	</ThingDef>
+
 </Defs>

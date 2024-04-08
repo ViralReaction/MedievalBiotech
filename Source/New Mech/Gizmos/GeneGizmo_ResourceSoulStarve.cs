@@ -57,17 +57,17 @@ namespace MedievalBiotech
 
         public override void DrawHeader(Rect headerRect, ref bool mouseOverElement)
         {
-            Gene_Hemogen hemogenGene;
-            if (this.IsDraggable && (hemogenGene = (this.gene as Gene_Hemogen)) != null)
+            Gene_Soul soulGene;
+            if (this.IsDraggable && (soulGene = (this.gene as Gene_Soul)) != null)
             {
                 headerRect.xMax -= 24f;
                 Rect rect = new Rect(headerRect.xMax, headerRect.y, 24f, 24f);
-                Widgets.DefIcon(rect, ThingDefOf.HemogenPack, null, 1f, null, false, null, null, null);
-                GUI.DrawTexture(new Rect(rect.center.x, rect.y, rect.width / 2f, rect.height / 2f), hemogenGene.hemogenPacksAllowed ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex);
+                Widgets.DefIcon(rect, MB_DefOf.MB_CorruptedSoulGemBasic, null, 1f, null, false, null, null, null);
+                GUI.DrawTexture(new Rect(rect.center.x, rect.y, rect.width / 2f, rect.height / 2f), soulGene.soulGemsAllowed ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex);
                 if (Widgets.ButtonInvisible(rect, true))
                 {
-                    hemogenGene.hemogenPacksAllowed = !hemogenGene.hemogenPacksAllowed;
-                    if (hemogenGene.hemogenPacksAllowed)
+                    soulGene.soulGemsAllowed = !soulGene.soulGemsAllowed;
+                    if (soulGene.soulGemsAllowed)
                     {
                         SoundDefOf.Tick_High.PlayOneShotOnCamera(null);
                     }
@@ -79,8 +79,8 @@ namespace MedievalBiotech
                 if (Mouse.IsOver(rect))
                 {
                     Widgets.DrawHighlight(rect);
-                    string onOff = (hemogenGene.hemogenPacksAllowed ? "On" : "Off").Translate().ToString().UncapitalizeFirst();
-                    TooltipHandler.TipRegion(rect, () => "AutoTakeHemogenDesc".Translate(this.gene.pawn.Named("PAWN"), hemogenGene.PostProcessValue(hemogenGene.targetValue).Named("MIN"), onOff.Named("ONOFF")).Resolve(), 828267373);
+                    string onOff = (soulGene.soulGemsAllowed ? "On" : "Off").Translate().ToString().UncapitalizeFirst();
+                    TooltipHandler.TipRegion(rect, () => "MB_AutoTakeSoulDesc".Translate(this.gene.pawn.Named("PAWN"), soulGene.PostProcessValue(soulGene.targetValue).Named("MIN"), onOff.Named("ONOFF")).Resolve(), 828267373);
                     mouseOverElement = true;
                 }
             }
@@ -95,11 +95,11 @@ namespace MedievalBiotech
             {
                 if (this.gene.targetValue <= 0f)
                 {
-                    text += "NeverConsumeHemogen".Translate().ToString();
+                    text += "MB_NeverConsumeSoul".Translate().ToString();
                 }
                 else
                 {
-                    text = text + ("ConsumeHemogenBelow".Translate() + ": ") + this.gene.PostProcessValue(this.gene.targetValue);
+                    text = text + ("MB_ConsumeSoulBelow".Translate() + ": ") + this.gene.PostProcessValue(this.gene.targetValue);
                 }
             }
             if (!this.drainGenes.NullOrEmpty<IGeneResourceDrain>())

@@ -2,64 +2,180 @@
 <Defs>
 
 	<!-- Mech gestators -->
-	<!-- Mech gestators -->
-	<ThingDef Abstract="True" Name="DankPyon_MechGestatorBase" ParentName="BuildingBase">
-		<thingClass>Building_MechGestator</thingClass>
-		<containedPawnsSelectable>true</containedPawnsSelectable>
-		<tickerType>Normal</tickerType>
-		<drawerType>MapMeshAndRealTime</drawerType>
-		<altitudeLayer>Building</altitudeLayer>
-		<passability>PassThroughOnly</passability>
-		<fillPercent>0.5</fillPercent>
-		<hasInteractionCell>true</hasInteractionCell>
-		<castEdgeShadows>true</castEdgeShadows>
-		<pathCost>42</pathCost>
-		<surfaceType>Item</surfaceType>
-		<inspectorTabs>
-			<li>ITab_Bills</li>
-		</inspectorTabs>
-		<building>
-			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
-			<ai_chillDestination>false</ai_chillDestination>
-			<buildingTags>
-				<li>Production</li>
-				<li>Biotech</li>
-			</buildingTags>
-		</building>
-		<designationCategory>MB_PipeNetworks</designationCategory>
-		<uiOrder>2400</uiOrder>
-		<defaultPlacingRot>South</defaultPlacingRot>
-		<placeWorkers>
-			<li>PlaceWorker_MechGestatorTop</li>
-		</placeWorkers>
-		<comps>
-			<li Class="CompProperties_Flickable"/>
-		</comps>
-	</ThingDef>
+	<!-- <ThingDef Abstract="True" Name="MB_MechGestatorBase" ParentName="MechGestatorBase"> -->
+		<!-- <techLevel>Medieval</techLevel> -->
+	<!-- </ThingDef> -->
+	
+	<ThingDef Abstract="True" Name="MB_MechGestatorBase" ParentName="BuildingBase">
+    <thingClass>Building_MechGestator</thingClass>
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <hasInteractionCell>true</hasInteractionCell>
+    <castEdgeShadows>true</castEdgeShadows>
+    <pathCost>42</pathCost>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <ai_chillDestination>false</ai_chillDestination>
+      <buildingTags>
+        <li>Production</li>
+        <li>Biotech</li>
+      </buildingTags>
+    </building>
+    <designationCategory>Biotech</designationCategory>
+    <uiOrder>2400</uiOrder>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <placeWorkers>
+      <li>PlaceWorker_MechGestatorTop</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+	<techLevel>Medieval</techLevel>
+  </ThingDef>
 
-	<ThingDef ParentName="DankPyon_MechGestatorBase">
-		<defName>DankPyon_ArtificeGestator</defName>
-		<label>artificing platform</label>
+	<!-- <ThingDef ParentName="MB_MechGestatorBase"> -->
+	<!-- <defName>MB_ArtificeGestator</defName> -->
+	<!-- <label>artificing platform</label> -->
+	<!-- <description>A tank of mechanite-rich fluid with support tubes for feeding in materials and nutrients. Mechanitors can use it to produce new mechanoids or to resurrect dead mechanoids. This basic type of mech gestator is only capable of generating light-weight mechs.\n\nThe process uses harsh chemicals which are stored in toxic wastepacks. Haulers must remove the wastepacks from time to time.</description> -->
+	<!-- <graphicData> -->
+	<!-- <texPath>Things/Building/Production/MechGestatorStandard</texPath> -->
+	<!-- <graphicClass>Graphic_Multi</graphicClass> -->
+	<!-- <drawSize>(5.6,4)</drawSize> -->
+	<!-- <shadowData> -->
+	<!-- <volume>(3, 2, 1.9)</volume> -->
+	<!-- </shadowData> -->
+	<!-- </graphicData> -->
+	<!-- <uiIconPath>Things/Building/Production/MechGestatorStandard_MenuIcon</uiIconPath> -->
+	<!-- <uiIconScale>1.85</uiIconScale> -->
+	<!-- <interactionCellOffset>(1,0,2)</interactionCellOffset> -->
+	<!-- <recipes> -->
+	<!-- <li>MB_Artifice_Lifter</li> -->
+	<!-- <li>MB_Artifice_Constructoid</li> -->
+	<!-- <li>MB_Artifice_Agrihand</li> -->
+	<!-- <li>MB_Artifice_Cleansweeper</li> -->
+	<!-- <li>MB_Artifice_Paramedic</li> -->
+	<!-- <li>MB_Artifice_Militor</li> -->
+	<!-- <li>MB_ResurrectLightArtifice</li> -->
+	<!-- </recipes> -->
+	<!-- <statBases> -->
+	<!-- <MaxHitPoints>250</MaxHitPoints> -->
+	<!-- <WorkToBuild>8000</WorkToBuild> -->
+	<!-- <Mass>25</Mass> -->
+	<!-- <Flammability>0.5</Flammability> -->
+	<!-- </statBases> -->
+	<!-- <size>(3,2)</size> -->
+	<!-- <costList> -->
+	<!-- <Steel>150</Steel> -->
+	<!-- <DankPyon_ComponentBasic>3</DankPyon_ComponentBasic> -->
+	<!-- </costList> -->
+	<!-- <researchPrerequisites> -->
+	<!-- <li>MB_Artifice</li> -->
+	<!-- </researchPrerequisites> -->
+	<!-- <building> -->
+	<!-- <barDrawData> -->
+	<!-- <north> -->
+	<!-- <preRotationOffset>(-1.06, 0.91)</preRotationOffset> -->
+	<!-- <size>(0.7, 0.13)</size> -->
+	<!-- </north> -->
+	<!-- <south> -->
+	<!-- <preRotationOffset>(-1.06, 0.82)</preRotationOffset> -->
+	<!-- <size>(0.7, 0.13)</size> -->
+	<!-- </south> -->
+	<!-- <east> -->
+	<!-- <preRotationOffset>(1.06, -0.97)</preRotationOffset> -->
+	<!-- <size>(0.7, 0.13)</size> -->
+	<!-- </east> -->
+	<!-- <west> -->
+	<!-- <preRotationOffset>(-1.06, -0.97)</preRotationOffset> -->
+	<!-- <size>(0.7, 0.13)</size> -->
+	<!-- </west> -->
+	<!-- </barDrawData> -->
+	<!-- <formingGraphicData> -->
+	<!-- <texPath>Things/Pawn/Mechanoid/HalfGestatedMechSmall</texPath> -->
+	<!-- <graphicClass>Graphic_Single</graphicClass> -->
+	<!-- <drawSize>(1,1)</drawSize> -->
+	<!-- </formingGraphicData> -->
+	<!-- <formingMechPerRotationOffset> -->
+	<!-- <li>(0, 0, 0.45)</li> -->
+	<!-- <li>(0, 0, 0.45)</li> -->
+	<!-- <li>(0, 0, 0.45)</li> -->
+	<!-- <li>(0, 0, 0.45)</li> -->
+	<!-- </formingMechPerRotationOffset> -->
+	<!-- <mechGestatorCylinderGraphic> -->
+	<!-- <texPath>Things/Building/Production/MechGestatorStandardGlass</texPath> -->
+	<!-- <graphicClass>Graphic_Multi</graphicClass> -->
+	<!-- <drawSize>(5.6,4)</drawSize> -->
+	<!-- <shaderType>Transparent</shaderType> -->
+	<!-- </mechGestatorCylinderGraphic> -->
+	<!-- <mechGestatorTopGraphic> -->
+	<!-- <texPath>Things/Building/Production/MechGestatorStandardTop</texPath> -->
+	<!-- <graphicClass>Graphic_Multi</graphicClass> -->
+	<!-- <drawSize>(5.6,4)</drawSize> -->
+	<!-- </mechGestatorTopGraphic> -->
+	<!-- <gestatorFormingMote> -->
+	<!-- <north>MechGestatorForming_North</north> -->
+	<!-- <east>MechGestatorForming_East</east> -->
+	<!-- <west>MechGestatorForming_East</west> -->
+	<!-- <south>MechGestatorForming_South</south> -->
+	<!-- </gestatorFormingMote> -->
+	<!-- <gestatorCycleCompleteMote> -->
+	<!-- <north>MechGestatorCycleComplete_North</north> -->
+	<!-- <east>MechGestatorCycleComplete_East</east> -->
+	<!-- <west>MechGestatorCycleComplete_East</west> -->
+	<!-- <south>MechGestatorCycleComplete_South</south> -->
+	<!-- </gestatorCycleCompleteMote> -->
+	<!-- <gestatorFormedMote> -->
+	<!-- <north>MechGestatorFormed_North</north> -->
+	<!-- <east>MechGestatorFormed_East</east> -->
+	<!-- <west>MechGestatorFormed_East</west> -->
+	<!-- <south>MechGestatorFormed_South</south> -->
+	<!-- </gestatorFormedMote> -->
+	<!-- </building> -->
+	<!-- <comps> -->
+	<!-- <li Class="PipeSystem.CompProperties_ResourceTrader"> -->
+	<!-- <pipeNet>MB_SteamNet</pipeNet> -->
+	<!-- <consumptionPerTick>5</consumptionPerTick> -->
+	<!-- </li> -->
+	<!-- <li Class="CompProperties_Power"> -->
+	<!-- <transmitsPower>true</transmitsPower> -->
+	<!-- <compClass>PipeSystem.CompPowerPlantNeedResource</compClass> -->
+	<!-- <basePowerConsumption>-1000</basePowerConsumption> -->
+	<!-- </li> -->
+	<!-- </comps> -->
+	<!-- </ThingDef> -->
+	
+	<ThingDef ParentName="MB_MechGestatorBase">
+		<defName>MB_ArtificeGestator</defName>
+		<label>artifice mech gestator</label>
 		<description>A tank of mechanite-rich fluid with support tubes for feeding in materials and nutrients. Mechanitors can use it to produce new mechanoids or to resurrect dead mechanoids. This basic type of mech gestator is only capable of generating light-weight mechs.\n\nThe process uses harsh chemicals which are stored in toxic wastepacks. Haulers must remove the wastepacks from time to time.</description>
 		<graphicData>
-			<texPath>Things/Building/Production/MechGestatorStandard</texPath>
+			<texPath>Things/Building/Production/ArtificeConstructPlatform</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(5.6,4)</drawSize>
 			<shadowData>
 				<volume>(3, 2, 1.9)</volume>
 			</shadowData>
 		</graphicData>
-		<uiIconPath>Things/Building/Production/MechGestatorStandard_MenuIcon</uiIconPath>
+		<uiIconPath>Things/Building/Production/ArtificeConstructPlatform_south</uiIconPath>
 		<uiIconScale>1.85</uiIconScale>
 		<interactionCellOffset>(1,0,2)</interactionCellOffset>
 		<recipes>
-			<li>DankPyon_Artifice_Lifter</li>
-			<li>DankPyon_Artifice_Constructoid</li>
-			<li>DankPyon_Artifice_Agrihand</li>
-			<li>DankPyon_Artifice_Cleansweeper</li>
-			<li>DankPyon_Artifice_Paramedic</li>
-			<li>DankPyon_ResurrectLightArtifice</li>
+			<li>MB_Artifice_Lifter</li>
+			<li>MB_Artifice_Constructoid</li>
+			<li>MB_Artifice_Agrihand</li>
+			<li>MB_Artifice_Cleansweeper</li>
+			<li>MB_Artifice_Paramedic</li>
+			<li>MB_Artifice_Militor</li>
+			<li>MB_ResurrectLightArtifice</li>
 		</recipes>
 		<statBases>
 			<MaxHitPoints>250</MaxHitPoints>
@@ -73,7 +189,7 @@
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<researchPrerequisites>
-			<li>DankPyon_Artifice</li>
+			<li>MB_Artifice</li>
 		</researchPrerequisites>
 		<building>
 			<barDrawData>
@@ -138,7 +254,7 @@
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<pipeNet>MB_SteamNet</pipeNet>
-				<consumptionPerTick>3</consumptionPerTick>
+				<consumptionPerTick>5</consumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
 				<transmitsPower>true</transmitsPower>
@@ -146,11 +262,12 @@
 				<basePowerConsumption>-1000</basePowerConsumption>
 			</li>
 		</comps>
+		<designationCategory>MB_PipeNetworks</designationCategory>
 	</ThingDef>
 
 	<!-- Subcore -->
 	<ThingDef ParentName="BenchBase">
-		<defName>DankPyon_SubcoreEncoder</defName>
+		<defName>MB_SubcoreEncoder</defName>
 		<label>gem infuser</label>
 		<description>A work station where an artificer can craft basic-tier soul gems. Soul gems are the brains of automatons, and one is required to craft any automaton. Basic soul gems can only be used in simple basic-tier automatons.\n\nHigher tier soul gems can be created by building a subcore softscanner or a subcore ripscanner.</description>
 		<thingClass>Building_WorkTable</thingClass>
@@ -184,10 +301,10 @@
 		<size>(3,2)</size>
 		<costList>
 			<Steel>100</Steel>
-			<ComponentIndustrial>3</ComponentIndustrial>
+			<DankPyon_ComponentBasic>3</DankPyon_ComponentBasic>
 		</costList>
 		<researchPrerequisites>
-			<li>DankPyon_Artifice</li>
+			<li>MB_Artifice</li>
 		</researchPrerequisites>
 		<hasInteractionCell>true</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
@@ -225,7 +342,7 @@
 		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
-	<ThingDef Abstract="True" Name="DankPyon_SubcoreScannerBase" ParentName="BuildingBase">
+	<ThingDef Abstract="True" Name="MB_SubcoreScannerBase" ParentName="BuildingBase">
 		<thingClass>Building_SubcoreScanner</thingClass>
 		<containedPawnsSelectable>true</containedPawnsSelectable>
 		<altitudeLayer>Building</altitudeLayer>
@@ -255,7 +372,7 @@
 				<li>
 					<filter>
 						<thingDefs>
-							<li>ComponentIndustrial</li>
+							<li>DankPyon_ComponentBasic</li>
 						</thingDefs>
 					</filter>
 					<count>4</count>
@@ -275,7 +392,8 @@
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<pipeNet>MB_SteamNet</pipeNet>
-				<consumptionPerTick>3</consumptionPerTick>
+				<consumptionPerTick>5</consumptionPerTick>
+				<idleConsumptionPerTick>1</idleConsumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
 				<transmitsPower>true</transmitsPower>
@@ -289,8 +407,8 @@
 		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
-	<ThingDef ParentName="DankPyon_SubcoreScannerBase">
-		<defName>DankPyon_SubcoreSoftscanner</defName>
+	<ThingDef ParentName="MB_SubcoreScannerBase">
+		<defName>MB_SubcoreSoftscanner</defName>
 		<label>amplified gem infuser</label>
 		<description>PLACEHOLDER</description>
 		<graphicData>
@@ -304,10 +422,10 @@
 		<costList>
 			<Steel>200</Steel>
 			<Plasteel>50</Plasteel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<DankPyon_ComponentBasic>4</DankPyon_ComponentBasic>
 		</costList>
 		<researchPrerequisites>
-			<li>DankPyon_Artifice</li>
+			<li>MB_Artifice</li>
 		</researchPrerequisites>
 		<building>
 			<subcoreScannerOutputDef>SubcoreRegular</subcoreScannerOutputDef>
@@ -321,8 +439,8 @@
 		<techLevel>Medieval</techLevel>
 	</ThingDef>
   
-	<ThingDef ParentName="DankPyon_SubcoreScannerBase">
-		<defName>DankPyon_SubcoreRipscanner</defName>
+	<ThingDef ParentName="MB_SubcoreScannerBase">
+		<defName>MB_SubcoreRipscanner</defName>
 		<label>soul harvester</label>
 		<description>PLACEHOLDER</description>
 		<graphicData>
@@ -336,10 +454,10 @@
 		<costList>
 			<Steel>200</Steel>
 			<Plasteel>150</Plasteel>
-			<ComponentIndustrial>6</ComponentIndustrial>
+			<DankPyon_ComponentBasic>6</DankPyon_ComponentBasic>
 		</costList>
 		<researchPrerequisites>
-			<li>DankPyon_Artifice</li>
+			<li>MB_Artifice</li>
 		</researchPrerequisites>
 		<building>
 			<subcoreScannerOutputDef>SubcoreHigh</subcoreScannerOutputDef>
@@ -354,7 +472,7 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="BuildingBase">
-		<defName>DankPyon_BandNode</defName>
+		<defName>MB_BandNode</defName>
 		<label>control amplifier</label>
 		<description>PLACEHOLDER</description>
 		<tickerType>Normal</tickerType>
@@ -391,15 +509,15 @@
 		<size>(2,2)</size>
 		<costList>
 			<Steel>200</Steel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<DankPyon_ComponentBasic>4</DankPyon_ComponentBasic>
 		</costList>
 		<researchPrerequisites>
-			<li>DankPyon_Artifice</li>
+			<li>MB_Artifice</li>
 		</researchPrerequisites>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<pipeNet>MB_SteamNet</pipeNet>
-				<consumptionPerTick>3</consumptionPerTick>
+				<consumptionPerTick>1</consumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
 				<transmitsPower>true</transmitsPower>

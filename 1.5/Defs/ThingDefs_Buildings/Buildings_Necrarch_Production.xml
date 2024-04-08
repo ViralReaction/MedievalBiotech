@@ -88,7 +88,7 @@
 		<designationCategory>Production</designationCategory>
 		<costList>
 			<Steel>150</Steel>
-			<ComponentIndustrial>6</ComponentIndustrial>
+			<DankPyon_ComponentBasic>6</DankPyon_ComponentBasic>
 			<HemogenPack>5</HemogenPack>
 		</costList>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>

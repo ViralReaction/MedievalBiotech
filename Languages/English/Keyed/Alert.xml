@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+	<!-- Low Soul Energy -->
+	<MB_AlertLowSoulEnergy>Low dark arcana</MB_AlertLowSoulEnergy>
+	<MB_AlertLowSoulEnergyDesc>A colonist has low dark arcana. At zero dark arcana, they will develop a painful craving.\n\nFeed them corrupted soul gems to prevent this. \n\nThe following colonists have low dark arcana</MB_AlertLowSoulEnergyDesc>
+	
+</LanguageData>

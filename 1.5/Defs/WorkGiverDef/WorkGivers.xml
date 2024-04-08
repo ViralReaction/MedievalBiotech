@@ -2,13 +2,13 @@
 <Defs>
 
 	<WorkGiverDef>
-		<defName>DankPyon_DoBillsMechGestator</defName>
+		<defName>MB_DoBillsMechGestator</defName>
 		<label>make artifice construct</label>
 		<giverClass>WorkGiver_DoBill</giverClass>
 		<workType>Smithing</workType>
 		<priorityInType>210</priorityInType>
 		<fixedBillGiverDefs>
-			<li>DankPyon_ArtificeGestator</li>
+			<li>MB_ArtificeGestator</li>
 		</fixedBillGiverDefs>
 		<verb>work at</verb>
 		<gerund>working at</gerund>

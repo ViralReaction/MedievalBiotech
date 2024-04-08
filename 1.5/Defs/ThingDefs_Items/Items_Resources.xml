@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
 	<ThingDef ParentName="ResourceVerbBase">
 		<defName>MB_CorruptedBone</defName>
 		<label>corrupted bone</label>
@@ -8,11 +9,9 @@
 			<texPath>Things/Item/Resource/CorruptedBone</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-
 		<equippedAngleOffset>-20</equippedAngleOffset>
 		<soundInteract>Wood_Drop</soundInteract>
 		<soundDrop>Wood_Drop</soundDrop>
-
 		<statBases>
 			<MarketValue>2.5</MarketValue>
 			<Mass>0.7</Mass>
@@ -25,7 +24,6 @@
 			<SharpDamageMultiplier>1</SharpDamageMultiplier>
 			<BluntDamageMultiplier>1</BluntDamageMultiplier>
 		</statBases>
-
 		<stuffProps>
 			<stuffAdjective>corrupted</stuffAdjective>
 			<categories>
@@ -61,4 +59,5 @@
 		</li>
 		</tools>
 	</ThingDef>
+
 </Defs>

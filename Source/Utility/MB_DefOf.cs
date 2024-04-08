@@ -18,5 +18,9 @@ namespace MedievalBiotech
 
         public static StatDef SoulGainFactor;
         public static GeneDef MB_SoulStarved;
+
+        public static ThingDef MB_CorruptedSoulGemBasic;
+        public static ThingDef MB_CorruptedSoulGemRegular;
+        public static ThingDef MB_CorruptedSoulGemHigh;
     }
 }

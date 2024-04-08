@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>/Defs/ThinkTreeDef[defName="MainColonistBehaviorCore"]/thinkRoot/subNodes/li/subNodes/li[@Class="JobGiver_GetHemogen"]</xpath>
+		<order>Append</order>
+		<value>
+			<li Class="MedievalBiotech.JobGiver_GetSoulGem" MayRequire="Ludeon.RimWorld.Biotech"/>
+		</value>
+	</Operation>
+		
+
+</Patch>

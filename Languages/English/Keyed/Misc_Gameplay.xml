@@ -5,7 +5,7 @@
 	<AlertGenebankUnpowered>Gene bank needs fuel</AlertGenebankUnpowered>
 	<AlertGenebankUnpoweredDesc>A gene potion bank does not have fuel, so the genepacks inside it are slowly deteriorating. Add insect jelly to the gene potion bank to prevent gene potions from deteriorating
 
-Once the gene potion bank is fueled. it will slowly reverse the deterioration of the gene potions inside it.</AlertGenebankUnpoweredDesc>
+Once the gene potion bank is fueled. it will slowly reverse the deterioration of the gene potions inside it.	</AlertGenebankUnpoweredDesc>
 	<MB.GenepackInactive>{0} (Inactive)</MB.GenepackInactive>
 
 	<MB_CommandToggleGas_Label>Toggle steam flow</MB_CommandToggleGas_Label>
@@ -15,9 +15,12 @@ Once the gene potion bank is fueled. it will slowly reverse the deterioration of
 	
 	<!-- Blood Chalice -->
 	<DankPyon_InstallBloodChaliceHemogenRequired>Missing required gene</DankPyon_InstallBloodChaliceHemogenRequired>
-	<DankPyon_InstallNecronomiconHemogenRequired></DankPyon_InstallNecronomiconHemogenRequired>
+	<DankPyon_InstallNecronomiconHemogenRequired/>
 
-	<!-- Ability -->
+	<!-- Soul Gene -->
 	<DankPyon_AbilitySoulCost>Soul cost</DankPyon_AbilitySoulCost>
+	<MB_AutoTakeSoulDesc>This determines whether {PAWN_nameDef} will automatically ingest soul gems when {PAWN_possessive} dark arcana is below {MIN}.\n\nAutomatic ingestion is currently {ONOFF}.</MB_AutoTakeSoulDesc>
+	<MB_ConsumeSoulBelow>Consume soul gems below</MB_ConsumeSoulBelow>
+	<MB_NeverConsumeSoul>Never consume soul gems.</MB_NeverConsumeSoul>
 
 </LanguageData>

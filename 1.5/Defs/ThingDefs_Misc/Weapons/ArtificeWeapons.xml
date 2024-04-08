@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ============================== Crossbows ========================== -->
+	<ThingDef ParentName="LightMechanoidGun">
+		<defName>MB_ArtificeCrossbow</defName>
+		<label>crossbow</label>
+		<description>A projectile launching weapon that, much like the bow, relies on a string pulled back for tension and propels a projectile upon release. However, the crossbow allows the wielder to maintain the draw thanks to the crossbow’s locking mechanism, thus making the ranged weapon both accessible to novices and powerful in combat.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/MB_ArtificeCrossbow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Bow_Recurve</soundInteract>
+		<statBases>
+			<WorkToMake>14000</WorkToMake>
+			<Mass>2.5</Mass>
+			<AccuracyTouch>0.86</AccuracyTouch>
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.67</AccuracyMedium>
+			<AccuracyLong>0.38</AccuracyLong>
+			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+		</equippedStatOffsets>
+		<weaponTags>
+			<li>MB_ArtificeCrossbow</li>
+		</weaponTags>
+		<weaponClasses>
+		  <li>Ranged</li>
+		</weaponClasses>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>DankPyon_Arrow_Crossbow</defaultProjectile>
+				<warmupTime>1.35</warmupTime>
+				<range>25.9</range>
+				<soundCast>Bow_Recurve</soundCast>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>limb</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+	</ThingDef>
+  
+</Defs>

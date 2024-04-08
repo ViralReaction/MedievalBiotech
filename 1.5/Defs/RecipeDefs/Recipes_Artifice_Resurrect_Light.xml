@@ -15,7 +15,7 @@
 	</RecipeDef>
 
 	<RecipeDef ParentName="BaseArtificeResurrectionRecipe">
-		<defName>DankPyon_ResurrectLightArtifice</defName>
+		<defName>MB_ResurrectLightArtifice</defName>
 		<label>resurrect light artifice</label>
 		<description>Resurrect a friendly artifice of the light weight class. So long as the artifice's body is not completely destroyed, it can be resurrected.</description>
 		<ingredients>
@@ -38,11 +38,12 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>Corpse_DankPyon_Artifice_Lifter</li>
-				<li>Corpse_DankPyon_Artifice_Constructoid</li>
-				<li>Corpse_DankPyon_Artifice_Agrihand</li>
-				<li>Corpse_DankPyon_Artifice_Cleansweeper</li>
-				<li>Corpse_DankPyon_Artifice_Paramedic</li>
+				<li>Corpse_MB_Artifice_Lifter</li>
+				<li>Corpse_MB_Artifice_Constructoid</li>
+				<li>Corpse_MB_Artifice_Agrihand</li>
+				<li>Corpse_MB_Artifice_Cleansweeper</li>
+				<li>Corpse_MB_Artifice_Paramedic</li>
+				<li>Corpse_MB_Artifice_Militor</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 	</RecipeDef>

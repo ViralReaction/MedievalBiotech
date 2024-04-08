@@ -12,10 +12,10 @@
 			<drawSize>(3,3)</drawSize>
 			<shadowData>
 				<volume>(0.9, 0.3, 1.8)</volume>
-			 </shadowData>
-			 <damageData>
+			</shadowData>
+			<damageData>
 				<rect>(0.1,0.1,0.9,1.8)</rect>
-			 </damageData>
+			</damageData>
 		</graphicData>
 		<altitudeLayer>BuildingOnTop</altitudeLayer>
 		<uiIconScale>0.5</uiIconScale>
@@ -49,6 +49,11 @@
 				<soundWorking>Hemopump_Ambience</soundWorking>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="MedievalBiotech.Deathrest_SoulOffset">
+				<soulGainOffset>0.25</soulGainOffset>
+			</li>
+		</modExtensions>
 		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
@@ -90,7 +95,7 @@
 				<li>MB_DreadlightCandelabra</li><!-- Increases Dark Arcana gain from sources -->
 				<li>MB_NecrarchPentagram</li><!-- Gives Glucosoid Rush -->
 				<li>MB_DeathrestIncense</li><!-- Increases Deathrest Speed -->
-				<li>MB_MagusAltar</li> <!-- Gives Psychofluid Rush -->
+				<li>MB_MagusAltar</li><!-- Gives Psychofluid Rush -->
 			</relatedBuildCommands>
 		</building>
 		<designationCategory>Biotech</designationCategory>
@@ -167,7 +172,7 @@
 		<size>(1,2)</size>
 		<costList>
 			<Steel>300</Steel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<DankPyon_ComponentBasic>4</DankPyon_ComponentBasic>
 		</costList>
 		<costStuffCount>100</costStuffCount>
 		<stuffCategories>
@@ -276,7 +281,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(3, 3)</drawSize>
 			<damageData>
-					<rect>(0.3,0.2,0.7,1.8)</rect>
+				<rect>(0.3,0.2,0.7,1.8)</rect>
 			</damageData>
 		</graphicData>
 		<uiIconScale>0.8</uiIconScale>
@@ -295,7 +300,7 @@
 		<size>(1,2)</size>
 		<costList>
 			<Steel>150</Steel>
-			<ComponentIndustrial>6</ComponentIndustrial>
+			<DankPyon_ComponentBasic>6</DankPyon_ComponentBasic>
 			<HemogenPack>5</HemogenPack>
 		</costList>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
@@ -325,10 +330,10 @@
 			<drawSize>(4,4)</drawSize>
 			<shadowData>
 				<volume>(0.9, 0.3, 1.8)</volume>
-			 </shadowData>
-			 <damageData>
+			</shadowData>
+			<damageData>
 				<rect>(0.1,0.1,0.9,1.8)</rect>
-			 </damageData>
+			</damageData>
 		</graphicData>
 		<altitudeLayer>BuildingOnTop</altitudeLayer>
 		<defaultPlacingRot>South</defaultPlacingRot>

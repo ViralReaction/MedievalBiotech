@@ -15,5 +15,28 @@
 			</li>
 		</stages>
 	</ThoughtDef>
-  
+
+	<ThoughtDef>
+		<defName>MB_SoulEnergyCraving</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>MB_SoulCraving</hediff>
+		<stages>
+			<li>
+				<label>soul energy craving</label>
+				<description>I feel an intense yearning for soul essence.</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+			<li>
+				<label>soul energy craving</label>
+				<description>I find myself irresistibly drawn to the life force of others, my desperation driving me to increasingly risky behavior in pursuit of satisfaction.</description>
+				<baseMoodEffect>-15</baseMoodEffect>
+			</li>
+			<li>
+				<label>soul energy craving</label>
+				<description>I'm consumed by an insatiable hunger, my essence withering in its absence.</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
 </Defs>

@@ -2,7 +2,7 @@
 <Defs>
 
 
-	<ThingDef Name="DankPyon_BaseMechCharger" ParentName="BuildingBase" Abstract="True">
+	<ThingDef Name="MB_BaseMechCharger" ParentName="BuildingBase" Abstract="True">
 		<thingClass>Building_MechCharger</thingClass>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>Building</altitudeLayer>
@@ -19,16 +19,13 @@
 		<uiOrder>2410</uiOrder>
 		<comps>
 			<li Class="CompProperties_Forbiddable"/>
-			<li Class="CompProperties_WasteProducer">
-				<showContentsInInspectPane>false</showContentsInInspectPane>
-			</li>
 		</comps>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
-	<ThingDef ParentName="DankPyon_BaseMechCharger">
-		<defName>DankPyon_BasicRecharger</defName>
+	<ThingDef ParentName="MB_BaseMechCharger">
+		<defName>MB_BasicRecharger</defName>
 		<label>mech recharger</label>
 		<description>Lightweight mechanoids can recharge here. During recharge, this recharger produces toxic wastepacks and stores them internally. Haulers must remove the wastepacks from time to time.</description>
 		<graphicData>
@@ -73,10 +70,10 @@
 		</building>
 		<costList>
 			<Steel>125</Steel>
-			<ComponentIndustrial>1</ComponentIndustrial>
+			<DankPyon_ComponentBasic>1</DankPyon_ComponentBasic>
 		</costList>
 		<researchPrerequisites>
-			<li>DankPyon_Artifice</li>
+			<li>MB_Artifice</li>
 		</researchPrerequisites>
 		<comps>
 			<li Class="CompProperties_ThingContainer">
@@ -87,7 +84,8 @@
 			</li>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<pipeNet>MB_SteamNet</pipeNet>
-				<consumptionPerTick>3</consumptionPerTick>
+				<consumptionPerTick>6</consumptionPerTick>
+				<idleConsumptionPerTick>1</idleConsumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
 				<transmitsPower>true</transmitsPower>
@@ -99,8 +97,8 @@
 		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
-	<ThingDef ParentName="DankPyon_BaseMechCharger">
-		<defName>DankPyon_StandardRecharger</defName>
+	<ThingDef ParentName="MB_BaseMechCharger">
+		<defName>MB_StandardRecharger</defName>
 		<label>large mech recharger</label>
 		<description>Medium, heavy, and ultraheavy mechanoids can recharge here. During recharge, this recharger produces toxic wastepacks and stores them internally. Haulers must remove the wastepacks from time to time.</description>
 		<graphicData>
@@ -148,10 +146,10 @@
 		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
 		<costList>
 			<Steel>250</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<DankPyon_ComponentBasic>2</DankPyon_ComponentBasic>
 		</costList>
 		<researchPrerequisites>
-			<li>DankPyon_Artifice</li>
+			<li>MB_Artifice</li>
 		</researchPrerequisites>
 		<comps>
 			<li Class="CompProperties_ThingContainer">
@@ -162,7 +160,8 @@
 			</li>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<pipeNet>MB_SteamNet</pipeNet>
-				<consumptionPerTick>3</consumptionPerTick>
+				<consumptionPerTick>12</consumptionPerTick>
+				<idleConsumptionPerTick>1</idleConsumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
 				<transmitsPower>true</transmitsPower>

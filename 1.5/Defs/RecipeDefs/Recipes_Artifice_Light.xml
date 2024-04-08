@@ -12,7 +12,7 @@
 	</RecipeDef>
 
 	<RecipeDef Name="LightArtificeRecipe" ParentName="MB_BaseArtificeRecipe" Abstract="True">
-		<researchPrerequisite>DankPyon_Artifice</researchPrerequisite>
+		<researchPrerequisite>MB_Artifice</researchPrerequisite>
 		<ingredients>
 			<li>
 				<filter>
@@ -25,7 +25,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SubcoreBasic</li>
+						<li>MB_SoulGemBasic</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -34,60 +34,73 @@
 	</RecipeDef>
 
 	<RecipeDef ParentName="LightArtificeRecipe">
-		<defName>DankPyon_Artifice_Lifter</defName>
+		<defName>MB_Artifice_Lifter</defName>
 		<label>gestate lifter</label>
 		<description>Gestate a lifter mechanoid.</description>
 		<products>
-			<DankPyon_Artifice_Lifter>1</DankPyon_Artifice_Lifter>
+			<MB_Artifice_Lifter>1</MB_Artifice_Lifter>
 		</products>
 		<descriptionHyperlinks>
-			<ThingDef>DankPyon_Artifice_Lifter</ThingDef>
+			<ThingDef>MB_Artifice_Lifter</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
 
 	<RecipeDef ParentName="LightArtificeRecipe">
-		<defName>DankPyon_Artifice_Constructoid</defName>
+		<defName>MB_Artifice_Constructoid</defName>
 		<label>gestate constructoid</label>
 		<description>Gestate a constructoid mechanoid.</description>
 		<products>
-			<DankPyon_Artifice_Constructoid>1</DankPyon_Artifice_Constructoid>
+			<MB_Artifice_Constructoid>1</MB_Artifice_Constructoid>
 		</products>
 		<descriptionHyperlinks>
-			<ThingDef>DankPyon_Artifice_Constructoid</ThingDef>
+			<ThingDef>MB_Artifice_Constructoid</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
 
 	<RecipeDef ParentName="LightArtificeRecipe">
-		<defName>DankPyon_Artifice_Agrihand</defName>
+		<defName>MB_Artifice_Agrihand</defName>
 		<label>gestate agrihand</label>
 		<description>Gestate an agrihand mechanoid.</description>
-		<researchPrerequisite>DankPyon_Artifice</researchPrerequisite>
+		<researchPrerequisite>MB_Artifice</researchPrerequisite>
 		<products>
-			<DankPyon_Artifice_Agrihand>1</DankPyon_Artifice_Agrihand>
+			<MB_Artifice_Agrihand>1</MB_Artifice_Agrihand>
 		</products>
 		<descriptionHyperlinks>
-			<ThingDef>DankPyon_Artifice_Agrihand</ThingDef>
+			<ThingDef>MB_Artifice_Agrihand</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
 
 	<RecipeDef ParentName="LightArtificeRecipe">
-		<defName>DankPyon_Artifice_Cleansweeper</defName>
+		<defName>MB_Artifice_Cleansweeper</defName>
 		<label>gestate cleansweeper</label>
 		<description>Gestate a cleansweeper mechanoid.</description>
-		<researchPrerequisite>DankPyon_Artifice</researchPrerequisite>
+		<researchPrerequisite>MB_Artifice</researchPrerequisite>
 		<products>
-			<DankPyon_Artifice_Cleansweeper>1</DankPyon_Artifice_Cleansweeper>
+			<MB_Artifice_Cleansweeper>1</MB_Artifice_Cleansweeper>
 		</products>
 		<descriptionHyperlinks>
-			<ThingDef>DankPyon_Artifice_Cleansweeper</ThingDef>
+			<ThingDef>MB_Artifice_Cleansweeper</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="LightArtificeRecipe">
+		<defName>MB_Artifice_Militor</defName>
+		<label>gestate militor</label>
+		<description>Gestate a cleansweeper mechanoid.</description>
+		<researchPrerequisite>MB_Artifice</researchPrerequisite>
+		<products>
+			<MB_Artifice_Militor>1</MB_Artifice_Militor>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>MB_Artifice_Militor</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
 
 	<RecipeDef ParentName="LightArtificeRecipe">
-		<defName>DankPyon_Artifice_Paramedic</defName>
+		<defName>MB_Artifice_Paramedic</defName>
 		<label>gestate paramedic</label>
 		<description>Gestate a paramedic mechanoid.</description>
-		<researchPrerequisite>DankPyon_Artifice</researchPrerequisite>
+		<researchPrerequisite>MB_Artifice</researchPrerequisite>
 		<ingredients Inherit="False">
 			<li>
 				<filter>
@@ -100,17 +113,17 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SubcoreHigh</li>
+						<li>MB_SoulGemRegular</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
 			</li>
 		</ingredients>
 		<products>
-			<DankPyon_Artifice_Paramedic>1</DankPyon_Artifice_Paramedic>
+			<MB_Artifice_Paramedic>1</MB_Artifice_Paramedic>
 		</products>
 		<descriptionHyperlinks>
-			<ThingDef>DankPyon_Artifice_Paramedic</ThingDef>
+			<ThingDef>MB_Artifice_Paramedic</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
 

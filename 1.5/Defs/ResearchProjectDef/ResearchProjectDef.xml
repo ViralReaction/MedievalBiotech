@@ -3,7 +3,7 @@
 
   <!--=========================== Artificing ==============================-->
 	<ResearchProjectDef>
-		<defName>DankPyon_Artifice</defName>
+		<defName>MB_Artifice</defName>
 		<label>artificing</label>
 		<description>Research how to craft basic artifice constructs.</description>
 		<baseCost>1000</baseCost>

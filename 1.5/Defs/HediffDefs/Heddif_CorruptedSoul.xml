@@ -5,7 +5,7 @@
 		<defName>MB_SoulCraving</defName>
 		<label>soul craving</label>
 		<description>PLACEHOLDER</description>
-		<hediffClass>Hediff_HemogenCraving</hediffClass>
+		<hediffClass>HediffWithComps</hediffClass>
 		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
 		<initialSeverity>0.01</initialSeverity>
 		<maxSeverity>1</maxSeverity>
@@ -46,7 +46,7 @@
 		</stages>
 		<comps>
 			<li Class="MedievalBiotech.HediffCompProperties_SeverityFromSoul">
-				<severityPerHourEmpty>0.05</severityPerHourEmpty>
+				<severityPerHourEmpty>0.25</severityPerHourEmpty>
 				<severityPerHourSoul>-0.1</severityPerHourSoul>
 			</li>
 		</comps>

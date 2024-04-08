@@ -311,7 +311,7 @@
 
 		<costList>
 			<Steel>15</Steel>
-			<ComponentIndustrial>1</ComponentIndustrial>
+			<DankPyon_ComponentBasic>1</DankPyon_ComponentBasic>
 		</costList>
 
 		<comps>
@@ -372,13 +372,13 @@
 
 		<costList>
 			<Steel>100</Steel>
-			<ComponentIndustrial>3</ComponentIndustrial>
+			<DankPyon_ComponentBasic>3</DankPyon_ComponentBasic>
 		</costList>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<pipeNet>MB_SteamNet</pipeNet>
 				<!-- Amount used per net tick (100 game ticks), it it's negative, it's producing -->
-				<consumptionPerTick>-1</consumptionPerTick>
+				<consumptionPerTick>-5</consumptionPerTick>
 				<!-- Ambient sound -->
 				<soundAmbientReceivingResource>ChemfuelFiredGenerator_Ambience</soundAmbientReceivingResource>
 			</li>
@@ -455,13 +455,13 @@
 		</building>
 		<costList>
 			<Steel>100</Steel>
-			<ComponentIndustrial>3</ComponentIndustrial>
+			<DankPyon_ComponentBasic>3</DankPyon_ComponentBasic>
 		</costList>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<pipeNet>MB_SteamNet</pipeNet>
 				<!-- Amount used per net tick (100 game ticks), it it's negative, it's producing -->
-				<consumptionPerTick>-5</consumptionPerTick>
+				<consumptionPerTick>-10</consumptionPerTick>
 				<!-- Ambient sound -->
 				<soundAmbientReceivingResource>ChemfuelFiredGenerator_Ambience</soundAmbientReceivingResource>
 			</li>
@@ -537,7 +537,7 @@
 		<size>(6,6)</size>
 		<costList>
 			<Steel>340</Steel>
-			<ComponentIndustrial>8</ComponentIndustrial>
+			<DankPyon_ComponentBasic>8</DankPyon_ComponentBasic>
 		</costList>
 		<tickerType>Normal</tickerType>
 		<comps>

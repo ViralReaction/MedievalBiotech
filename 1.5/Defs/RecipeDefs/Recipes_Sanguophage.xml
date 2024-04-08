@@ -39,7 +39,7 @@
 	</RecipeDef>
 
 	<RecipeDef ParentName="MB_LightSanguophageRecipe">
-		<defName>DankPyon_CreateGhoul</defName>
+		<defName>MB_CreateGhoul</defName>
 		<label>create ghoul</label>
 		<description>Gestate a militor mechanoid.</description>
 		<products>
