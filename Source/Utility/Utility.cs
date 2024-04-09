@@ -29,6 +29,26 @@ namespace MedievalBiotech
             return false;
         }
 
+        public static bool IsUndeadMech(Pawn pawn)
+        {
+            var extension = pawn.def.GetModExtension<Undead_Mech>();
+            if (extension != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool IsSanguinMech(Pawn pawn)
+        {
+            var extension = pawn.def.GetModExtension<Undead_Mech>();
+            if (extension != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public static void OffsetSoul(Pawn pawn, float offset, bool applyStatFactor = true)
         {
             if (!ModsConfig.BiotechActive)

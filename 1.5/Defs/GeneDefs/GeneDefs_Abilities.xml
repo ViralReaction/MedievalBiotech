@@ -57,8 +57,8 @@
 	<GeneDef>
 		<defName>MB_Decrepify</defName>
 		<label>decrepify</label>
-		<description>A genetic anomaly that bestows upon its bearer a sinister power to decay and wither the very essence of another's soul. </description>
-		<iconPath>UI/Icons/Genes/Gene_Curse</iconPath>
+		<description>A genetic anomaly that bestows upon its bearer a sinister power to decay and wither the very essence of another's soul.</description>
+		<iconPath>UI/Icons/Genes/Gene_Curse_Decrepify</iconPath>
 		<prerequisite>MB_SoulStarved</prerequisite>
 		<displayCategory>MB_DarkEnergy</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
@@ -67,6 +67,23 @@
 		</abilities>
 		<descriptionHyperlinks>
 			<AbilityDef>MB_Decrepify</AbilityDef>
+		</descriptionHyperlinks>
+		<biostatMet>-3</biostatMet>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>MB_UndeadVigor</defName>
+		<label>undead vigor</label>
+		<description>A genetic anomaly that allows it's bearer to channel dark energy to bolster its own strength and that of its undead minions</description>
+		<iconPath>UI/Icons/Genes/Gene_DarkSigil</iconPath>
+		<prerequisite>MB_SoulStarved</prerequisite>
+		<displayCategory>MB_DarkEnergy</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<abilities>
+			<li>MB_UndeadVigor</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>MB_UndeadVigor</AbilityDef>
 		</descriptionHyperlinks>
 		<biostatMet>-3</biostatMet>
 	</GeneDef>

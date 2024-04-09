@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>MB_Mote_UndeadVigor</defName>
+		<thingClass>MoteAttached</thingClass>
+		<altitudeLayer>LightingOverlay</altitudeLayer>
+		<drawOffscreen>true</drawOffscreen>
+		<mote>
+			<solidTime>9999999</solidTime>
+			<needsMaintenance>true</needsMaintenance>
+		</mote>
+		<graphicData>
+			<graphicClass>Graphic_Mote</graphicClass>
+			<texPath>Things/Mote/UndeadVigorAura</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<color>(64, 51, 81)</color>
+			<drawSize>10</drawSize>
+		</graphicData>
+	</ThingDef>
+	
+	<EffecterDef>
+		<defName>MB_Effecter_UndeadVigorAura</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_DrifterEmoteChance</subEffecterClass>
+				<scale>
+					<min>0.8</min>
+					<max>0.95</max>
+				</scale>
+				<chancePerTick>0.01</chancePerTick>
+				<positionRadius>0.25</positionRadius>
+				<moteDef>MB_Mote_UndeadVigorAura</moteDef>
+				<speed>
+					<min>0.18</min>
+					<max>0.18</max>
+				</speed>
+				<angle>
+					<min>10</min>
+					<max>80</max>
+				</angle>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	<ThingDef ParentName="MoteBase">
+		<defName>MB_Mote_UndeadVigorAura</defName>
+		<thingClass>MoteAttached</thingClass>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0.05</fadeInTime>
+			<fadeOutTime>0.1</fadeOutTime>
+			<solidTime>0.35</solidTime>
+		</mote>
+		<graphicData>
+			<texPath>Things/Mote/MechSparkSimple</texPath>
+			<graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+			<shaderType>GlowAnimated</shaderType>
+			<color>(0.25, 0.2, 0.32)</color>
+			<shaderParameters>
+				<_NumFrames>2</_NumFrames>
+				<_FramesPerSec>4</_FramesPerSec>
+			</shaderParameters>
+			<drawSize>(1.1, 1.1)</drawSize>
+		</graphicData>
+	</ThingDef>
+ 
+</Defs>

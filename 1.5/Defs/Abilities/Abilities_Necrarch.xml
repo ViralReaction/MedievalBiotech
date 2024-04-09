@@ -19,8 +19,8 @@
 		<targetRequired>False</targetRequired>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
 		<verbProperties>
-		  <verbClass>Verb_CastAbility</verbClass>
-		  <range>-1</range>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>-1</range>
 		</verbProperties>
 		<comps>
 			<li Class="MedievalBiotech.CompProperties_AbilitySoulCost">
@@ -117,7 +117,6 @@
 		<cooldownTicksRange>600</cooldownTicksRange>
 		<displayOrder>201</displayOrder>
 		<aiCanUse>true</aiCanUse>
-		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
 		<warmupStartSound>FireSpew_Warmup</warmupStartSound>
 		<verbProperties>
 			<verbClass>MedievalBiotech.Verb_CastAbilitySoul</verbClass>
@@ -146,7 +145,7 @@
 		<defName>MB_Decrepify</defName>
 		<label>decrepify</label>
 		<description>This powerful curse lowers movement, damage, and physical resistance.</description>
-		<iconPath>UI/Abilities/Ability_Curse</iconPath>
+		<iconPath>UI/Abilities/Ability_Curse_Decrepify</iconPath>
 		<displayOrder>202</displayOrder>
 		<hotKey>Misc1</hotKey>
 		<hostile>true</hostile>
@@ -176,229 +175,62 @@
 		</comps>
 	</AbilityDef>
 
-	<!-- <AbilityDef ParentName="AbilityTouchBase"> -->
-	<!-- <defName>Resurrect</defName> -->
-	<!-- <label>resurrect</label> -->
-	<!-- <description>Use archites in the bloodstream to infuse a corpse's body with new life, repairing degenerated cell structures and kickstarting vital functions. The older and worse-preserved the corpse is, the more likely it is that they will come back with memory loss or health conditions. This ability seems to exhaust the archites somehow, so it can only be used very rarely.</description> -->
-	<!-- <iconPath>UI/Abilities/Resurrect</iconPath> -->
-	<!-- <cooldownTicksRange>6840000~7560000</cooldownTicksRange> -->
-	<!-- <warmupMote>Mote_ResurrectAbility</warmupMote> -->
-	<!-- <warmupStartSound>Resurrect_Cast</warmupStartSound> -->
-	<!-- <category>Sanguophage</category> -->
-	<!-- <displayOrder>600</displayOrder> -->
-	<!-- <hostile>false</hostile> -->
-	<!-- <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete> -->
-	<!-- <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence> -->
-	<!-- <verbProperties> -->
-	<!-- <verbClass>Verb_CastAbilityTouch</verbClass> -->
-	<!-- <drawAimPie>false</drawAimPie> -->
-	<!-- <range>-1</range> -->
-	<!-- <warmupTime>2</warmupTime> -->
-	<!-- <soundCast>Resurrect_Resolve</soundCast> -->
-	<!-- <targetParams> -->
-	<!-- <canTargetPawns>false</canTargetPawns> -->
-	<!-- <canTargetBuildings>false</canTargetBuildings> -->
-	<!-- <canTargetCorpses>true</canTargetCorpses> -->
-	<!-- <canTargetMechs>false</canTargetMechs> -->
-	<!-- </targetParams> -->
-	<!-- </verbProperties> -->
-	<!-- <comps> -->
-	<!-- <li Class="CompProperties_Resurrect"/> -->
-	<!-- <li Class="CompProperties_AbilityHemogenCost"> -->
-	<!-- <hemogenCost>0.90</hemogenCost> -->
-	<!-- </li> -->
-	<!-- </comps> -->
-	<!-- </AbilityDef> -->
-
-	<!-- <AbilityDef> -->
-	<!-- <defName>AcidSpray</defName> -->
-	<!-- <label>acid spray</label> -->
-	<!-- <description>Spray a sticky acid substance from glands in the neck up through the mouth and all over the target area. The acid will stick to targets and burn them.</description> -->
-	<!-- <iconPath>UI/Abilities/AcidSpray</iconPath> -->
-	<!-- <cooldownTicksRange>30000</cooldownTicksRange> -->
-	<!-- <aiCanUse>true</aiCanUse> -->
-	<!-- <displayOrder>300</displayOrder> -->
-	<!-- <category>Sanguophage</category> -->
-	<!-- <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete> -->
-	<!-- <warmupStartSound>AcidSpray_Warmup</warmupStartSound> -->
-	<!-- <verbProperties> -->
-	<!-- <verbClass>Verb_CastAbility</verbClass> -->
-	<!-- <range>8.9</range> -->
-	<!-- <warmupTime>0.5</warmupTime> -->
-	<!-- <soundCast>AcidSpray_Resolve</soundCast> -->
-	<!-- <targetParams> -->
-	<!-- <canTargetLocations>true</canTargetLocations> -->
-	<!-- </targetParams> -->
-	<!-- </verbProperties> -->
-	<!-- <comps> -->
-	<!-- <li Class="CompProperties_AbilitySprayLiquid"> -->
-	<!-- <projectileDef>Proj_Acid</projectileDef> -->
-	<!-- <numCellsToHit>9</numCellsToHit> -->
-	<!-- <sprayEffecter>AcidSpray_Directional</sprayEffecter> -->
-	<!-- </li> -->
-	<!-- </comps> -->
-	<!-- </AbilityDef> -->
-	<!-- <ThingDef> -->
-	<!-- <defName>Proj_Acid</defName> -->
-	<!-- <label>acid</label> -->
-	<!-- <thingClass>Projectile_Liquid</thingClass> -->
-	<!-- <category>Projectile</category> -->
-	<!-- <tickerType>Normal</tickerType> -->
-	<!-- <altitudeLayer>Projectile</altitudeLayer> -->
-	<!-- <useHitPoints>False</useHitPoints> -->
-	<!-- <neverMultiSelect>True</neverMultiSelect> -->
-	<!-- <graphicData> -->
-	<!-- <texPath>Things/Projectile/Acid</texPath> -->
-	<!-- <graphicClass>Graphic_Random</graphicClass> -->
-	<!-- <shaderType>MoteGlow</shaderType> -->
-	<!-- <drawSize>0.85</drawSize> -->
-	<!-- </graphicData> -->
-	<!-- <projectile> -->
-	<!-- <damageDef>AcidBurn</damageDef> -->
-	<!-- <speed>25</speed> -->
-	<!-- <damageAmountBase>30</damageAmountBase> -->
-	<!-- <arcHeightFactor>0.4</arcHeightFactor> -->
-	<!-- <armorPenetrationBase>0.8</armorPenetrationBase> -->
-	<!-- <stoppingPower>1</stoppingPower> -->
-	<!-- <shadowSize>0</shadowSize> -->
-	<!-- <filth>Filth_SpentAcid</filth> -->
-	<!-- <filthCount>1</filthCount> -->
-	<!-- </projectile> -->
-	<!-- </ThingDef> -->
-
-	<!-- <AbilityDef> -->
-	<!-- <defName>FoamSpray</defName> -->
-	<!-- <label>foam spray</label> -->
-	<!-- <description>Spray thick fire-retardant foam from glands in the neck up through the mouth. The foam will cover a small area and extinguish any fire it touches.</description> -->
-	<!-- <iconPath>UI/Icons/Genes/Gene_FoamSpray</iconPath> -->
-	<!-- <charges>3</charges> -->
-	<!-- <cooldownTicksRange>30000</cooldownTicksRange> -->
-	<!-- <warmupStartSound>FoamSpray_Warmup</warmupStartSound> -->
-	<!-- <hostile>false</hostile> -->
-	<!-- <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete> -->
-	<!-- <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence> -->
-	<!-- <verbProperties> -->
-	<!-- <verbClass>Verb_CastAbility</verbClass> -->
-	<!-- <range>4.9</range> -->
-	<!-- <warmupTime>1</warmupTime> -->
-	<!-- <soundCast>FoamSpray_Resolve</soundCast> -->
-	<!-- <targetParams> -->
-	<!-- <canTargetLocations>true</canTargetLocations> -->
-	<!-- </targetParams> -->
-	<!-- </verbProperties> -->
-	<!-- <comps> -->
-	<!-- <li Class="CompProperties_AbilitySprayLiquid"> -->
-	<!-- <projectileDef>Proj_Foam_Ability</projectileDef> -->
-	<!-- <numCellsToHit>9</numCellsToHit> -->
-	<!-- <sprayEffecter>FoamSpray_Directional</sprayEffecter> -->
-	<!-- </li> -->
-	<!-- </comps> -->
-	<!-- </AbilityDef> -->
-	<!-- <ThingDef ParentName="ProjectileFoamBase"> -->
-	<!-- <defName>Proj_Foam_Ability</defName> -->
-	<!-- <projectile> -->
-	<!-- <speed>25</speed> -->
-	<!-- <numExtraHitCells>0</numExtraHitCells> -->
-	<!-- <filthCount>1~3</filthCount> -->
-	<!-- </projectile> -->
-	<!-- <graphicData> -->
-	<!-- <texPath>Things/Mote/FoamSpray</texPath> -->
-	<!-- <graphicClass>Graphic_Random</graphicClass> -->
-	<!-- <shaderType>MoteGlow</shaderType> -->
-	<!-- <drawSize>1.35</drawSize> -->
-	<!-- </graphicData> -->
-	<!-- </ThingDef> -->
-
-	<!-- <AbilityDef> -->
-	<!-- <defName>FireSpew</defName> -->
-	<!-- <label>fire spew</label> -->
-	<!-- <description>Spit a stream of sticky, flammable bile from the mouth. The bile can ignite anything or anyone it hits, and also form flaming pools on the ground.\n\nThe bile is generated and stored by an organ in the neck, along with a separate pouch of hypergolic reactant for ignition.</description> -->
-	<!-- <iconPath>UI/Abilities/FireSpew</iconPath> -->
-	<!-- <cooldownTicksRange>300000</cooldownTicksRange> -->
-	<!-- <aiCanUse>true</aiCanUse> -->
-	<!-- <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete> -->
-	<!-- <warmupStartSound>FireSpew_Warmup</warmupStartSound> -->
-	<!-- <verbProperties> -->
-	<!-- <verbClass>Verb_CastAbility</verbClass> -->
-	<!-- <range>7.9</range> -->
-	<!-- <warmupTime>1</warmupTime> -->
-	<!-- <soundCast>FireSpew_Resolve</soundCast> -->
-	<!-- <targetParams> -->
-	<!-- <canTargetLocations>true</canTargetLocations> -->
-	<!-- </targetParams> -->
-	<!-- </verbProperties> -->
-	<!-- <comps> -->
-	<!-- <li Class="CompProperties_AbilityFireSpew"> -->
-	<!-- <range>7.9</range> -->
-	<!-- <lineWidthEnd>3</lineWidthEnd> -->
-	<!-- <filthDef>Filth_FlammableBile</filthDef> -->
-	<!-- <effecterDef>Fire_Spew</effecterDef> -->
-	<!-- <canHitFilledCells>true</canHitFilledCells> -->
-	<!-- </li> -->
-	<!-- </comps> -->
-	<!-- </AbilityDef> -->
-
-	<!-- <AbilityDef Name="LongJump"> -->
-	<!-- <defName>Longjump</defName> -->
-	<!-- <label>longjump</label> -->
-	<!-- <description>Jump to a distant location using super-strong hemogen-powered legs.</description> -->
-	<!-- <iconPath>UI/Abilities/Longjump</iconPath> -->
-	<!-- <cooldownTicksRange>60</cooldownTicksRange> -->
-	<!-- <hostile>false</hostile> -->
-	<!-- <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence> -->
-	<!-- <verbProperties> -->
-	<!-- <verbClass>Verb_CastAbilityJump</verbClass> -->
-	<!-- <label>jump</label> -->
-	<!-- <violent>false</violent> -->
-	<!-- <forceNormalTimeSpeed>false</forceNormalTimeSpeed> -->
-	<!-- <warmupTime>0.5</warmupTime> -->
-	<!-- <range>19.9</range> -->
-	<!-- <requireLineOfSight>true</requireLineOfSight> -->
-	<!-- <soundCast>Longjump_Jump</soundCast> -->
-	<!-- <soundLanding>Longjump_Land</soundLanding> -->
-	<!-- <targetParams> -->
-	<!-- <canTargetLocations>true</canTargetLocations> -->
-	<!-- <canTargetPawns>false</canTargetPawns> -->
-	<!-- <canTargetBuildings>false</canTargetBuildings> -->
-	<!-- </targetParams> -->
-	<!-- </verbProperties> -->
-	<!-- <jobDef>CastJump</jobDef> -->
-	<!-- <comps> -->
-	<!-- <li Class="CompProperties_AbilityHemogenCost"> -->
-	<!-- <hemogenCost>0.05</hemogenCost> -->
-	<!-- </li> -->
-	<!-- </comps> -->
-	<!-- </AbilityDef> -->
-
-	<!-- <AbilityDef> -->
-	<!-- <defName>FireBurst</defName> -->
-	<!-- <label>fire burst</label> -->
-	<!-- <description>Emit a burst of burning fuel in all directions to form puddles of ignited liquid on the ground.</description> -->
-	<!-- <jobDef>CastAbilityOnThingWithoutWeapon</jobDef> -->
-	<!-- <iconPath>UI/Abilities/FireBurst</iconPath> -->
-	<!-- <cooldownTicksRange>2700</cooldownTicksRange> -->
-	<!-- <aiCanUse>true</aiCanUse> -->
-	<!-- <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets> -->
-	<!-- <targetRequired>false</targetRequired> -->
-	<!-- <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted> -->
-	<!-- <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted> -->
-	<!-- <showCastingProgressBar>true</showCastingProgressBar> -->
-	<!-- <verbProperties> -->
-	<!-- <verbClass>Verb_CastAbility</verbClass> -->
-	<!-- <warmupEffecter>Fire_Burst_Warmup</warmupEffecter> -->
-	<!-- <warmupTime>3</warmupTime> -->
-	<!-- <requireLineOfSight>false</requireLineOfSight> -->
-	<!-- <range>5.9</range> -->
-	<!-- <drawAimPie>false</drawAimPie> -->
-	<!-- <targetParams> -->
-	<!-- <canTargetSelf>true</canTargetSelf> -->
-	<!-- </targetParams> -->
-	<!-- </verbProperties> -->
-	<!-- <comps> -->
-	<!-- <li Class="CompProperties_AbilityFireBurst"> -->
-	<!-- <radius>5.9</radius> -->
-	<!-- </li> -->
-	<!-- </comps> -->
-	<!-- </AbilityDef> -->
+	<!-- Wight Abilities -->
+	<AbilityDef>
+		<defName>MB_UndeadVigor</defName>
+		<label>undead vigor</label>
+		<description>The Wight channels dark energy to bolster its own strength and that of its undead minions. For a limited duration, the Wight and nearby undead allies gain increased damage, attack speed, and resilience</description>
+		<jobDef>CastAbilityOnThing</jobDef>
+		<category>Necrarch</category>
+		<targetRequired>False</targetRequired>
+		<canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+		<iconPath>UI/Abilities/Ability_DarkSigil</iconPath>
+		<stunTargetWhileCasting>True</stunTargetWhileCasting>
+		<showPsycastEffects>False</showPsycastEffects>
+		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<uiOrder>3</uiOrder>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<cooldownTicksRange>15000</cooldownTicksRange>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_Duration>30</Ability_Duration>
+			<Ability_EffectRadius>5.9</Ability_EffectRadius>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<warmupTime>3</warmupTime>
+			<range>5.9</range>
+			<drawAimPie>False</drawAimPie>
+			<requireLineOfSight>False</requireLineOfSight>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetHumans>false</canTargetHumans>
+				<canTargetMechs>true</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="MedievalBiotech.CompProperties_AbilitySoulCost">
+				<soulCost>0.35</soulCost>
+			</li>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>MB_UndeadVigor</hediffDef>
+				<onlyBrain>True</onlyBrain>
+				<onlyApplyToSelf>True</onlyApplyToSelf>
+				<replaceExisting>true</replaceExisting>
+			</li>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>MedievalBiotech.CompAbilityEffect_GiveHediffSecondary</compClass>
+				<hediffDef>MB_UndeadVigorSelf</hediffDef>
+				<onlyBrain>True</onlyBrain>
+				<onlyApplyToSelf>True</onlyApplyToSelf>
+				<replaceExisting>true</replaceExisting>
+			</li>
+		</comps>
+	</AbilityDef>
 
 </Defs>

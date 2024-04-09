@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<HediffDef>
+		<defName>MB_Curse_Decrepify</defName>
+		<label>decrepify</label>
+		<description>This powerful curse lowers movement,damage and physical resistance.</description>
+		<hediffClass>Hediff_HemogenCraving</hediffClass>
+		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<everCurableByItem>false</everCurableByItem>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>0.6</postFactor>
+					</li>
+				</capMods>
+				<statFactors>
+					<IncomingDamageFactor>1.15</IncomingDamageFactor>
+					<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-2</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>MB_UndeadVigor</defName>
+		<label>undead vigor</label>
+		<description>Dark energy bolstering undead damage, attack speed, and resilience.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>false</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="MedievalBiotech.HediffCompProperties_GiveHediffsInRangeUndead">
+				<range>9.9</range>
+				<mote>MB_Mote_UndeadVigor</mote>
+				<hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetColonists>true</onlyTargetColonists>
+				</targetingParameters>
+				<hediff>MB_UndeadVigorBuff</hediff>
+				<geneDef>MB_SoulStarved</geneDef>
+			</li>
+		</comps>
+		<isBad>false</isBad>
+	</HediffDef>
+  
+	<HediffDef>
+		<defName>MB_UndeadVigorBuff</defName>
+		<label>undead vigor</label>
+		<description>Dark energy bolstering undead damage, attack speed, and resilience.</description>
+		<debugLabelExtra>other</debugLabelExtra>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>false</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>MB_Effecter_UndeadVigorAura</stateEffecter>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+					<MeleeHitChance>3</MeleeHitChance>
+				</statOffsets>
+				<statFactors>
+					<MeleeDPS>1.10</MeleeDPS>
+					<MeleeDamageFactor>1.10</MeleeDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>MB_UndeadVigorSelf</defName>
+		<label>undead resilience</label>
+		<description>Dark energy bolstering undead damage, attack speed, and resilience.</description>
+		<debugLabelExtra>other</debugLabelExtra>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<painFactor>0.8</painFactor>
+				<statFactors>
+					<IncomingDamageFactor>0.95</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>
+                    <min>1800</min>
+                    <max>1800</max>
+                </disappearsAfterTicks>
+            </li>
+		</comps>
+	</HediffDef>
+
+</Defs>

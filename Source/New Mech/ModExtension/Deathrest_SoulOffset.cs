@@ -11,4 +11,8 @@ namespace MedievalBiotech
     {
         public float soulGainOffset;
     }
+
+    public class Undead_Mech : DefModExtension
+    {
+    }
 }
