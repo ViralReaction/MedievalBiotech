@@ -33,8 +33,8 @@
 	</HediffDef>
 	
 	<HediffDef>
-		<defName>MB_UndeadVigor</defName>
-		<label>undead vigor</label>
+		<defName>MB_NecroticVigor</defName>
+		<label>necrotic vigor</label>
 		<description>Dark energy bolstering undead damage, attack speed, and resilience.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
@@ -45,7 +45,7 @@
 			<li Class="HediffCompProperties_DisappearsOnDeath"/>
 			<li Class="MedievalBiotech.HediffCompProperties_GiveHediffsInRangeUndead">
 				<range>9.9</range>
-				<mote>MB_Mote_UndeadVigor</mote>
+				<mote>MB_Mote_NecroticVigor</mote>
 				<hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
 				<targetingParameters>
 					<canTargetBuildings>false</canTargetBuildings>
@@ -53,16 +53,19 @@
 					<canTargetMechs>false</canTargetMechs>
 					<onlyTargetColonists>true</onlyTargetColonists>
 				</targetingParameters>
-				<hediff>MB_UndeadVigorBuff</hediff>
+				<hediff>MB_NecroticVigorBuff</hediff>
 				<geneDef>MB_SoulStarved</geneDef>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>MB_Effecter_NecroticVigorAura</stateEffecter>
 			</li>
 		</comps>
 		<isBad>false</isBad>
 	</HediffDef>
   
 	<HediffDef>
-		<defName>MB_UndeadVigorBuff</defName>
-		<label>undead vigor</label>
+		<defName>MB_NecroticVigorBuff</defName>
+		<label>necrotic vigor</label>
 		<description>Dark energy bolstering undead damage, attack speed, and resilience.</description>
 		<debugLabelExtra>other</debugLabelExtra>
 		<hediffClass>HediffWithComps</hediffClass>
@@ -72,7 +75,7 @@
 				<showRemainingTime>false</showRemainingTime>
 			</li>
 			<li Class="HediffCompProperties_Effecter">
-				<stateEffecter>MB_Effecter_UndeadVigorAura</stateEffecter>
+				<stateEffecter>MB_Effecter_NecroticVigorAura</stateEffecter>
 			</li>
 			<li Class="HediffCompProperties_DisappearsOnDeath"/>
 		</comps>
@@ -92,8 +95,8 @@
 	</HediffDef>
 
 	<HediffDef>
-		<defName>MB_UndeadVigorSelf</defName>
-		<label>undead resilience</label>
+		<defName>MB_NecroticVigorSelf</defName>
+		<label>necrotic resilience</label>
 		<description>Dark energy bolstering undead damage, attack speed, and resilience.</description>
 		<debugLabelExtra>other</debugLabelExtra>
 		<hediffClass>HediffWithComps</hediffClass>
@@ -111,11 +114,11 @@
 		</stages>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
-                <disappearsAfterTicks>
-                    <min>1800</min>
-                    <max>1800</max>
-                </disappearsAfterTicks>
-            </li>
+				<disappearsAfterTicks>
+					<min>1800</min>
+					<max>1800</max>
+				</disappearsAfterTicks>
+			</li>
 		</comps>
 	</HediffDef>
 

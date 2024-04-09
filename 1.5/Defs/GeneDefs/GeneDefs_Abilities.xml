@@ -72,18 +72,18 @@
 	</GeneDef>
 	
 	<GeneDef>
-		<defName>MB_UndeadVigor</defName>
-		<label>undead vigor</label>
+		<defName>MB_NecroticVigor</defName>
+		<label>necrotic vigor</label>
 		<description>A genetic anomaly that allows it's bearer to channel dark energy to bolster its own strength and that of its undead minions</description>
-		<iconPath>UI/Icons/Genes/Gene_DarkSigil</iconPath>
+		<iconPath>UI/Icons/Genes/Gene_NecroticVigor</iconPath>
 		<prerequisite>MB_SoulStarved</prerequisite>
 		<displayCategory>MB_DarkEnergy</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<abilities>
-			<li>MB_UndeadVigor</li>
+			<li>MB_NecroticVigor</li>
 		</abilities>
 		<descriptionHyperlinks>
-			<AbilityDef>MB_UndeadVigor</AbilityDef>
+			<AbilityDef>MB_NecroticVigor</AbilityDef>
 		</descriptionHyperlinks>
 		<biostatMet>-3</biostatMet>
 	</GeneDef>

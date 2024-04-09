@@ -177,14 +177,14 @@
 
 	<!-- Wight Abilities -->
 	<AbilityDef>
-		<defName>MB_UndeadVigor</defName>
-		<label>undead vigor</label>
+		<defName>MB_NecroticVigor</defName>
+		<label>necrotic vigor</label>
 		<description>The Wight channels dark energy to bolster its own strength and that of its undead minions. For a limited duration, the Wight and nearby undead allies gain increased damage, attack speed, and resilience</description>
 		<jobDef>CastAbilityOnThing</jobDef>
 		<category>Necrarch</category>
 		<targetRequired>False</targetRequired>
 		<canUseAoeToGetTargets>False</canUseAoeToGetTargets>
-		<iconPath>UI/Abilities/Ability_DarkSigil</iconPath>
+		<iconPath>UI/Abilities/Ability_NecroticVigor</iconPath>
 		<stunTargetWhileCasting>True</stunTargetWhileCasting>
 		<showPsycastEffects>False</showPsycastEffects>
 		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
@@ -218,14 +218,14 @@
 			</li>
 			<li Class="CompProperties_AbilityGiveHediff">
 				<compClass>CompAbilityEffect_GiveHediff</compClass>
-				<hediffDef>MB_UndeadVigor</hediffDef>
+				<hediffDef>MB_NecroticVigor</hediffDef>
 				<onlyBrain>True</onlyBrain>
 				<onlyApplyToSelf>True</onlyApplyToSelf>
 				<replaceExisting>true</replaceExisting>
 			</li>
 			<li Class="CompProperties_AbilityGiveHediff">
 				<compClass>MedievalBiotech.CompAbilityEffect_GiveHediffSecondary</compClass>
-				<hediffDef>MB_UndeadVigorSelf</hediffDef>
+				<hediffDef>MB_NecroticVigorSelf</hediffDef>
 				<onlyBrain>True</onlyBrain>
 				<onlyApplyToSelf>True</onlyApplyToSelf>
 				<replaceExisting>true</replaceExisting>

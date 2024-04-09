@@ -2,7 +2,7 @@
 <Defs>
 
 	<ThingDef ParentName="MoteBase">
-		<defName>MB_Mote_UndeadVigor</defName>
+		<defName>MB_Mote_NecroticVigor</defName>
 		<thingClass>MoteAttached</thingClass>
 		<altitudeLayer>LightingOverlay</altitudeLayer>
 		<drawOffscreen>true</drawOffscreen>
@@ -18,9 +18,9 @@
 			<drawSize>10</drawSize>
 		</graphicData>
 	</ThingDef>
-	
+
 	<EffecterDef>
-		<defName>MB_Effecter_UndeadVigorAura</defName>
+		<defName>MB_Effecter_NecroticVigorAura</defName>
 		<children>
 			<li>
 				<subEffecterClass>SubEffecter_DrifterEmoteChance</subEffecterClass>
@@ -30,7 +30,7 @@
 				</scale>
 				<chancePerTick>0.01</chancePerTick>
 				<positionRadius>0.25</positionRadius>
-				<moteDef>MB_Mote_UndeadVigorAura</moteDef>
+				<moteDef>MB_Mote_NecroticVigorAura</moteDef>
 				<speed>
 					<min>0.18</min>
 					<max>0.18</max>
@@ -43,26 +43,28 @@
 		</children>
 	</EffecterDef>
 	
-	<ThingDef ParentName="MoteBase">
-		<defName>MB_Mote_UndeadVigorAura</defName>
-		<thingClass>MoteAttached</thingClass>
-		<altitudeLayer>MoteOverhead</altitudeLayer>
-		<mote>
-			<fadeInTime>0.05</fadeInTime>
-			<fadeOutTime>0.1</fadeOutTime>
-			<solidTime>0.35</solidTime>
-		</mote>
-		<graphicData>
-			<texPath>Things/Mote/MechSparkSimple</texPath>
-			<graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
-			<shaderType>GlowAnimated</shaderType>
-			<color>(0.25, 0.2, 0.32)</color>
-			<shaderParameters>
-				<_NumFrames>2</_NumFrames>
-				<_FramesPerSec>4</_FramesPerSec>
-			</shaderParameters>
-			<drawSize>(1.1, 1.1)</drawSize>
-		</graphicData>
-	</ThingDef>
+	
+	
+	<!-- <ThingDef ParentName="MoteBase"> -->
+		<!-- <defName>MB_Mote_NecroticVigorAura</defName> -->
+		<!-- <thingClass>MoteAttached</thingClass> -->
+		<!-- <altitudeLayer>MoteOverhead</altitudeLayer> -->
+		<!-- <mote> -->
+			<!-- <fadeInTime>0.05</fadeInTime> -->
+			<!-- <fadeOutTime>0.1</fadeOutTime> -->
+			<!-- <solidTime>0.35</solidTime> -->
+		<!-- </mote> -->
+		<!-- <graphicData> -->
+			<!-- <texPath>Things/Mote/MechSparkSimple</texPath> -->
+			<!-- <graphicClass>Graphic_MoteWithAgeSecs</graphicClass> -->
+			<!-- <shaderType>GlowAnimated</shaderType> -->
+			<!-- <color>(0.25, 0.2, 0.32)</color> -->
+			<!-- <shaderParameters> -->
+				<!-- <_NumFrames>2</_NumFrames> -->
+				<!-- <_FramesPerSec>4</_FramesPerSec> -->
+			<!-- </shaderParameters> -->
+			<!-- <drawSize>(1.1, 1.1)</drawSize> -->
+		<!-- </graphicData> -->
+	<!-- </ThingDef> -->
  
 </Defs>
