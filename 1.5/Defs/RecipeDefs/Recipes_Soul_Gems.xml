@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef Name="MB_Convert_SoulGemBase" Abstract="True">
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workSkill>Crafting</workSkill>
+		<recipeUsers>
+			<li>MB_Necrarch_Workbench</li>
+		</recipeUsers>
+	</RecipeDef>
+	<RecipeDef ParentName="MB_Convert_SoulGemBase">
+		<defName>MB_Covert_SoulGem_Basic</defName>
+		<label>corrupt basic soulgem</label>
+		<description>Corrupt a basic soulgem.</description>
+		<jobString>corrupting soulgem.</jobString>
+		<workAmount>2000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MB_SoulGemBasic</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<MB_CorruptedSoulGemBasic>1</MB_CorruptedSoulGemBasic>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MB_SoulGemBasic</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>MB_SoulGemBasic</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef ParentName="MB_Convert_SoulGemBase">
+		<defName>MB_Covert_SoulGem_Regular</defName>
+		<label>corrupt regular soulgem</label>
+		<description>Corrupt a regular soulgem.</description>
+		<jobString>corrupting soulgem.</jobString>
+		<workAmount>2000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MB_SoulGemRegular</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<MB_CorruptedSoulGemRegular>1</MB_CorruptedSoulGemRegular>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MB_SoulGemRegular</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>MB_SoulGemRegular</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef ParentName="MB_Convert_SoulGemBase">
+		<defName>MB_Covert_SoulGem_High</defName>
+		<label>corrupt high soulgem</label>
+		<description>Corrupt a high soulgem.</description>
+		<jobString>corrupting soulgem.</jobString>
+		<workAmount>2000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MB_SoulGemHigh</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<MB_CorruptedSoulGemHigh>1</MB_CorruptedSoulGemHigh>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MB_SoulGemHigh</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>MB_SoulGemHigh</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+
+</Defs>

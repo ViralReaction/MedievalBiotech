@@ -22,5 +22,7 @@ namespace MedievalBiotech
         public static ThingDef MB_CorruptedSoulGemBasic;
         public static ThingDef MB_CorruptedSoulGemRegular;
         public static ThingDef MB_CorruptedSoulGemHigh;
+        public static ThingDef MB_SoulGemHigh;
+        public static ThingDef MB_ArcanaStone;
     }
 }

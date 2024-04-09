@@ -32,7 +32,7 @@
 			<ingestSound>HemogenPack_Consume</ingestSound>
 		</ingestible>
 	</ThingDef>
-	
+
 	<ThingDef Name="MB_ArtificeResourceBase" ParentName="ResourceBase" Abstract="True">
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Standard_Drop</soundDrop>
@@ -51,11 +51,11 @@
 		</thingCategories>
 		<isTechHediff>true</isTechHediff>
 	</ThingDef>
-	
+
 	<!-- Soulgems -->
 	<ThingDef ParentName="MB_SoulGemBase">
 		<defName>MB_SoulGemBasic</defName>
-		<label>basic subcore</label>
+		<label>basic soulgem</label>
 		<description>A crystalline vessel, pulsating with ethereal energy, capturing the essence of life's energy. Within its depths lies the potential to drive the simplest of artifice constructs. \n\Occasionally, the personality and quirks of the soul within the gem manifest in the construct. \n\These soul gems serve as conduits for mystical power, coveted by mages and sorcerers alike for their ability to channel the forces of life and death.</description>
 		<graphicData>
 			<texPath>Things/Item/Resource/SoulgemBasic</texPath>
@@ -68,11 +68,11 @@
 			<WorkToMake>3000</WorkToMake>
 		</statBases>
 		<recipeMaker>
-			<researchPrerequisite>BasicMechtech</researchPrerequisite>
+			<researchPrerequisite>MB_Artifice</researchPrerequisite>
 			<workSpeedStat>SubcoreEncodingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<recipeUsers>
-				<li>SubcoreEncoder</li>
+				<li>MB_SubcoreEncoder</li>
 			</recipeUsers>
 			<mechanitorOnlyRecipe>true</mechanitorOnlyRecipe>
 			<unfinishedThingDef>UnfinishedSubcore</unfinishedThingDef>
@@ -86,7 +86,7 @@
 
 	<ThingDef ParentName="MB_SoulGemBase">
 		<defName>MB_SoulGemRegular</defName>
-		<label>standard subcore</label>
+		<label>standard soulgem</label>
 		<description>A A shimmering prism, pulsing with the captured essence of departed souls. Within its depths lies the potential to drive the standard artifice constructs. \n\Occasionally, the personality and quirks of the soul within the gem manifest in the construct. \n\These soul gems serve as conduits for mystical power, coveted by mages and sorcerers alike for their ability to channel the forces of life and death.</description>
 		<graphicData>
 			<texPath>Things/Item/Resource/SoulgemRegular</texPath>
@@ -99,7 +99,7 @@
 
 	<ThingDef ParentName="MB_SoulGemBase">
 		<defName>MB_SoulGemHigh</defName>
-		<label>high subcore</label>
+		<label>high soulgem</label>
 		<description>An iridescent vessel of unparalleled potency, radiating with the boundless energies of a body forced into transcendence before being shoved within. Within its depths lies the potential to drive the most complex of artifice constructs. \n\These prestigious soul gems are coveted treasures among the arcane elite, serving as conduits for unparalleled feats of magic and the invocation of forces beyond mortal comprehension.</description>
 		<graphicData>
 			<texPath>Things/Item/Resource/SoulgemHigh</texPath>
@@ -253,7 +253,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<!-- <techHediffsTags> -->
-			<!-- <li>SubcoreBasic</li> -->
+		<!-- <li>SubcoreBasic</li> -->
 		<!-- </techHediffsTags> -->
 		<statBases>
 			<WorkToMake>3000</WorkToMake>
@@ -304,6 +304,24 @@
 					<offset>2.0</offset>
 				</li>
 			</outcomeDoers>
+		</ingestible>
+	</ThingDef>
+	
+	<ThingDef ParentName="MB_CorruptedSoulGemBase">
+		<defName>MB_ArcanaStone</defName>
+		<label>arcana stone</label>
+		<description>PLACEHOLDER</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/ArcanaStone</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<ingestible>
+			<outcomeDoers>
+				<li Class="MedievalBiotech.IngestionOutcomeDoer_OffsetSoul">
+					<offset>0.2</offset>
+				</li>
+			</outcomeDoers>
+			<tasteThought Inherit="False"/>
 		</ingestible>
 	</ThingDef>
 

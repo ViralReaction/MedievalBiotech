@@ -40,19 +40,19 @@ namespace MedievalBiotech
             Gene_Soul gene_Soul = (genes != null) ? genes.GetFirstGeneOfType<Gene_Soul>() : null;
             if (gene_Soul == null)
             {
-                reason = "AbilityDisabledNoHemogenGene".Translate(this.parent.pawn);
+                reason = "MB_AbilityDisabledNoSoulGene".Translate(this.parent.pawn);
                 return true;
             }
             if (gene_Soul.Value < this.Props.soulCost)
             {
-                reason = "AbilityDisabledNoHemogen".Translate(this.parent.pawn);
+                reason = "MB_AbilityDisabledNoSoul".Translate(this.parent.pawn);
                 return true;
             }
             float num = this.TotalSoulCostOfQueuedAbilities();
             float num2 = this.Props.soulCost + num;
             if (this.Props.soulCost > 1E-45f && num2 > gene_Soul.Value)
             {
-                reason = "AbilityDisabledNoHemogen".Translate(this.parent.pawn);
+                reason = "MB_AbilityDisabledNoSoul".Translate(this.parent.pawn);
                 return true;
             }
             reason = null;

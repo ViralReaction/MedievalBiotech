@@ -18,9 +18,13 @@ Once the gene potion bank is fueled. it will slowly reverse the deterioration of
 	<DankPyon_InstallNecronomiconHemogenRequired/>
 
 	<!-- Soul Gene -->
-	<DankPyon_AbilitySoulCost>Soul cost</DankPyon_AbilitySoulCost>
 	<MB_AutoTakeSoulDesc>This determines whether {PAWN_nameDef} will automatically ingest soul gems when {PAWN_possessive} dark arcana is below {MIN}.\n\nAutomatic ingestion is currently {ONOFF}.</MB_AutoTakeSoulDesc>
 	<MB_ConsumeSoulBelow>Consume soul gems below</MB_ConsumeSoulBelow>
 	<MB_NeverConsumeSoul>Never consume soul gems.</MB_NeverConsumeSoul>
+	
+	<!-- Abilities -->
+	<MB_AbilitySoulCost>Arcana cost</MB_AbilitySoulCost>
+	<MB_AbilityDisabledNoSoul>{0_labelShort} is not soul starved.</MB_AbilityDisabledNoSoul>
+	<MB_AbilityDisabledNoSoulGene>{0_labelShort} does not have enough dark arcana.</MB_AbilityDisabledNoSoulGene>
 
 </LanguageData>

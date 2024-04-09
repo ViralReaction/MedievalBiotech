@@ -45,6 +45,7 @@
     <Compile Include="Gene Stuff\HarmonyPatches\GeneAssembler_Patches.cs" />
     <Compile Include="Gene Stuff\HarmonyPatches\GenePack_Patches.cs" />
     <Compile Include="Gene Stuff\HarmonyPatches\GeneExtractor_Patches.cs" />
+    <Compile Include="New Mech\Comps\CompAbilityEffect_CreateArcanaStone.cs" />
     <Compile Include="New Mech\Comps\CompProperties\C.cs" />
     <Compile Include="New Mech\Comps\CompDeathrestBindable_Soul.cs" />
     <Compile Include="New Mech\Comps\CompProperties\CompProperties_AbilitySoulCost.cs" />
@@ -53,10 +54,13 @@
     <Compile Include="New Mech\Comps\CompAbilityEffect_SoulDrain.cs" />
     <Compile Include="New Mech\Comps\CompProperties\CompProperties_DeathrestBindable_Soul.cs" />
     <Compile Include="New Mech\Comps\CompProperties\CompProperties_UsedGraphic.cs" />
+    <Compile Include="New Mech\Comps\CompProperties\CompProperties_CreateArcanaStone.cs" />
     <Compile Include="New Mech\Comps\CompUsedGraphic.cs" />
     <Compile Include="New Mech\Comps\CompNecrarchMeetingFire.cs" />
-    <Compile Include="New Mech\Comps\FileName.cs" />
+    <Compile Include="New Mech\Comps\CompUseEffect_SoulGem.cs" />
     <Compile Include="New Mech\SoulDrainStuff\Alert_LowSoulEnergy.cs" />
+    <Compile Include="New Mech\SoulDrainStuff\Workgiver_AdministerSoulGem.cs" />
+    <Compile Include="New Mech\SoulDrainStuff\WorkGiver_Warden_DeliverSoulGem.cs" />
     <Compile Include="New Mech\SoulDrainStuff\JobGiver_GetSoulGem.cs" />
     <Compile Include="Utility\IngestionOutcomeDoer_OffsetSoul.cs" />
     <Compile Include="New Mech\Gizmos\GeneGizmo_ResourceSoulStarve.cs" />

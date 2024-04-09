@@ -41,7 +41,7 @@ namespace MedievalBiotech
                             Rect rect = this.barRect.ContractedBy(3f);
                             float width = rect.width;
                             float num3 = this.gene.Value / this.gene.Max;
-                            rect.xMax = rect.xMin + width * num3;
+                            rect.xMax = rect.xMin + width * num3 + 30;
                             float num4 = Mathf.Min(compAbilityEffect_SoulCost.Props.soulCost / this.gene.Max, 1f);
                             rect.xMin = Mathf.Max(rect.xMin, rect.xMax - width * num4);
                             GUI.color = new Color(1f, 1f, 1f, num2 * 0.7f);
@@ -63,11 +63,11 @@ namespace MedievalBiotech
                 headerRect.xMax -= 24f;
                 Rect rect = new Rect(headerRect.xMax, headerRect.y, 24f, 24f);
                 Widgets.DefIcon(rect, MB_DefOf.MB_CorruptedSoulGemBasic, null, 1f, null, false, null, null, null);
-                GUI.DrawTexture(new Rect(rect.center.x, rect.y, rect.width / 2f, rect.height / 2f), soulGene.soulGemsAllowed ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex);
+                GUI.DrawTexture(new Rect(rect.center.x, rect.y, rect.width / 2f, rect.height / 2f), soulGene.soulBasicGemsAllowed ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex);
                 if (Widgets.ButtonInvisible(rect, true))
                 {
-                    soulGene.soulGemsAllowed = !soulGene.soulGemsAllowed;
-                    if (soulGene.soulGemsAllowed)
+                    soulGene.soulBasicGemsAllowed = !soulGene.soulBasicGemsAllowed;
+                    if (soulGene.soulBasicGemsAllowed)
                     {
                         SoundDefOf.Tick_High.PlayOneShotOnCamera(null);
                     }
@@ -79,8 +79,32 @@ namespace MedievalBiotech
                 if (Mouse.IsOver(rect))
                 {
                     Widgets.DrawHighlight(rect);
-                    string onOff = (soulGene.soulGemsAllowed ? "On" : "Off").Translate().ToString().UncapitalizeFirst();
-                    TooltipHandler.TipRegion(rect, () => "MB_AutoTakeSoulDesc".Translate(this.gene.pawn.Named("PAWN"), soulGene.PostProcessValue(soulGene.targetValue).Named("MIN"), onOff.Named("ONOFF")).Resolve(), 828267373);
+                    string onOff = (soulGene.soulBasicGemsAllowed ? "On" : "Off").Translate().ToString().UncapitalizeFirst();
+                    TooltipHandler.TipRegion(rect, () => "MB_AutoTakeSoulDesc".Translate(this.gene.pawn.Named("PAWN"), soulGene.PostProcessValue(soulGene.targetValue).Named("MIN"), onOff.Named("ONOFF")).Resolve(), 828267371);
+                    mouseOverElement = true;
+                }
+                // Adds Widget for MB_ArcanaStone
+                headerRect.xMax -= 24f;
+                Rect rect4 = new Rect(headerRect.xMax, headerRect.y, 24f, 24f);
+                Widgets.DefIcon(rect4, MB_DefOf.MB_ArcanaStone, null, 1f, null, false, null, null, null);
+                GUI.DrawTexture(new Rect(rect4.center.x, rect4.y, rect4.width / 2f, rect4.height / 2f), soulGene.soulArcanaGemsAllowed ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex);
+                if (Widgets.ButtonInvisible(rect4, true))
+                {
+                    soulGene.soulArcanaGemsAllowed = !soulGene.soulArcanaGemsAllowed;
+                    if (soulGene.soulArcanaGemsAllowed)
+                    {
+                        SoundDefOf.Tick_High.PlayOneShotOnCamera(null);
+                    }
+                    else
+                    {
+                        SoundDefOf.Tick_Low.PlayOneShotOnCamera(null);
+                    }
+                }
+                if (Mouse.IsOver(rect4))
+                {
+                    Widgets.DrawHighlight(rect4);
+                    string onOff = (soulGene.soulArcanaGemsAllowed ? "On" : "Off").Translate().ToString().UncapitalizeFirst();
+                    TooltipHandler.TipRegion(rect4, () => "MB_AutoTakeSoulDesc".Translate(this.gene.pawn.Named("PAWN"), soulGene.PostProcessValue(soulGene.targetValue).Named("MIN"), onOff.Named("ONOFF")).Resolve(), 828267373);
                     mouseOverElement = true;
                 }
             }
@@ -149,5 +173,6 @@ namespace MedievalBiotech
         private const float TotalPulsateTime = 0.85f;
 
         private List<Pair<IGeneResourceDrain, float>> tmpDrainGenes = new List<Pair<IGeneResourceDrain, float>>();
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using HarmonyLib;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,14 +40,14 @@ namespace MedievalBiotech
                                 obj = outcomeDoers.FirstOrDefault((IngestionOutcomeDoer x) => x is IngestionOutcomeDoer_OffsetSoul);
                             }
                         }
-                        IngestionOutcomeDoer_OffsetSoul ingestionOutcomeDoer_OffsetHemogen = obj as IngestionOutcomeDoer_OffsetSoul;
-                        if (ingestionOutcomeDoer_OffsetHemogen == null)
+                        IngestionOutcomeDoer_OffsetSoul ingestionOutcomeDoer_OffsetSoul = obj as IngestionOutcomeDoer_OffsetSoul;
+                        if (ingestionOutcomeDoer_OffsetSoul == null)
                         {
                             JobGiver_GetSoulGem.cachedSoulGenEnergyGain = new float?(0f);
                         }
                         else
                         {
-                            JobGiver_GetSoulGem.cachedSoulGenEnergyGain = new float?(ingestionOutcomeDoer_OffsetHemogen.offset);
+                            JobGiver_GetSoulGem.cachedSoulGenEnergyGain = new float?(ingestionOutcomeDoer_OffsetSoul.offset);
                         }
                     }
                 }
@@ -78,12 +79,12 @@ namespace MedievalBiotech
                 return null;
             }
             Pawn_GeneTracker genes = pawn.genes;
-            Gene_Soul gene_Hemogen = (genes != null) ? genes.GetFirstGeneOfType<Gene_Soul>() : null;
-            if (gene_Hemogen == null)
+            Gene_Soul gene_Soul = (genes != null) ? genes.GetFirstGeneOfType<Gene_Soul>() : null;
+            if (gene_Soul == null)
             {
                 return null;
             }
-            if (!gene_Hemogen.ShouldConsumeSoulNow())
+            if (!gene_Soul.ShouldConsumeSoulNow())
             {
                 return null;
             }
@@ -95,16 +96,16 @@ namespace MedievalBiotech
                     return JobMaker.MakeJob(JobDefOf.PrisonerBloodfeed, prisoner);
                 }
             }
-            if (gene_Hemogen.soulGemsAllowed)
+            if (gene_Soul.soulArcanaGemsAllowed || gene_Soul.soulBasicGemsAllowed)
             {
-                int num = Mathf.FloorToInt((gene_Hemogen.Max - gene_Hemogen.Value) / JobGiver_GetSoulGem.SoulGemEnergyGain);
+                int num = Mathf.FloorToInt((gene_Soul.Max - gene_Soul.Value) / JobGiver_GetSoulGem.SoulGemEnergyGain);
                 if (num > 0)
                 {
-                    Thing hemogenPack = this.GetSoulGem(pawn);
-                    if (hemogenPack != null)
+                    Thing soulGem = this.GetSoulGem(pawn, gene_Soul);
+                    if (soulGem != null)
                     {
-                        Job job = JobMaker.MakeJob(JobDefOf.Ingest, hemogenPack);
-                        job.count = Mathf.Min(hemogenPack.stackCount, num);
+                        Job job = JobMaker.MakeJob(JobDefOf.Ingest, soulGem);
+                        job.count = Mathf.Min(soulGem.stackCount, num);
                         job.ingestTotalCount = true;
                         return job;
                     }
@@ -113,21 +114,57 @@ namespace MedievalBiotech
             return null;
         }
 
-        private Thing GetSoulGem(Pawn pawn)
+        private Thing GetSoulGem(Pawn pawn, Gene_Soul gene_Soul)
         {
+            bool flag1 = gene_Soul.soulArcanaGemsAllowed;
+            bool flag2 = gene_Soul.soulBasicGemsAllowed;
+
+            //if (gene_Soul.soulArcanaGemsAllowed)
+            //{
+
+            //    flag1 = true;
+            //}
+            //if (gene_Soul.soulBasicGemsAllowed)
+            //{
+
+            //    flag2 = true;
+            //}
             Thing carriedThing = pawn.carryTracker.CarriedThing;
-            if (carriedThing != null && carriedThing.def == MB_DefOf.MB_CorruptedSoulGemBasic)
+            if (carriedThing != null)
             {
-                return carriedThing;
+                if (flag1 && carriedThing.def == MB_DefOf.MB_ArcanaStone)
+                {
+                    return carriedThing;
+                }
+                if (flag2 && carriedThing.def == MB_DefOf.MB_CorruptedSoulGemBasic)
+                {
+                    return carriedThing;
+                }
             }
             for (int i = 0; i < pawn.inventory.innerContainer.Count; i++)
             {
-                if (pawn.inventory.innerContainer[i].def == MB_DefOf.MB_CorruptedSoulGemBasic)
+                if (flag1 && pawn.inventory.innerContainer[i].def == MB_DefOf.MB_ArcanaStone)
+                {
+                    return pawn.inventory.innerContainer[i];
+                }
+                if (flag2 && pawn.inventory.innerContainer[i].def == MB_DefOf.MB_CorruptedSoulGemBasic)
                 {
                     return pawn.inventory.innerContainer[i];
                 }
             }
-            return GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, pawn.Map.listerThings.ThingsOfDef(MB_DefOf.MB_CorruptedSoulGemBasic), PathEndMode.OnCell, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false, false, false), 9999f, (Thing t) => pawn.CanReserve(t, 1, -1, null, false) && !t.IsForbidden(pawn), null);
+            if (flag1 && !flag2)
+            {
+                return GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, pawn.Map.listerThings.ThingsOfDef(MB_DefOf.MB_CorruptedSoulGemBasic), PathEndMode.OnCell, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false, false, false), 9999f, (Thing t) => pawn.CanReserve(t, 1, -1, null, false) && !t.IsForbidden(pawn), null);
+            }
+            if (flag2 && !flag1)
+            {
+                return GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, pawn.Map.listerThings.ThingsOfDef(MB_DefOf.MB_CorruptedSoulGemBasic), PathEndMode.OnCell, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false, false, false), 9999f, (Thing t) => pawn.CanReserve(t, 1, -1, null, false) && !t.IsForbidden(pawn), null);
+            }
+            List<Thing> addThings = new List<Thing>();
+            addThings.AddRange(pawn.Map.listerThings.ThingsOfDef(MB_DefOf.MB_ArcanaStone));
+            addThings.AddRange(pawn.Map.listerThings.ThingsOfDef(MB_DefOf.MB_CorruptedSoulGemBasic));
+            IEnumerable<Thing> things = addThings;
+            return GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, things, PathEndMode.OnCell, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false, false, false), 9999f, (Thing t) => pawn.CanReserve(t, 1, -1, null, false) && !t.IsForbidden(pawn), null);
         }
 
         public static AcceptanceReport CanFeedOnPrisoner(Pawn bloodfeeder, Pawn prisoner)

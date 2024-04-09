@@ -20,7 +20,7 @@ namespace MedievalBiotech
             return false;
         }
 
-        public static bool IsNecrarch(Pawn pawn)
+        public static bool IsNecromancer(Pawn pawn)
         {
             if (pawn.health.hediffSet.HasHediff(MB_DefOf.MB_NecronomiconImplant))
             {

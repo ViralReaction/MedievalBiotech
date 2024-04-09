@@ -30,6 +30,7 @@
 			<li>PsychicAbility_Extreme</li>
 			<li>Beauty_VeryUgly</li>
 			<li>AptitudeStrong_Intellectual</li>
+			<li>MeleeDamage_Weak</li>
 
 			<li>MB_Head_Necrarch</li>
 			<li>MB_Body_Necrarch</li>
@@ -53,7 +54,7 @@
 		<label>wight</label>
 		<description>PLACEHOLDER</description>
 		<descriptionShort>PLACEHOLDER</descriptionShort>
-		<iconPath>UI/Icons/Xenotypes/Necrarch</iconPath>
+		<iconPath>UI/Icons/Xenotypes/Wight</iconPath>
 		<soundDefOnImplant>PawnBecameSanguophage</soundDefOnImplant>
 		<combatPowerFactor>2.5</combatPowerFactor>
 		<displayPriority>-1000</displayPriority>
@@ -74,9 +75,12 @@
 			<li>DarkVision</li>
 			<li>Sterile</li>
 			<li>MinTemp_SmallDecrease</li>
-			<li>PsychicAbility_Extreme</li>
 			<li>Beauty_VeryUgly</li>
-			<li>AptitudeStrong_Intellectual</li>
+			<li>Aggression_Aggressive</li>
+			<li>Robust</li>
+			<li>MoveSpeed_Quick</li>
+			<li>MeleeDamage_Strong</li>
+			<li>AptitudeStrong_Melee</li>
 
 			<li>MB_Head_Wight</li>
 			<li>MB_Body_Wight</li>
@@ -86,6 +90,9 @@
 
 			<li>MB_SoulStarved</li>
 			<li>MB_SoulDrain</li>
+			
+			<!-- Abilities -->
+			
 		</genes>
 	</XenotypeDef>
 

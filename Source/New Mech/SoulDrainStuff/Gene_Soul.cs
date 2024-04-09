@@ -170,9 +170,12 @@ namespace MedievalBiotech
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look<bool>(ref this.soulGemsAllowed, "soulGemsAllowed", true, false);
+            Scribe_Values.Look<bool>(ref this.soulBasicGemsAllowed, "soulBasicGemsAllowed", true, false);
+            Scribe_Values.Look<bool>(ref this.soulArcanaGemsAllowed, "soulArcanaGemsAllowed", true, false);
         }
 
-        public bool soulGemsAllowed = true;
+        public bool soulBasicGemsAllowed = true;
+        public bool soulArcanaGemsAllowed = true;
+
     }
 }

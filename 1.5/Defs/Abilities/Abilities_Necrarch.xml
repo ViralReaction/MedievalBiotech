@@ -5,6 +5,32 @@
 		<defName>Necrarch</defName>
 		<displayOrder>1000</displayOrder>
 	</AbilityCategoryDef>
+	
+	<AbilityDef ParentName="AbilityTouchBase">
+		<defName>MB_Create_ArcanaGem</defName>
+		<label>seal arcana</label>
+		<description>Conjures and then seals excess dark arcana with a stone. Stone can be used to restore dark arcana at a later time.</description>
+		<iconPath>UI/Abilities/Ability_ArcanaSealing</iconPath>
+		<category>Necrarch</category>
+		<displayOrder>100</displayOrder>
+		<warmupEffecter>Bloodfeed_Warmup</warmupEffecter>
+		<warmupStartSound>Bloodfeed_Cast</warmupStartSound>
+		<hostile>false</hostile>
+		<targetRequired>False</targetRequired>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+		  <verbClass>Verb_CastAbility</verbClass>
+		  <range>-1</range>
+		</verbProperties>
+		<comps>
+			<li Class="MedievalBiotech.CompProperties_AbilitySoulCost">
+				<soulCost>0.2</soulCost>
+			</li>
+			<li Class="MedievalBiotech.CompProperties_CreateArcanaStone">
+				<stoneCreated>MB_ArcanaStone</stoneCreated>
+			</li>
+		</comps>
+	</AbilityDef>
 
 	<AbilityDef ParentName="AbilityTouchBase">
 		<defName>MB_SoulFeeding</defName>

@@ -15,7 +15,7 @@ namespace MedievalBiotech
                 Pawn pawn = __instance.boundPawn;
                 if (pawn != null)
                 {
-                    if (Utility.IsSanguinMage(pawn) || Utility.IsNecrarch(pawn))
+                    if (Utility.IsSanguinMage(pawn) || Utility.IsNecromancer(pawn))
                     {
                         JobFailReason.Is("NotAMechanitor".Translate(), null);
                         __result = false;

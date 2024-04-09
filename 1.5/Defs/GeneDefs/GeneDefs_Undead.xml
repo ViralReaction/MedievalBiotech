@@ -23,6 +23,12 @@
 		<customEffectDescriptions>
 			<li>Gives dark arcana supply.</li>
 		</customEffectDescriptions>
+		<abilities>
+			<li>MB_Create_ArcanaGem</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>MB_Create_ArcanaGem</AbilityDef>
+		</descriptionHyperlinks>
 		<symbolPack>
 			<prefixSymbols>
 				<li><symbol>undead</symbol></li>
@@ -32,6 +38,9 @@
 		<resourceLossPerDay>0.01</resourceLossPerDay>
 		<biostatCpx>1</biostatCpx>
 		<biostatMet>1</biostatMet>
+		<exclusionTags>
+		  <li>MB_SoulStarved</li>
+		</exclusionTags>
 	</GeneDef>
 
 	<GeneDef>
