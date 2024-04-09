@@ -61,6 +61,7 @@
     <Compile Include="New Mech\Comps\CompProperties\HediffCompProperties_GiveHediffsInRange.cs" />
     <Compile Include="New Mech\Comps\HediffComp_GiveHediffsInRangeGene.cs" />
     <Compile Include="New Mech\Harmony Patches\MechBill_ShouldDoNow_Patch .cs" />
+    <Compile Include="New Mech\Harmony Patches\MechanitorUtility_CanControlMech_Patch.cs" />
     <Compile Include="New Mech\Harmony Patches\WorkGiver_HaulMechToCharger_HasJobOnThing_Patch.cs" />
     <Compile Include="New Mech\SoulDrainStuff\Alert_LowSoulEnergy.cs" />
     <Compile Include="New Mech\SoulDrainStuff\Workgiver_AdministerSoulGem.cs" />

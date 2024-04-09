@@ -7,9 +7,9 @@ namespace MedievalBiotech
     [HarmonyPatch(typeof(MechanitorUtility), "ShouldBeMechanitor")]
     public static class MechanitorUtility_ShouldBeMechanitor_Patch
     {
-        public static bool Prefix(ref bool __result, CompGenepackContainer __instance, Pawn pawn)
+        public static bool Prefix(ref bool __result, Pawn pawn)
         {
-            if (pawn.health.hediffSet.HasHediff(MB_DefOf.MB_BloodChaliceImplant))
+            if (Utility.IsSanguinMage(pawn) || Utility.IsNecromancer(pawn))
             {
                 __result = true;
                 return false;
