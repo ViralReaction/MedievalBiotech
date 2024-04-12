@@ -223,13 +223,6 @@
 				<onlyApplyToSelf>True</onlyApplyToSelf>
 				<replaceExisting>true</replaceExisting>
 			</li>
-			<li Class="CompProperties_AbilityGiveHediff">
-				<compClass>MedievalBiotech.CompAbilityEffect_GiveHediffSecondary</compClass>
-				<hediffDef>MB_NecroticVigorSelf</hediffDef>
-				<onlyBrain>True</onlyBrain>
-				<onlyApplyToSelf>True</onlyApplyToSelf>
-				<replaceExisting>true</replaceExisting>
-			</li>
 		</comps>
 	</AbilityDef>
 

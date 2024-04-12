@@ -26,4 +26,5 @@
     <driverClass>MedievalBiotech.JobDriver_CarryCorpseToTable</driverClass>
     <reportString>carrying TargetB to TargetA.</reportString>
   </JobDef>
+
 </Defs>

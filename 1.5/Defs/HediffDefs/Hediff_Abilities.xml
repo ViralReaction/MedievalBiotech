@@ -34,8 +34,8 @@
 	
 	<HediffDef>
 		<defName>MB_NecroticVigor</defName>
-		<label>necrotic vigor</label>
-		<description>Dark energy bolstering undead damage, attack speed, and resilience.</description>
+		<label>necrotic resilience</label>
+		<description>Dark energy bolstering undead damage, attack speed, and resilience. Nearby minions will share part of this benefit.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
 		<comps>
@@ -56,10 +56,21 @@
 				<hediff>MB_NecroticVigorBuff</hediff>
 				<geneDef>MB_SoulStarved</geneDef>
 			</li>
-			<li Class="HediffCompProperties_Effecter">
-				<stateEffecter>MB_Effecter_NecroticVigorAura</stateEffecter>
-			</li>
 		</comps>
+		<stages>
+			<li>
+				<statOffsets>
+					<ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+					<MeleeHitChance>3</MeleeHitChance>
+				</statOffsets>
+				<statFactors>
+					<MeleeDPS>1.10</MeleeDPS>
+					<MeleeDamageFactor>1.10</MeleeDamageFactor>
+					<IncomingDamageFactor>0.95</IncomingDamageFactor>
+				</statFactors>
+				<painFactor>0.8</painFactor>
+			</li>
+		</stages>
 		<isBad>false</isBad>
 	</HediffDef>
   
@@ -92,34 +103,6 @@
 				</statFactors>
 			</li>
 		</stages>
-	</HediffDef>
-
-	<HediffDef>
-		<defName>MB_NecroticVigorSelf</defName>
-		<label>necrotic resilience</label>
-		<description>Dark energy bolstering undead damage, attack speed, and resilience.</description>
-		<debugLabelExtra>other</debugLabelExtra>
-		<hediffClass>HediffWithComps</hediffClass>
-		<defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
-		<initialSeverity>1</initialSeverity>
-		<maxSeverity>1</maxSeverity>
-		<isBad>false</isBad>
-		<stages>
-			<li>
-				<painFactor>0.8</painFactor>
-				<statFactors>
-					<IncomingDamageFactor>0.95</IncomingDamageFactor>
-				</statFactors>
-			</li>
-		</stages>
-		<comps>
-			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>
-					<min>1800</min>
-					<max>1800</max>
-				</disappearsAfterTicks>
-			</li>
-		</comps>
 	</HediffDef>
 
 </Defs>

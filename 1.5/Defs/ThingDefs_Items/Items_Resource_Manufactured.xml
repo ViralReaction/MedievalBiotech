@@ -261,7 +261,7 @@
 		<ingestible>
 			<outcomeDoers>
 				<li Class="MedievalBiotech.IngestionOutcomeDoer_OffsetSoul">
-					<offset>0.2</offset>
+					<offset>0.10</offset>
 				</li>
 			</outcomeDoers>
 		</ingestible>
@@ -281,7 +281,7 @@
 		<ingestible>
 			<outcomeDoers>
 				<li Class="MedievalBiotech.IngestionOutcomeDoer_OffsetSoul">
-					<offset>0.4</offset>
+					<offset>0.45</offset>
 				</li>
 			</outcomeDoers>
 		</ingestible>
@@ -318,7 +318,7 @@
 		<ingestible>
 			<outcomeDoers>
 				<li Class="MedievalBiotech.IngestionOutcomeDoer_OffsetSoul">
-					<offset>0.2</offset>
+					<offset>0.20</offset>
 				</li>
 			</outcomeDoers>
 			<tasteThought Inherit="False"/>

@@ -35,7 +35,7 @@
 			</prefixSymbols>
 		</symbolPack>
 		<minAgeActive>3</minAgeActive>
-		<resourceLossPerDay>0.01</resourceLossPerDay>
+		<resourceLossPerDay>0.02</resourceLossPerDay>
 		<biostatCpx>1</biostatCpx>
 		<biostatMet>1</biostatMet>
 		<exclusionTags>
@@ -52,7 +52,7 @@
 		<geneClass>MedievalBiotech.Gene_SoulDrain</geneClass>
 		<iconPath>UI/Icons/Genes/Gene_SoulDrain</iconPath>
 		<prerequisite>MB_SoulStarved</prerequisite>
-		<resourceLossPerDay>0.08</resourceLossPerDay>
+		<resourceLossPerDay>0.02</resourceLossPerDay>
 		<displayCategory>MB_DarkEnergy</displayCategory>
 		<displayOrderInCategory>-1</displayOrderInCategory>
 		<minAgeActive>3</minAgeActive>
