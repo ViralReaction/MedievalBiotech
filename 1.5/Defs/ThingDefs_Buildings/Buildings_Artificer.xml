@@ -142,7 +142,7 @@
 				<consumptionPerTick>5</consumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
-				<transmitsPower>true</transmitsPower>
+				<transmitsPower>false</transmitsPower>
 				<compClass>PipeSystem.CompPowerPlantNeedResource</compClass>
 				<basePowerConsumption>-1000</basePowerConsumption>
 			</li>
@@ -215,7 +215,7 @@
 				<consumptionPerTick>3</consumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
-				<transmitsPower>true</transmitsPower>
+				<transmitsPower>false</transmitsPower>
 				<!-- Specify the comp class -->
 				<compClass>PipeSystem.CompPowerPlantNeedResource</compClass>
 				<basePowerConsumption>-1000</basePowerConsumption>
@@ -281,7 +281,7 @@
 				<idleConsumptionPerTick>1</idleConsumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
-				<transmitsPower>true</transmitsPower>
+				<transmitsPower>false</transmitsPower>
 				<!-- Specify the comp class -->
 				<compClass>PipeSystem.CompPowerPlantNeedResource</compClass>
 				<basePowerConsumption>-1000</basePowerConsumption>
@@ -405,7 +405,7 @@
 				<consumptionPerTick>1</consumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
-				<transmitsPower>true</transmitsPower>
+				<transmitsPower>false</transmitsPower>
 				<!-- Specify the comp class -->
 				<compClass>PipeSystem.CompPowerPlantNeedResource</compClass>
 				<basePowerConsumption>-1000</basePowerConsumption>

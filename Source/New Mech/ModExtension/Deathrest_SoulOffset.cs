@@ -12,7 +12,11 @@ namespace MedievalBiotech
         public float soulGainOffset;
     }
 
-    public class Undead_Mech : DefModExtension
+    public class Custom_Mech : DefModExtension
     {
+        public bool UndeadMech = false;
+        public bool DemonMech = false;
+        public bool ArtificeMech = false;
     }
 }
+

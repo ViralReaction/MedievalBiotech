@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
 	<ThingDef Name="MB_BaseMechCharger" ParentName="BuildingBase" Abstract="True">
-		<thingClass>Building_MechCharger</thingClass>
+		<thingClass>MedievalBiotech.Building_SteamCharger</thingClass>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>Building</altitudeLayer>
 		<hasInteractionCell>true</hasInteractionCell>
@@ -19,6 +18,9 @@
 		<uiOrder>2410</uiOrder>
 		<comps>
 			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_WasteProducer">
+				<showContentsInInspectPane>false</showContentsInInspectPane>
+			</li>
 		</comps>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<techLevel>Medieval</techLevel>
@@ -88,7 +90,7 @@
 				<idleConsumptionPerTick>1</idleConsumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
-				<transmitsPower>true</transmitsPower>
+				<transmitsPower>false</transmitsPower>
 				<!-- Specify the comp class -->
 				<compClass>PipeSystem.CompPowerPlantNeedResource</compClass>
 				<basePowerConsumption>-1000</basePowerConsumption>
@@ -164,7 +166,7 @@
 				<idleConsumptionPerTick>1</idleConsumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
-				<transmitsPower>true</transmitsPower>
+				<transmitsPower>false</transmitsPower>
 				<!-- Specify the comp class -->
 				<compClass>PipeSystem.CompPowerPlantNeedResource</compClass>
 				<basePowerConsumption>-1000</basePowerConsumption>

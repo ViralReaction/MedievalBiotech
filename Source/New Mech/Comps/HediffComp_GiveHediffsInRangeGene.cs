@@ -43,8 +43,8 @@ namespace MedievalBiotech
             }
             foreach (Pawn pawn in readOnlyList)
             {
-                var extension = pawn.def.GetModExtension<Undead_Mech>();
-                if ((pawn.RaceProps.Humanlike && pawn.genes.HasGene(Props.geneDef) || (pawn.RaceProps.IsMechanoid && (extension != null))) && !pawn.Dead && pawn.health != null && pawn != this.parent.pawn && pawn.Position.DistanceTo(this.parent.pawn.Position) <= this.Props.range && this.Props.targetingParameters.CanTarget(pawn, null))
+                var extension = pawn.def.GetModExtension<Custom_Mech>()?.UndeadMech;
+                if ((pawn.RaceProps.Humanlike && pawn.genes.HasGene(Props.geneDef) || (pawn.RaceProps.IsMechanoid && (extension == true))) && !pawn.Dead && pawn.health != null && pawn != this.parent.pawn && pawn.Position.DistanceTo(this.parent.pawn.Position) <= this.Props.range && this.Props.targetingParameters.CanTarget(pawn, null))
                 {
                     Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(this.Props.hediff, false);
                     if (hediff == null)

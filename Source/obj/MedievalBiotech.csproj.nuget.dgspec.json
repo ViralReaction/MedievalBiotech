@@ -22,14 +22,19 @@
           "net48"
         ],
         "sources": {
-          "C:\\Games\\Rimworld C# Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://nuget.info/packages/Krafs.Rimworld.Ref/1.5.4045-beta": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/packages/MonoMod.Core/": {}
         },
         "frameworks": {
           "net48": {
             "projectReferences": {}
           }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -39,11 +44,16 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.1, )"
+              "version": "[2.*, )"
             },
             "Krafs.Rimworld.Ref": {
               "target": "Package",
-              "version": "[1.5.4055-beta, )"
+              "version": "[1.*-*, )"
+            },
+            "Lib.Harmony": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[2.*, )"
             }
           }
         }

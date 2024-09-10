@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "lYIy0eRw+s2QmFP1QJLv5Ke/d3k1US1+MS/5ZUtUyBXbCQLHKrSmZXf7UeD6WSb68JFx0905xEvENSITnk4XJg==",
+  "dgSpecHash": "9JOF7o0AvHs=",
   "success": true,
   "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\MedievalBiotech\\Source\\MedievalBiotech.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Enurta\\.nuget\\packages\\krafs.publicizer\\2.2.1\\krafs.publicizer.2.2.1.nupkg.sha512",
-    "C:\\Users\\Enurta\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4055-beta\\krafs.rimworld.ref.1.5.4055-beta.nupkg.sha512"
+    "C:\\Users\\Enurta\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4184-beta\\krafs.rimworld.ref.1.5.4184-beta.nupkg.sha512",
+    "C:\\Users\\Enurta\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512"
   ],
   "logs": []
 }

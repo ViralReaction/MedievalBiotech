@@ -10,14 +10,29 @@ namespace MedievalBiotech
     {
         public static bool Prefix(Pawn pawn, Pawn mech)
         {
-            bool undeadMech = Utility.IsUndeadMech(mech);
-            bool vampMech = Utility.IsSanguinMech(mech);
-            if ((Utility.IsSanguinMage(pawn) == vampMech) || (Utility.IsNecromancer(pawn) == undeadMech))
+            var extension = pawn.def.GetModExtension<Custom_Mech>();
+            if (extension != null)
+            {
+                return true;
+            }
+            if (extension.UndeadMech)
+            {
+                if (Utility.IsNecromancer(pawn))
+                {
+                    return true;
+                }
+            }
+            else if (extension.DemonMech)
+            {
+                if (Utility.IsSanguinMage(pawn))
+                {
+                    return true;
+                }
+            }
+            else if (extension.UndeadMech || extension.DemonMech)
             {
                 return false;
             }
-            else if (undeadMech || vampMech)
-                return false;
             return true;
         }
     }

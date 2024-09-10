@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -33,12 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\..\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PipeSystem">
       <HintPath>..\..\VanillaExpandedFramework-main\1.5\Assemblies\PipeSystem.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -60,9 +59,12 @@
     <Compile Include="New Mech\Comps\CompUseEffect_SoulGem.cs" />
     <Compile Include="New Mech\Comps\CompProperties\HediffCompProperties_GiveHediffsInRange.cs" />
     <Compile Include="New Mech\Comps\HediffComp_GiveHediffsInRangeGene.cs" />
-    <Compile Include="New Mech\Harmony Patches\MechBill_ShouldDoNow_Patch .cs" />
+    <Compile Include="New Mech\Building_SteamCharger.cs" />
+    <Compile Include="New Mech\Harmony Patches\Building_MechCharger_IsCompatibleWithCharger_Patch.cs" />
     <Compile Include="New Mech\Harmony Patches\MechanitorUtility_CanControlMech_Patch.cs" />
+    <Compile Include="New Mech\Harmony Patches\ThingListGroupHelper_Includes_Patch.cs" />
     <Compile Include="New Mech\Harmony Patches\WorkGiver_HaulMechToCharger_HasJobOnThing_Patch.cs" />
+    <Compile Include="New Mech\JobStuff\WorkGiver_DoArtifice.cs" />
     <Compile Include="New Mech\SoulDrainStuff\Alert_LowSoulEnergy.cs" />
     <Compile Include="New Mech\SoulDrainStuff\Workgiver_AdministerSoulGem.cs" />
     <Compile Include="New Mech\SoulDrainStuff\WorkGiver_Warden_DeliverSoulGem.cs" />
@@ -99,12 +101,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Publicizer">
-      <Version>2.2.1</Version>
+      <Version>2.*</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.5.4055-beta</Version>
+      <Version>1.*-*</Version>
+    </PackageReference>
+    <PackageReference Include="Lib.Harmony">
+      <Version>2.*</Version>
+      <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

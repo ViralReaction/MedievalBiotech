@@ -32,8 +32,8 @@ namespace MedievalBiotech
 
         public static bool IsUndeadMech(Pawn pawn)
         {
-            var extension = pawn.def.GetModExtension<Undead_Mech>();
-            if (extension != null)
+            var extension = pawn.def.GetModExtension<Custom_Mech>()?.UndeadMech;
+            if (extension == true)
             {
                 return true;
             }
@@ -42,8 +42,18 @@ namespace MedievalBiotech
 
         public static bool IsSanguinMech(Pawn pawn)
         {
-            var extension = pawn.def.GetModExtension<Undead_Mech>();
-            if (extension != null)
+            var extension = pawn.def.GetModExtension<Custom_Mech>()?.DemonMech;
+            if (extension == true)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool IsArtificeMech(Pawn pawn)
+        {
+            var extension = pawn.def.GetModExtension<Custom_Mech>()?.ArtificeMech;
+            if (extension == true)
             {
                 return true;
             }

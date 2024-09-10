@@ -2,7 +2,7 @@
 <Defs>
 
 	<RecipeDef Name="MB_BaseArtificeRecipe" Abstract="True">
-		<jobString>Gestating mech.</jobString>
+		<jobString>Gestating artifice.</jobString>
 		<workAmount>1800</workAmount>
 		<gestationCycles>1</gestationCycles>
 		<formingTicks>120000</formingTicks><!-- 2 days -->
@@ -82,19 +82,6 @@
 			<ThingDef>MB_Artifice_Cleansweeper</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
-	
-	<RecipeDef ParentName="LightArtificeRecipe">
-		<defName>MB_Artifice_Militor</defName>
-		<label>gestate militor</label>
-		<description>Gestate a cleansweeper mechanoid.</description>
-		<researchPrerequisite>MB_Artifice</researchPrerequisite>
-		<products>
-			<MB_Artifice_Militor>1</MB_Artifice_Militor>
-		</products>
-		<descriptionHyperlinks>
-			<ThingDef>MB_Artifice_Militor</ThingDef>
-		</descriptionHyperlinks>
-	</RecipeDef>
 
 	<RecipeDef ParentName="LightArtificeRecipe">
 		<defName>MB_Artifice_Paramedic</defName>
@@ -124,6 +111,20 @@
 		</products>
 		<descriptionHyperlinks>
 			<ThingDef>MB_Artifice_Paramedic</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	
+	<!-- War Artifice -->
+	<RecipeDef ParentName="LightArtificeRecipe">
+		<defName>MB_Artifice_Militor</defName>
+		<label>gestate militor</label>
+		<description>Gestate a cleansweeper mechanoid.</description>
+		<researchPrerequisite>MB_Artifice</researchPrerequisite>
+		<products>
+			<MB_Artifice_Militor>1</MB_Artifice_Militor>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>MB_Artifice_Militor</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
 

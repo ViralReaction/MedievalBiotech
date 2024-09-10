@@ -4,7 +4,7 @@
 	<WorkGiverDef>
 		<defName>MB_DoBillsMechGestator</defName>
 		<label>make artifice construct</label>
-		<giverClass>WorkGiver_DoBill</giverClass>
+		<giverClass>MedievalBiotech.WorkGiver_DoArtifice</giverClass>
 		<workType>Smithing</workType>
 		<priorityInType>210</priorityInType>
 		<fixedBillGiverDefs>

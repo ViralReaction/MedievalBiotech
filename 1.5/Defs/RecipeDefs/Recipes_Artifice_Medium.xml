@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef Name="MB_MediumArtificeRecipe" ParentName="MB_BaseArtificeRecipe" Abstract="True">
+		<gestationCycles>2</gestationCycles>
+		<!-- <researchPrerequisite>StandardMechtech</researchPrerequisite> -->
+	</RecipeDef>
+
+	<RecipeDef ParentName="MB_MediumArtificeRecipe">
+		<defName>MB_Artifice_Scyther</defName>
+		<label>gestate scyther</label>
+		<description>Gestate a scyther artifice.</description>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DankPyon_ComponentBasic</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MB_SoulGemBasic</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<MB_Artifice_Scyther>1</MB_Artifice_Scyther>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>MB_Artifice_Scyther</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+	<RecipeDef ParentName="MB_MediumArtificeRecipe">
+		<defName>MB_Artifice_Sentinel</defName>
+		<label>gestate sentinel</label>
+		<description>Gestate a sentinel artifice.</description>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DankPyon_ComponentBasic</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MB_SoulGemBasic</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<MB_Artifice_Sentinel>1</MB_Artifice_Sentinel>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>MB_Artifice_Sentinel</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+</Defs>

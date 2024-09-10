@@ -8,9 +8,9 @@ namespace MedievalBiotech
     [HarmonyPatch(typeof(WorkGiver_RepairMech), "HasJobOnThing")]
     public static class WorkGiver_RepairMech_HasJobOnThing_Patch
     {
-        public static void Postfix(ref bool __result,Pawn pawn, Thing t)
+        public static void Postfix(WorkGiver_RepairMech __instance, ref bool __result,Pawn pawn, Thing t)
         {
-            if (__result != null)
+            if (__instance is not null)
             {
                 Pawn pawn2 = (Pawn)t;
                 bool undeadMech = Utility.IsUndeadMech(pawn2);

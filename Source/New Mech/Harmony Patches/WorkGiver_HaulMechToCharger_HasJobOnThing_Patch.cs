@@ -8,17 +8,20 @@ namespace MedievalBiotech
     [HarmonyPatch(typeof(WorkGiver_HaulMechToCharger), "HasJobOnThing")]
     public static class WorkGiver_HaulMechToCharger_HasJobOnThing_Patch
     {
-        public static void Postfix(ref bool __result, Pawn pawn, Thing t)
+        public static bool Prefix(WorkGiver_HaulMechToCharger __instance, Pawn pawn, Thing t)
         {
-            if (__result != null)
+
+            if (__instance is null)
             {
-                Pawn pawn2 = (Pawn)t;
-                if (Utility.IsSanguinMech(pawn2) || Utility.IsUndeadMech(pawn2))
-                {
-                    __result = false;
-                }
+                return false;
             }
-            return;
+            Pawn pawn2 = (Pawn)t;
+            var extension = pawn.def.GetModExtension<Custom_Mech>();
+            if (extension != null && (extension.UndeadMech || extension.DemonMech))
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

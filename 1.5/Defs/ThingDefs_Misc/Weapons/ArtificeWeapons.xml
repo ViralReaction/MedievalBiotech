@@ -2,7 +2,7 @@
 <Defs>
 
 	<!-- ============================== Crossbows ========================== -->
-	<ThingDef ParentName="LightMechanoidGun">
+	<ThingDef ParentName="LightMechanoidGunRanged">
 		<defName>MB_ArtificeCrossbow</defName>
 		<label>crossbow</label>
 		<description>A projectile launching weapon that, much like the bow, relies on a string pulled back for tension and propels a projectile upon release. However, the crossbow allows the wielder to maintain the draw thanks to the crossbow’s locking mechanism, thus making the ranged weapon both accessible to novices and powerful in combat.</description>
@@ -27,7 +27,7 @@
 			<li>MB_ArtificeCrossbow</li>
 		</weaponTags>
 		<weaponClasses>
-		  <li>Ranged</li>
+			<li>Ranged</li>
 		</weaponClasses>
 		<verbs>
 			<li>
@@ -44,6 +44,119 @@
 				<label>limb</label>
 				<capacities>
 					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+	</ThingDef>
+	
+	<!-- Artifice Melee Base -->
+	<ThingDef Name="MB_ArtificeMeleeWeapon" ParentName="BaseWeapon" Abstract="True">
+		<weaponClasses>
+			<li>Melee</li>
+		</weaponClasses>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+		<graphicData>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+	</ThingDef>
+ 
+	<!-- Scyther Blade -->
+	<ThingDef ParentName="MB_ArtificeMeleeWeapon">
+		<defName>MB_ArtificeBlade</defName>
+		<label>artifice scyther blade</label>
+		<description>Artifice Blade</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/MB_ArtificeBlade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Bow_Recurve</soundInteract>
+		<statBases>
+			<WorkToMake>14000</WorkToMake>
+			<Mass>2.5</Mass>
+		</statBases>
+		<weaponTags>
+			<li>MB_ArtificeBlade</li>
+		</weaponTags>
+		<tools>
+			<li>
+				<label>edge</label>
+				<labelNoLocation>blade</labelNoLocation>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<labelNoLocation>blade</labelNoLocation>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+	</ThingDef>
+
+	<!-- Sentinel Axeblade -->
+	<ThingDef ParentName="MB_ArtificeMeleeWeapon">
+		<defName>MB_ArtificeAxeBlade</defName>
+		<label>artifice sentinel blade</label>
+		<description>Artifice Blade</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/MB_ArtificeAxeblade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Bow_Recurve</soundInteract>
+		<statBases>
+			<WorkToMake>14000</WorkToMake>
+			<Mass>2.5</Mass>
+		</statBases>
+		<weaponTags>
+			<li>MB_ArtificeAxeblade</li>
+		</weaponTags>
+		<tools>
+			<li>
+				<label>edge</label>
+				<labelNoLocation>blade</labelNoLocation>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>32</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<labelNoLocation>blade</labelNoLocation>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>32</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>handle</label>
+				<capacities>
 					<li>Poke</li>
 				</capacities>
 				<power>9</power>
