@@ -15,7 +15,7 @@ namespace MedievalBiotech
                 if (__instance.boundPawn != null)
                 {
                     var extension = __instance.parent.def.GetModExtension<Deathrest_SoulOffset>();
-                    if (extension != null && extension.soulGainOffset != null)
+                    if (extension != null && extension?.soulGainOffset is not null)
                     {
                         Pawn_GeneTracker genes = __instance.boundPawn.genes;
                         Gene_Soul gene_Soul = (genes != null) ? genes.GetFirstGeneOfType<Gene_Soul>() : null;

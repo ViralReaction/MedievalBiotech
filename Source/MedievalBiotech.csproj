@@ -78,7 +78,6 @@
     <Compile Include="New Mech\HediffDef\CompProperties\HediffCompProperties_SeverityFromSoul.cs" />
     <Compile Include="New Mech\HediffDef\Hediff_SoulCraving.cs" />
     <Compile Include="New Mech\ModExtension\Deathrest_SoulOffset.cs" />
-    <Compile Include="New Mech\SoulDrainStuff\StatWorker_SoulGainFactor.cs" />
     <Compile Include="New Mech\SoulDrainStuff\Verb_CastAbilitySoul.cs" />
     <Compile Include="New Mech\SoulDrainStuff\Gene_SoulDrain.cs" />
     <Compile Include="New Mech\SoulDrainStuff\Gene_Soul.cs" />

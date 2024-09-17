@@ -3,12 +3,12 @@
 
 	<StatDef>
 		<defName>SoulGainFactor</defName>
-		<workerClass>MedievalBiotech.StatWorker_SoulGainFactor</workerClass>
 		<label>dark arcana gain multiplier</label>
 		<description>A multiplier on the amount of dark arcana gained.</description>
 		<category>BasicsPawn</category>
 		<toStringStyle>PercentZero</toStringStyle>
 		<defaultBaseValue>1</defaultBaseValue>
+		<hideAtValue>1</hideAtValue>
 	</StatDef>
 
 </Defs>

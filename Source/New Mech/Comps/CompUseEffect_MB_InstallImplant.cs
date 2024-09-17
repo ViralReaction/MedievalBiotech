@@ -5,7 +5,7 @@ namespace MedievalBiotech
 {
     public class CompUseEffect_MB_InstallImplant : CompUseEffect_InstallImplant
     {
-        public CompProperties_MB_InstallImplant Props
+        public new CompProperties_MB_InstallImplant Props
         {
             get
             {
