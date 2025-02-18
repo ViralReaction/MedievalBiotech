@@ -85,7 +85,7 @@
 				<dropEffecterDef>MechChargerWasteRemoved</dropEffecterDef>
 			</li>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
-				<compClass>CompResourceTrader_Steam</compClass>
+				<compClass>MedievalBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>MB_SteamNet</pipeNet>
 				<consumptionPerTick>6</consumptionPerTick>
 				<idleConsumptionPerTick>1</idleConsumptionPerTick>
@@ -162,7 +162,7 @@
 				<dropEffecterDef>MechChargerWasteRemoved</dropEffecterDef>
 			</li>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
-				<compClass>CompResourceTrader_Steam</compClass>
+				<compClass>MedievalBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>MB_SteamNet</pipeNet>
 				<consumptionPerTick>12</consumptionPerTick>
 				<idleConsumptionPerTick>1</idleConsumptionPerTick>

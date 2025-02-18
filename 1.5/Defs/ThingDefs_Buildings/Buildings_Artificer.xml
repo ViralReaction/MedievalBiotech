@@ -138,7 +138,7 @@
 		</building>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
-				<compClass>CompResourceTrader_Steam</compClass>
+				<compClass>MedievalBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>MB_SteamNet</pipeNet>
 				<consumptionPerTick>5</consumptionPerTick>
 			</li>
@@ -212,7 +212,7 @@
 				<useParentRotation>true</useParentRotation>
 			</li>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
-				<compClass>CompResourceTrader_Steam</compClass>
+				<compClass>MedievalBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>MB_SteamNet</pipeNet>
 				<consumptionPerTick>3</consumptionPerTick>
 			</li>
@@ -278,7 +278,7 @@
 		</statBases>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
-				<compClass>CompResourceTrader_Steam</compClass>
+				<compClass>MedievalBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>MB_SteamNet</pipeNet>
 				<consumptionPerTick>5</consumptionPerTick>
 				<idleConsumptionPerTick>1</idleConsumptionPerTick>
@@ -406,15 +406,11 @@
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<compClass>MedievalBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>MB_SteamNet</pipeNet>
-				<consumptionPerTick>1</consumptionPerTick>
-			</li>
-			<li Class="CompProperties_Power">
-				<transmitsPower>false</transmitsPower>
-				<!-- Specify the comp class -->
-				<compClass>MedievalBiotech.CompPowerPlantNeedResource_Steam</compClass>
-				<basePowerConsumption>-1000</basePowerConsumption>
+				<consumptionPerTick>2</consumptionPerTick>
+				<idleConsumptionPerTick>1</idleConsumptionPerTick>
 			</li>
 			<li Class="CompProperties_BandNode">
+				<compClass>MedievalBiotech.CompBandNode_Steam</compClass>
 				<hediff>MB_BandNode</hediff>
 				<untunedEffect>BandNodeUntuned</untunedEffect>
 				<tuningEffect>BandNodeTuning</tuningEffect>

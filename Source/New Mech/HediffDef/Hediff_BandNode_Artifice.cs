@@ -65,7 +65,7 @@ namespace MedievalBiotech
             {
                 foreach (Building thing in maps[i].listerBuildings.AllBuildingsColonistOfDef(MB_DefOf.MB_BandNode))
                 {
-                    if (thing.TryGetComp<CompBandNode>().tunedTo == this.pawn && thing.TryGetComp<CompPowerTrader>().PowerOn)
+                    if (thing.TryGetComp<CompBandNode_Steam>().tunedTo == this.pawn && thing.TryGetComp<CompResourceTrader_Steam>().ResourceOn)
                     {
                         this.cachedTunedBandNodesCount++;
                     }
