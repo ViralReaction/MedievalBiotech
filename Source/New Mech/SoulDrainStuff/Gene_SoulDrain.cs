@@ -70,7 +70,6 @@ namespace MedievalBiotech
             }
             IEnumerator<Gizmo> enumerator = null;
             yield break;
-            yield break;
         }
 
         [Unsaved(false)]

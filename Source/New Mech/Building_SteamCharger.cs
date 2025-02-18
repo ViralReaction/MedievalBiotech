@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
 using RimWorld;
-using System.Reflection;
-using Mono.Unix.Native;
+using PipeSystem;
 
 namespace MedievalBiotech
 {
@@ -44,9 +42,15 @@ namespace MedievalBiotech
 
         private new Material wireMaterial;
 
-        public new CompPowerTrader Power => this.TryGetComp<CompPowerTrader>();
+        public new CompResourceTrader Power => this.TryGetComp<CompResourceTrader>();
 
-        public new bool IsPowered => Power.PowerOn;
+        public new bool IsPowered
+        {   get
+            {
+                Log.Message(Power.ResourceOn);
+                return Power.ResourceOn;
+            }
+        }
 
         public new bool IsFullOfWaste
         {
@@ -124,29 +128,37 @@ namespace MedievalBiotech
             }
         }
 
-        public new bool CanPawnChargeCurrently(Pawn pawn)
+        public bool CanPawnChargeCurrentlySteam(Pawn pawn)
         {
-            if (Power.PowerNet == null)
+            if (pawn == null)
             {
                 return false;
             }
+
+
             if (!IsCompatibleWithCharger(pawn.kindDef))
             {
                 return false;
             }
+
             if (IsPowered)
             {
+
                 if (currentlyChargingMech == null)
                 {
                     return true;
                 }
+
                 if (currentlyChargingMech == pawn)
                 {
                     return true;
                 }
+
             }
+
             return false;
         }
+
 
 
 
@@ -181,7 +193,7 @@ namespace MedievalBiotech
                 Log.Warning("Mech did not clean up his charging job properly");
                 StopCharging();
             }
-            if (currentlyChargingMech != null && Power.PowerOn)
+            if (currentlyChargingMech != null && Power.ResourceOn)
             {
                 currentlyChargingMech.needs.energy.CurLevel += 0.00083333335f;
                 if (moteCablePulse == null || moteCablePulse.Destroyed)
@@ -190,7 +202,7 @@ namespace MedievalBiotech
                 }
                 moteCablePulse?.Maintain();
             }
-            if (currentlyChargingMech != null && Power.PowerOn && IsAttachedToMech)
+            if (currentlyChargingMech != null && Power.ResourceOn && IsAttachedToMech)
             {
                 if (sustainerCharging == null)
                 {
@@ -203,7 +215,7 @@ namespace MedievalBiotech
                 }
                 moteCharging?.Maintain();
             }
-            else if (sustainerCharging != null && (currentlyChargingMech == null || !Power.PowerOn))
+            else if (sustainerCharging != null && (currentlyChargingMech == null || !Power.ResourceOn))
             {
                 sustainerCharging.End();
                 sustainerCharging = null;

@@ -36,8 +36,10 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PipeSystem">
-      <HintPath>..\..\VanillaExpandedFramework-main\1.5\Assemblies\PipeSystem.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\2023507013\1.5\Assemblies\PipeSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="VFECore">
+      <HintPath>..\..\2023507013\1.5\Assemblies\VFECore.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -76,7 +78,10 @@
     <Compile Include="New Mech\Comps\CompProperties\HediffCompProperties_GiveHediffsInRange.cs" />
     <Compile Include="New Mech\Comps\HediffComp_GiveHediffsInRangeGene.cs" />
     <Compile Include="New Mech\Building_SteamCharger.cs" />
+    <Compile Include="New Mech\FileName.cs" />
     <Compile Include="New Mech\Harmony Patches\Building_MechCharger_IsCompatibleWithCharger_Patch.cs" />
+    <Compile Include="New Mech\Harmony Patches\Building_MechCharger_CanPawnChargeCurrently.cs" />
+    <Compile Include="New Mech\Harmony Patches\JobGiver_GetEnergy_Charger_GetClosestCharge.cs" />
     <Compile Include="New Mech\Harmony Patches\MechanitorUtility_CanControlMech_Patch.cs" />
     <Compile Include="New Mech\Harmony Patches\ThingListGroupHelper_Includes_Patch.cs" />
     <Compile Include="New Mech\Harmony Patches\WorkGiver_HaulMechToCharger_HasJobOnThing_Patch.cs" />
@@ -85,6 +90,7 @@
     <Compile Include="New Mech\SoulDrainStuff\Workgiver_AdministerSoulGem.cs" />
     <Compile Include="New Mech\SoulDrainStuff\WorkGiver_Warden_DeliverSoulGem.cs" />
     <Compile Include="New Mech\SoulDrainStuff\JobGiver_GetSoulGem.cs" />
+    <Compile Include="New Mech\JobStuff\WorkGiver.cs" />
     <Compile Include="Utility\IngestionOutcomeDoer_OffsetSoul.cs" />
     <Compile Include="New Mech\Gizmos\GeneGizmo_ResourceSoulStarve.cs" />
     <Compile Include="New Mech\Harmony Patches\WorkGiver_RepairMech_HasJobOnThing_Patch.cs" />

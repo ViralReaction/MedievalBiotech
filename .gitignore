@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+1.5/Assemblies/KCSG.dll
+1.5/Assemblies/PipeSystem.dll
+1.5/Assemblies/VFECore.dll
