@@ -39,7 +39,7 @@ namespace MedievalBiotech
             Building_MechCharger closestCharger = null;
             float closestDist = 9999f;
 
-            List<Thing> potentialChargers = mech.Map.listerThings?.ThingsOfDef(MedievalBiotechDefOf.MB_BasicRecharger);
+            List<Thing> potentialChargers = mech.Map.listerThings?.ThingsOfDef(MB_DefOf.MB_BasicRecharger);
 
             if (potentialChargers == null || potentialChargers.Count == 0)
             {

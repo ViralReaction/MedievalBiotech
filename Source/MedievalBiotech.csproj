@@ -76,9 +76,10 @@
     <Compile Include="New Mech\Comps\CompNecrarchMeetingFire.cs" />
     <Compile Include="New Mech\Comps\CompUseEffect_SoulGem.cs" />
     <Compile Include="New Mech\Comps\CompProperties\HediffCompProperties_GiveHediffsInRange.cs" />
+    <Compile Include="New Mech\Comps\FileName.cs" />
     <Compile Include="New Mech\Comps\HediffComp_GiveHediffsInRangeGene.cs" />
     <Compile Include="New Mech\Building_SteamCharger.cs" />
-    <Compile Include="New Mech\FileName.cs" />
+    <Compile Include="New Mech\Building_SteamMachine.cs" />
     <Compile Include="New Mech\Harmony Patches\Building_MechCharger_IsCompatibleWithCharger_Patch.cs" />
     <Compile Include="New Mech\Harmony Patches\Building_MechCharger_CanPawnChargeCurrently.cs" />
     <Compile Include="New Mech\Harmony Patches\JobGiver_GetEnergy_Charger_GetClosestCharge.cs" />

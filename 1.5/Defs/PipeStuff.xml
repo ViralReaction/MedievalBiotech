@@ -341,7 +341,7 @@
 		<defName>MB_SteamGenerator</defName>
 		<label>steam generator</label>
 		<description>Produces steam by consuming coal. Must be periodically refueled by hand.</description>
-		<thingClass>Building</thingClass>
+		<thingClass>MedievalBiotech.Building_SteamMachine</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
 		<texPath>Things/Building/SteamMachines/SteamGenerator</texPath>
@@ -425,7 +425,7 @@
 		<defName>MB_SteamGenerator_Artificer</defName>
 		<label>artificer steam generator</label>
 		<description>Produces large amounts of steam by consuming coal. Must be periodically refueled by hand.</description>
-		<thingClass>Building</thingClass>
+		<thingClass>MedievalBiotech.Building_SteamMachine</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
 		<texPath>Things/Building/SteamMachines/ArtificerSteamGenerator</texPath>
