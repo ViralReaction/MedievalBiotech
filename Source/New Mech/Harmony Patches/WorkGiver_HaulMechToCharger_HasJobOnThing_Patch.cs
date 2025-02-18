@@ -19,6 +19,11 @@ namespace MedievalBiotech
             var extension = pawn.def.GetModExtension<Custom_Mech>();
             if (extension != null && (extension.UndeadMech || extension.DemonMech))
             {
+                if (extension.ArtificeMech)
+                {
+                    Log.Message("WorkGiver True");
+                    return true;
+                }
                 return false;
             }
             return true;

@@ -41,8 +41,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gene Stuff\HarmonyPatches\GeneAssembler_Patches.cs" />
-    <Compile Include="Gene Stuff\HarmonyPatches\GenePack_Patches.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\Building_GeneAssembler_GetGenepacks_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\Building_GeneAssembler_MaxComplexity_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\Building_GeneAssembler_Finish_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\Building_GeneAssembler_PowerOn_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\Building_GeneAssembler_DoWork_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\Building_GeneAssembler_Tick_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\Building_GeneExtractor_PowerOn_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\Building_GeneExtractor_ContainedPawn_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\Building_GeneExtractor_CanAcceptPawn_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\Building_GeneExtractor_TryAcceptPawn_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\Building_GeneExtractor_Tick_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\CompGenepackContainer_PowerOn_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\CompGenepackContainer_CompTick_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\Genepack_TickRare_Transpiler.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\TradeUtility_AllLaunchableThingsForTrade_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\Pawn_TraderTracker_ColonyThingsWillingToBuy_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\FloatMenuMakerMap_AddHumanlikeOrders_Patch.cs" />
+    <Compile Include="Gene Stuff\HarmonyPatches\Genepack_LabelNoCount_Patch.cs" />
     <Compile Include="Gene Stuff\HarmonyPatches\GeneExtractor_Patches.cs" />
     <Compile Include="New Mech\Comps\CompAbilityEffect_CreateArcanaStone.cs" />
     <Compile Include="New Mech\Comps\CompDeathrestBindable_Soul.cs" />

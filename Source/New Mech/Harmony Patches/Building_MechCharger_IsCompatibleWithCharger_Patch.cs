@@ -16,16 +16,17 @@ namespace MedievalBiotech
         public static void Postfix(ref bool __result, Building_MechCharger __instance, PawnKindDef kindDef)
         {
             var extension = kindDef.race.GetModExtension<Custom_Mech>();
-            if (__instance.def.thingClass == typeof(Building_MechCharger))
+            var instanceThingClass = __instance.def.thingClass;
+            if (instanceThingClass == typeof(Building_SteamCharger))
             {
-                if (extension != null)
+                if (extension != null && extension.ArtificeMech)
                 {
-                    __result = false;
+                    __result = true;
                 }
             }
-            else if (__instance.def.thingClass == typeof(Building_SteamCharger))
+            else if (instanceThingClass == typeof(Building_MechCharger))
             {
-                if (extension == null)
+                if (extension != null)
                 {
                     __result = false;
                 }

@@ -12,14 +12,14 @@ namespace MedievalBiotech
                     Genepack pack = parent as Genepack;
                     if (pack != null) {
                         foreach (GeneDef gene in pack.GeneSet.GenesListForReading) {
-                            if (!ingester.genes.HasGene(gene)) {
+                            if (!ingester.genes.HasActiveGene(gene)) {
                                 ingester.genes.AddGene(gene, true);
                             }
                         }
                     }
                     if (Props.genes.Any()) {
                         foreach (GeneDef gene in Props.genes) {
-                            if (!ingester.genes.HasGene(gene)) {
+                            if (!ingester.genes.HasActiveGene(gene)) {
                                 ingester.genes.AddGene(gene, true);
                             }
                         }

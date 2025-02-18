@@ -150,7 +150,7 @@ namespace MedievalBiotech
 
 
 
-        public new  bool IsCompatibleWithCharger(PawnKindDef kindDef)
+        public new bool IsCompatibleWithCharger(PawnKindDef kindDef)
         {
             if (kindDef.race.GetModExtension<Custom_Mech> == null)
             {
