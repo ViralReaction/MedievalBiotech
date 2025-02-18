@@ -1,7 +1,6 @@
 ﻿using Verse;
 using PipeSystem;
 using System.Collections.Generic;
-using System.Linq;
 using RimWorld;
 
 namespace MedievalBiotech
@@ -16,7 +15,8 @@ namespace MedievalBiotech
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            this.traders = this.GetComps<CompResourceTrader>().ToList<CompResourceTrader>();
+            var comps = this.GetComps<CompResourceTrader>();
+            this.traders = new List<CompResourceTrader>(comps);
             this.tradersCount = this.traders.Count;
             this.compRefuelable = this.GetComp<CompRefuelable>();
         }
