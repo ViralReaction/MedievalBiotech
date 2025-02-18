@@ -76,6 +76,8 @@
     <Compile Include="New Mech\Comps\CompNecrarchMeetingFire.cs" />
     <Compile Include="New Mech\Comps\CompUseEffect_SoulGem.cs" />
     <Compile Include="New Mech\Comps\CompProperties\HediffCompProperties_GiveHediffsInRange.cs" />
+    <Compile Include="New Mech\Comps\Steam\CompResourceTrader_Steam.cs" />
+    <Compile Include="New Mech\Comps\Steam\CompPowerPlantNeedResource_Steam.cs" />
     <Compile Include="New Mech\Comps\HediffComp_GiveHediffsInRangeGene.cs" />
     <Compile Include="New Mech\Building_SteamCharger.cs" />
     <Compile Include="New Mech\Building_SteamMachine.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="New Mech\Harmony Patches\MechanitorUtility_CanControlMech_Patch.cs" />
     <Compile Include="New Mech\Harmony Patches\ThingListGroupHelper_Includes_Patch.cs" />
     <Compile Include="New Mech\Harmony Patches\WorkGiver_HaulMechToCharger_HasJobOnThing_Patch.cs" />
+    <Compile Include="New Mech\HediffDef\Hediff_BandNode_Artifice.cs" />
     <Compile Include="New Mech\JobStuff\WorkGiver_DoArtifice.cs" />
     <Compile Include="New Mech\SoulDrainStuff\Alert_LowSoulEnergy.cs" />
     <Compile Include="New Mech\SoulDrainStuff\Workgiver_AdministerSoulGem.cs" />

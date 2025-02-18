@@ -26,5 +26,8 @@ Once the gene potion bank is fueled. it will slowly reverse the deterioration of
 	<MB_AbilitySoulCost>Arcana cost</MB_AbilitySoulCost>
 	<MB_AbilityDisabledNoSoul>{0_labelShort} is not soul starved.</MB_AbilityDisabledNoSoul>
 	<MB_AbilityDisabledNoSoulGene>{0_labelShort} does not have enough dark arcana.</MB_AbilityDisabledNoSoulGene>
+	
+	<!-- Custom Pipe -->
+	<MB_PipeSystem_NotConnected>Not connected to network.</MB_PipeSystem_NotConnected>
 
 </LanguageData>

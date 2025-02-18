@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- Band node -->
+	<HediffDef>
+		<defName>MB_BandNode</defName>
+		<hediffClass>MedievalBiotech.Hediff_BandNode_Artifice</hediffClass>
+		<label>control amplifier (tuned)</label>
+		<description>This artificer's bandwidth is being increased thanks to the influence of a control amplifier structure.</description>
+		<isBad>false</isBad>
+	</HediffDef>
+
+</Defs>

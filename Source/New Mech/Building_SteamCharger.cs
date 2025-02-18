@@ -47,7 +47,6 @@ namespace MedievalBiotech
         public new bool IsPowered
         {   get
             {
-                Log.Message(Power.ResourceOn);
                 return Power.ResourceOn;
             }
         }

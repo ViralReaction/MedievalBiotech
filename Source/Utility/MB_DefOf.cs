@@ -26,5 +26,6 @@ namespace MedievalBiotech
         public static ThingDef MB_ArcanaStone;
 
         public static ThingDef MB_BasicRecharger;
+        public static ThingDef MB_BandNode;
     }
 }
