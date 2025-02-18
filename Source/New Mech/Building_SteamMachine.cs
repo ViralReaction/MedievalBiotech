@@ -3,7 +3,6 @@ using PipeSystem;
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
-using System.Reflection;
 
 namespace MedievalBiotech
 {
