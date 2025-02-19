@@ -138,6 +138,10 @@ namespace MedievalBiotech
         public override string GetInspectString()
         {
             StringBuilder stringBuilder = new StringBuilder();
+            if (this.currentlyChargingMech != null)
+            {
+                stringBuilder.Append("MB_SteamCharger_CurrentlyCharging".Translate(this.currentlyChargingMech.Label));
+            }
             string text = this.InspectStringPartsFromComps();
             if (!text.NullOrEmpty())
             {

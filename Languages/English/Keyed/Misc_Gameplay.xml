@@ -29,5 +29,8 @@ Once the gene potion bank is fueled. it will slowly reverse the deterioration of
 	
 	<!-- Custom Pipe -->
 	<MB_PipeSystem_NotConnected>Not connected to network.</MB_PipeSystem_NotConnected>
+	
+	<!-- Steam Charger -->
+	<MB_SteamCharger_CurrentlyCharging>Currently charginging {0}.</MB_SteamCharger_CurrentlyCharging>
 
 </LanguageData>
