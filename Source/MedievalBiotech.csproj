@@ -76,7 +76,8 @@
     <Compile Include="New Mech\Comps\CompNecrarchMeetingFire.cs" />
     <Compile Include="New Mech\Comps\CompUseEffect_SoulGem.cs" />
     <Compile Include="New Mech\Comps\CompProperties\HediffCompProperties_GiveHediffsInRange.cs" />
-    <Compile Include="New Mech\Comps\CompBandNode_Steam.cs" />
+    <Compile Include="New Mech\Comps\Steam\CompBandNode_Steam.cs" />
+    <Compile Include="New Mech\Comps\Steam\CompInnerThing_SteamCharger.cs" />
     <Compile Include="New Mech\Comps\Steam\CompResourceTrader_Steam.cs" />
     <Compile Include="New Mech\Comps\Steam\CompPowerPlantNeedResource_Steam.cs" />
     <Compile Include="New Mech\Comps\HediffComp_GiveHediffsInRangeGene.cs" />
