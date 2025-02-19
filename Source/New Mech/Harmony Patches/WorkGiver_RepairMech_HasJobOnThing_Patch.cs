@@ -1,36 +1,33 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using Verse;
-using Verse.AI;
 
 namespace MedievalBiotech
 {
     [HarmonyPatch(typeof(WorkGiver_RepairMech), "HasJobOnThing")]
     public static class WorkGiver_RepairMech_HasJobOnThing_Patch
     {
-        public static void Postfix(WorkGiver_RepairMech __instance, ref bool __result,Pawn pawn, Thing t)
+        public static void Postfix(ref bool __result,Pawn pawn, Thing t)
         {
-            if (__instance is not null)
+            if (t is not Pawn mech)
             {
-                Pawn pawn2 = (Pawn)t;
-                bool undeadMech = Utility.IsUndeadMech(pawn2);
-                bool vampMech = Utility.IsSanguinMech(pawn2);
-                if (Utility.IsSanguinMage(pawn))
-                {
-                    if (!vampMech)
-                    __result = false;
-                    return;
-                }
-                if (Utility.IsNecromancer(pawn))
-                {
-                    if (!undeadMech)
-                    __result = false;
-                    return;
-                }
-                if (undeadMech || vampMech)
-                    __result = false;
+                return; // Ensure t is a Pawn before proceeding
             }
-            return;
+            
+            bool vampMech = Utility.IsSanguinMech(mech);
+            if (Utility.IsSanguinMage(pawn))
+            {
+                
+                __result = vampMech; // Only allow repair if it is a SanguinMech and SanguinMage
+                return;
+            }
+            bool undeadMech = Utility.IsUndeadMech(mech);
+            if (Utility.IsNecromancer(pawn))
+            {
+                __result = undeadMech; // Only allow repair if it is an UndeadMech and Necromancer
+                return;
+            }
+            __result = !(undeadMech || vampMech); // Prevent repair of these mechs
         }
     }
 }

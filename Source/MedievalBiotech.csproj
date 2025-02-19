@@ -81,6 +81,7 @@
     <Compile Include="New Mech\Comps\Steam\CompResourceTrader_Steam.cs" />
     <Compile Include="New Mech\Comps\Steam\CompPowerPlantNeedResource_Steam.cs" />
     <Compile Include="New Mech\Comps\HediffComp_GiveHediffsInRangeGene.cs" />
+    <Compile Include="New Mech\MapComponent\RechargerMapComponent.cs" />
     <Compile Include="New Mech\ThingClass\Building_SteamCharger.cs" />
     <Compile Include="New Mech\ThingClass\Building_SteamMachine.cs" />
     <Compile Include="New Mech\Harmony Patches\Building_MechCharger_IsCompatibleWithCharger_Patch.cs" />

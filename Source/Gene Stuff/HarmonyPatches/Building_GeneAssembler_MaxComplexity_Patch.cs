@@ -17,18 +17,13 @@ namespace MedievalBiotech
         public static int MaxComplexity(Building_GeneAssembler __instance)
         {
             int num = 6;
-            List<Thing> connectedFacilities = __instance.ConnectedFacilities;
-            if (connectedFacilities != null)
+            foreach (Thing item in __instance.ConnectedFacilities)
             {
-                foreach (Thing item in connectedFacilities)
+                CompRefuelable compRefuelable = item.TryGetComp<CompRefuelable>();
+                if (compRefuelable == null || compRefuelable.HasFuel)
                 {
-                    CompRefuelable compRefuelable = item.TryGetComp<CompRefuelable>();
-                    if (compRefuelable == null || compRefuelable.HasFuel)
-                    {
-                        num += (int)item.GetStatValue(StatDefOf.GeneticComplexityIncrease);
-                    }
+                    num += (int)item.GetStatValue(StatDefOf.GeneticComplexityIncrease);
                 }
-                return num;
             }
             return num;
         }

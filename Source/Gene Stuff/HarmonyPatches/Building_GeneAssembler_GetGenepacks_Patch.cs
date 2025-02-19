@@ -18,35 +18,35 @@ namespace MedievalBiotech
         {
             __instance.tmpGenepacks.Clear();
             List<Thing> connectedFacilities = __instance.ConnectedFacilities;
-            if (connectedFacilities != null)
+            foreach (Thing item in connectedFacilities)
             {
-                foreach (Thing item in connectedFacilities)
+                CompGenepackContainer compGenepackContainer = item.TryGetComp<CompGenepackContainer>();
+                if (compGenepackContainer == null)
                 {
-                    CompGenepackContainer compGenepackContainer = item.TryGetComp<CompGenepackContainer>();
-                    if (compGenepackContainer != null)
+                    continue;
+                }
+
+                bool fueled = item.TryGetComp<CompRefuelable>()?.HasFuel ?? true;
+                if (includePowered && fueled)
+                {
+                    if (compGenepackContainer?.ContainedGenepacks != null)
                     {
-                        var fueled = item.TryGetComp<CompRefuelable>()?.HasFuel ?? true;
-                        if (includePowered && fueled)
+                        foreach (var genepack in compGenepackContainer.ContainedGenepacks)
                         {
-                            if (compGenepackContainer?.ContainedGenepacks != null)
+                            if (genepack.deteriorationPct < 1f)
                             {
-                                foreach (var genepack in compGenepackContainer.ContainedGenepacks)
-                                {
-                                    if (genepack.deteriorationPct < 1f)
-                                    {
-                                        __instance.tmpGenepacks.Add(genepack);
-                                    }
-                                }
+                                __instance.tmpGenepacks.Add(genepack);
                             }
-
-                        }
-                        else if (includeUnpowered && !fueled)
-                        {
-                            __instance.tmpGenepacks.AddRange(compGenepackContainer.ContainedGenepacks);
-
                         }
                     }
+
                 }
+                else if (includeUnpowered && !fueled)
+                {
+                    __instance.tmpGenepacks.AddRange(compGenepackContainer.ContainedGenepacks);
+
+                }
+
             }
             return __instance.tmpGenepacks;
         }

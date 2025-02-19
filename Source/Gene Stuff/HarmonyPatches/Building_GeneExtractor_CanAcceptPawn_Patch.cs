@@ -15,6 +15,10 @@ namespace MedievalBiotech
 
         public static AcceptanceReport CanAcceptPawn(Building_GeneExtractor __instance, Pawn pawn)
         {
+            if (!pawn.IsColonist && !pawn.IsSlaveOfColony && !pawn.IsPrisonerOfColony && (!pawn.IsColonyMutant || !pawn.IsGhoul))
+            {
+                return false;
+            }
             if (__instance.selectedPawn != null && __instance.selectedPawn != pawn)
             {
                 return false;
@@ -27,11 +31,11 @@ namespace MedievalBiotech
             {
                 return "Occupied".Translate();
             }
-            if (pawn.genes == null || !pawn.genes.GenesListForReading.Any((Gene x) => x.def.passOnDirectly))
+            if (!pawn.genes?.GenesListForReading.Any(x => x.def.passOnDirectly) ?? true)
             {
                 return "PawnHasNoGenes".Translate(pawn.Named("PAWN"));
             }
-            if (!pawn.genes.GenesListForReading.Any((Gene x) => x.def.biostatArc == 0))
+            if (!pawn.genes.GenesListForReading.Any(x => x.def.biostatArc == 0))
             {
                 return "PawnHasNoNonArchiteGenes".Translate(pawn.Named("PAWN"));
             }

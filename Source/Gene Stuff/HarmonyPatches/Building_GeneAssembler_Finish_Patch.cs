@@ -1,6 +1,5 @@
 ﻿using HarmonyLib;
 using RimWorld;
-using System.Collections.Generic;
 using Verse;
 
 namespace MedievalBiotech
@@ -11,21 +10,23 @@ namespace MedievalBiotech
         public static void Prefix(Building_GeneAssembler __instance)
         {
             float currentComplexity = __instance.TotalGCX - 6;
-            if (currentComplexity > 0)
+            if (currentComplexity <= 0)
             {
-                List<Thing> connectedFacilities = __instance.ConnectedFacilities;
-                foreach (var facility in connectedFacilities)
+                return; // No need to process if complexity is already at or below the threshold
+            }
+            foreach (var facility in __instance.ConnectedFacilities)
+            {
+                if (facility.def == MB_DefOf.GeneProcessor)
                 {
-                    if (facility.def == MB_DefOf.GeneProcessor)
+                    currentComplexity -= facility.GetStatValue(StatDefOf.GeneticComplexityIncrease);
+
+                    Thing waste = ThingMaker.MakeThing(ThingDefOf.Wastepack);
+                    waste.stackCount = 1;
+                    GenSpawn.Spawn(waste, facility.Position, facility.Map);
+
+                    if (currentComplexity <= 0)
                     {
-                        currentComplexity -= facility.GetStatValue(StatDefOf.GeneticComplexityIncrease);
-                        var waste = ThingMaker.MakeThing(ThingDefOf.Wastepack);
-                        waste.stackCount = 1;
-                        GenSpawn.Spawn(waste, facility.Position, facility.Map);
-                        if (currentComplexity <= 0)
-                        {
-                            return;
-                        }
+                        return; // Stop processing if we've reduced complexity sufficiently
                     }
                 }
             }
