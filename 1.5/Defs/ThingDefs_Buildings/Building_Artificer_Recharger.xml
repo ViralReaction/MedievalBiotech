@@ -78,6 +78,7 @@
 			<li>MB_Artifice</li>
 		</researchPrerequisites>
 		<comps>
+			<!-- Required due to not being able to override all base things -->
 			<li Class="CompProperties_ThingContainer">
 				<compClass>CompThingContainer</compClass>
 				<stackLimit>5</stackLimit>

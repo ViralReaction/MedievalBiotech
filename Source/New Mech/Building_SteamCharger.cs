@@ -18,7 +18,7 @@ namespace MedievalBiotech
 
         private new int wireExtensionTicks = 70;
 
-        private new CompWasteProducer wasteProducer;
+        //private new CompWasteProducer wasteProducer;
 
         private new CompThingContainer container;
 
@@ -158,35 +158,33 @@ namespace MedievalBiotech
             return false;
         }
 
-
-
-
-        public new bool IsCompatibleWithCharger(PawnKindDef kindDef)
+        public bool IsCompatibleWithSteamCharger(PawnKindDef kindDef)
         {
-            if (kindDef.race.GetModExtension<Custom_Mech> == null)
+            var extension = kindDef.race.GetModExtension<Custom_Mech>();
+            if (extension == null)
             {
                 return false;
             }
-            return IsCompatibleWithCharger(def, kindDef);
+
+            ThingDef mechRace = kindDef.race;
+            return mechRace.race.IsMechanoid
+                && mechRace.GetCompProperties<CompProperties_OverseerSubject>() != null
+                && this.def.building.requiredMechWeightClasses.NotNullAndContains(mechRace.race.mechWeightClass);
         }
 
-        public new static bool IsCompatibleWithCharger(ThingDef chargerDef, PawnKindDef kindDef)
-        {
-            return IsCompatibleWithCharger(chargerDef, kindDef.race);
-        }
-
-        public new static bool IsCompatibleWithCharger(ThingDef chargerDef, ThingDef mechRace)
-        {
-            if (mechRace.race.IsMechanoid && mechRace.GetCompProperties<CompProperties_OverseerSubject>() != null)
-            {
-                return chargerDef.building.requiredMechWeightClasses.NotNullAndContains(mechRace.race.mechWeightClass);
-            }
-            return false;
-        }
 
         public override void Tick()
         {
-            base.Tick();
+            if (this.comps != null)
+            {
+                int i = 0;
+                int count = this.comps.Count;
+                while (i < count)
+                {
+                    this.comps[i].CompTick();
+                    i++;
+                }
+            }
             if (currentlyChargingMech != null && (currentlyChargingMech.CurJobDef != JobDefOf.MechCharge || currentlyChargingMech.CurJob.targetA.Thing != this))
             {
                 Log.Warning("Mech did not clean up his charging job properly");
@@ -223,11 +221,6 @@ namespace MedievalBiotech
             {
                 wireExtensionTicks++;
             }
-        }
-
-        public new void GenerateWastePack()
-        {
-            
         }
 
         public override IEnumerable<Gizmo> GetGizmos()
@@ -307,20 +300,11 @@ namespace MedievalBiotech
             GenDraw.DrawLineBetween(a, b, WireMaterial, 1f);
         }
 
-        private new float EaseInOutQuart(float val)
-        {
-            if (!((double)val < 0.5))
-            {
-                return 1f - Mathf.Pow(-2f * val + 2f, 4f) / 2f;
-            }
-            return 8f * val * val * val * val;
-        }
-
         public override string GetInspectString()
         {
            // StringBuilder stringBuilder = new StringBuilder();
             //stringBuilder.Append(base.GetInspectString());
-            return base.GetInspectString();
+            return null;
         }
 
         public override IEnumerable<StatDrawEntry> SpecialDisplayStats()
