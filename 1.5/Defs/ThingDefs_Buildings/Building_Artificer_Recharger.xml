@@ -80,7 +80,7 @@
 		<comps>
 			<!-- Required due to not being able to override all base things -->
 			<li Class="CompProperties_ThingContainer">
-				<compClass>MedievalOverhaul.CompInnerThing_SteamCharger</compClass> <!-- Hides the unusued string from CompInnerThing -->
+				<compClass>MedievalBiotech.CompInnerThing_SteamCharger</compClass> <!-- Hides the unusued string from CompInnerThing -->
 				<stackLimit>5</stackLimit>
 				<drawContainedThing>false</drawContainedThing>
 				<dropEffecterDef>MechChargerWasteRemoved</dropEffecterDef>
