@@ -4,7 +4,8 @@ using Verse;
 
 namespace MedievalBiotech
 {
-    public class ConsumableGenepack : ThingComp {
+    public class ConsumableGenepack : ThingComp 
+    {
         public CompProperties_ConsumableGenepack Props => (CompProperties_ConsumableGenepack)props;
         public override void PostIngested(Pawn ingester) {
             if (ingester.RaceProps.IsFlesh) {
@@ -28,10 +29,5 @@ namespace MedievalBiotech
             }
         }
     }
-    public class CompProperties_ConsumableGenepack : CompProperties {
-        public List<GeneDef> genes = new List<GeneDef>();
-        public CompProperties_ConsumableGenepack() {
-            compClass = typeof(ConsumableGenepack);
-        }
-    }
+    
 }
