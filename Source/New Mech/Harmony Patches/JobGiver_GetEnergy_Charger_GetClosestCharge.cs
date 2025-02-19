@@ -37,71 +37,52 @@ namespace MedievalBiotech
 
             Danger danger = forced ? Danger.Deadly : Danger.Some;
             Building_MechCharger closestCharger = null;
-            float closestDist = 9999f;
+            float closestDist = float.MaxValue;
 
-            List<Thing> potentialChargers = mech.Map.listerThings?.ThingsOfDef(MB_DefOf.MB_BasicRecharger);
-
+            // Fetch all chargers (all are SteamChargers)
+            var potentialChargers = mech.Map.GetComponent<RechargerMapComponent>()?.allChargers;
             if (potentialChargers == null || potentialChargers.Count == 0)
             {
                 return null;
             }
 
+            var reservationManager = mech.Map.reservationManager;
 
-            foreach (Thing t in potentialChargers)
+            foreach (Building_SteamCharger charger in potentialChargers)
             {
-                if (t == null)
+                if (!carrier.CanReach(charger, PathEndMode.InteractionCell, danger, false, false, TraverseMode.ByPawn))
                 {
                     continue;
                 }
 
-                // Ensure the type is correct before casting
-                if (!(t is Building_SteamCharger building_MechCharger))
+                bool isReserved = reservationManager.ReservedBy(charger, carrier, null);
+                if ((!forced && isReserved) || (forced && KeyBindingDefOf.QueueOrder.IsDownEvent && isReserved))
                 {
                     continue;
                 }
 
-                if (!carrier.CanReach(t, PathEndMode.InteractionCell, danger, false, false, TraverseMode.ByPawn))
+                if (charger.IsForbidden(carrier) || !carrier.CanReserve(charger, 1, -1, null, forced))
                 {
                     continue;
                 }
 
-                if (carrier != mech)
-                {
-                    if (!forced && building_MechCharger.Map.reservationManager.ReservedBy(building_MechCharger, carrier, null))
-                    {
-                        continue;
-                    }
-                    if (forced && KeyBindingDefOf.QueueOrder.IsDownEvent && building_MechCharger.Map.reservationManager.ReservedBy(building_MechCharger, carrier, null))
-                    {
-                        continue;
-                    }
-                }
-
-                if (t.IsForbidden(carrier))
+                if (!charger.CanPawnChargeCurrently(mech))
                 {
                     continue;
                 }
 
-                if (!carrier.CanReserve(t, 1, -1, null, forced))
-                {
-                    continue;
-                }
-
-                if (!building_MechCharger.CanPawnChargeCurrently(mech))
-                {
-                    continue;
-                }
-
-                float dist = (t.Position - mech.Position).LengthHorizontalSquared;
+                // Use squared distance for performance
+                float dist = (charger.Position - mech.Position).LengthHorizontalSquared;
                 if (dist < closestDist)
                 {
                     closestDist = dist;
-                    closestCharger = building_MechCharger;
+                    closestCharger = charger;
                 }
             }
 
             return closestCharger;
         }
+
 
     }
 }

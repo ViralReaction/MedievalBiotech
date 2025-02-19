@@ -19,17 +19,21 @@ namespace MedievalBiotech
 
         private new CompWasteProducer WasteProducer => null;
 
+        public RechargerMapComponent chargerMapComp;
 
-        public override void PostPostMake()
+
+
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
-            if (!ModLister.CheckBiotech("Mech recharger"))
-            {
-                Destroy();
-            }
-            else
-            {
-                base.PostPostMake();
-            }
+            base.SpawnSetup(map, respawningAfterLoad);
+            chargerMapComp = this.Map.GetComponent<RechargerMapComponent>();
+            chargerMapComp.RegisterCharger(this);
+        }
+
+        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
+        {
+            chargerMapComp.RemoveCharger(this);
+            base.DeSpawn(mode);
         }
 
         public override void Tick()

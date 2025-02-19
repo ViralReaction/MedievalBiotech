@@ -81,8 +81,8 @@
     <Compile Include="New Mech\Comps\Steam\CompResourceTrader_Steam.cs" />
     <Compile Include="New Mech\Comps\Steam\CompPowerPlantNeedResource_Steam.cs" />
     <Compile Include="New Mech\Comps\HediffComp_GiveHediffsInRangeGene.cs" />
-    <Compile Include="New Mech\Building_SteamCharger.cs" />
-    <Compile Include="New Mech\Building_SteamMachine.cs" />
+    <Compile Include="New Mech\ThingClass\Building_SteamCharger.cs" />
+    <Compile Include="New Mech\ThingClass\Building_SteamMachine.cs" />
     <Compile Include="New Mech\Harmony Patches\Building_MechCharger_IsCompatibleWithCharger_Patch.cs" />
     <Compile Include="New Mech\Harmony Patches\Building_MechCharger_CanPawnChargeCurrently.cs" />
     <Compile Include="New Mech\Harmony Patches\JobGiver_GetEnergy_Charger_GetClosestCharge.cs" />
@@ -96,6 +96,7 @@
     <Compile Include="New Mech\SoulDrainStuff\WorkGiver_Warden_DeliverSoulGem.cs" />
     <Compile Include="New Mech\SoulDrainStuff\JobGiver_GetSoulGem.cs" />
     <Compile Include="New Mech\JobStuff\WorkGiver.cs" />
+    <Compile Include="New Mech\ThingClass\Building_SteamGestator.cs" />
     <Compile Include="Utility\IngestionOutcomeDoer_OffsetSoul.cs" />
     <Compile Include="New Mech\Gizmos\GeneGizmo_ResourceSoulStarve.cs" />
     <Compile Include="New Mech\Harmony Patches\WorkGiver_RepairMech_HasJobOnThing_Patch.cs" />
@@ -112,7 +113,6 @@
     <Compile Include="Utility\Utility.cs" />
     <Compile Include="Utility\MB_DefOf.cs" />
     <Compile Include="Gene Stuff\ConsumableGenepack.cs" />
-    <Compile Include="Utility\HarmonyPatches.cs" />
     <Compile Include="Gene Stuff\JobDriver_CarryCorpseToTable.cs" />
     <Compile Include="Gene Stuff\JobDriver_OperateOnPawn.cs" />
     <Compile Include="New Mech\Harmony Patches\MechanitorUtility_ShouldBeMechanitor_Patch.cs" />

@@ -3,7 +3,7 @@
 
 	<!-- Mech gestators -->
 	<ThingDef Abstract="True" Name="MB_MechGestatorBase" ParentName="BuildingBase">
-		<thingClass>Building_MechGestator</thingClass>
+		<thingClass>MedievalBiotech.Building_SteamGestator</thingClass>
 		<containedPawnsSelectable>true</containedPawnsSelectable>
 		<tickerType>Normal</tickerType>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -141,6 +141,7 @@
 				<compClass>MedievalBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>MB_SteamNet</pipeNet>
 				<consumptionPerTick>5</consumptionPerTick>
+				<idleConsumptionPerTick>2</idleConsumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
 				<transmitsPower>false</transmitsPower>
@@ -155,7 +156,7 @@
 	<ThingDef ParentName="BenchBase">
 		<defName>MB_SubcoreEncoder</defName>
 		<label>gem infuser</label>
-		<description>A work station where an artificer can craft basic-tier soul gems. Soul gems are the brains of automatons, and one is required to craft any automaton. Basic soul gems can only be used in simple basic-tier automatons.\n\nHigher tier soul gems can be created by building a subcore softscanner or a subcore ripscanner.</description>
+		<description>A work station where an artificer can craft basic-tier soul gems. Soul gems are the brains of automatons, and one is required to craft any automaton. Basic soul gems can only be used in simple basic-tier automatons.\n\nHigher tier soul gems can be created by building an amplified gem infuser or soul harvester.</description>
 		<thingClass>Building_WorkTable</thingClass>
 		<canOverlapZones>false</canOverlapZones>
 		<passability>PassThroughOnly</passability>
@@ -215,6 +216,7 @@
 				<compClass>MedievalBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>MB_SteamNet</pipeNet>
 				<consumptionPerTick>3</consumptionPerTick>
+				<idleConsumptionPerTick>1</idleConsumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
 				<transmitsPower>false</transmitsPower>
