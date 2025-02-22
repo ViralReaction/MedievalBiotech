@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!--=========================== Artificing ==============================-->
+	<!--=========================== Artificing ==============================-->
 	<ResearchProjectDef>
-		<defName>MB_Artifice</defName>
-		<label>artificing</label>
+		<defName>MB_BasicArtificeTech</defName>
+		<label>basic artifice tech</label>
 		<description>Research how to craft basic artifice constructs.</description>
 		<baseCost>1000</baseCost>
 		<tab>DankPyon_MedievalResearchTab</tab>
@@ -13,6 +13,44 @@
 		<researchViewY>3.6</researchViewY>
 		<prerequisites>
 			<li>DankPyon_Engineering</li>
+		</prerequisites>
+		<generalRules>
+		  <rulesStrings>
+			<li>subject->artificing</li>
+		  </rulesStrings>
+		</generalRules>	
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>MB_StandardArtificeTech</defName>
+		<label>standard artifice tech</label>
+		<description>Research how to craft standard artifice constructs.</description>
+		<baseCost>1000</baseCost>
+		<tab>DankPyon_MedievalResearchTab</tab>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>11</researchViewX>
+		<researchViewY>3.6</researchViewY>
+		<prerequisites>
+			<li>MB_BasicArtificeTech</li>
+		</prerequisites>
+		<generalRules>
+		  <rulesStrings>
+			<li>subject->artificing</li>
+		  </rulesStrings>
+		</generalRules>	
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>MB_AdvancedArtificeTech</defName>
+		<label>advanced artifice tech</label>
+		<description>Research how to craft advanced artifice constructs.</description>
+		<baseCost>1000</baseCost>
+		<tab>DankPyon_MedievalResearchTab</tab>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>11</researchViewX>
+		<researchViewY>3.6</researchViewY>
+		<prerequisites>
+			<li>MB_StandardArtificeTech</li>
 		</prerequisites>
 		<generalRules>
 		  <rulesStrings>

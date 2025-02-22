@@ -12,7 +12,7 @@
 	</RecipeDef>
 
 	<RecipeDef Name="LightArtificeRecipe" ParentName="MB_BaseArtificeRecipe" Abstract="True">
-		<researchPrerequisite>MB_Artifice</researchPrerequisite>
+		<researchPrerequisite>MB_BasicArtificeTech</researchPrerequisite>
 		<ingredients>
 			<li>
 				<filter>

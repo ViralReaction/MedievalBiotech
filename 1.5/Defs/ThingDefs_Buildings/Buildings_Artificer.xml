@@ -40,8 +40,8 @@
 	
 	<ThingDef ParentName="MB_MechGestatorBase">
 		<defName>MB_ArtificeGestator</defName>
-		<label>artifice mech gestator</label>
-		<description>A tank of mechanite-rich fluid with support tubes for feeding in materials and nutrients. Mechanitors can use it to produce new mechanoids or to resurrect dead mechanoids. This basic type of mech gestator is only capable of generating light-weight mechs.\n\nThe process uses harsh chemicals which are stored in toxic wastepacks. Haulers must remove the wastepacks from time to time.</description>
+		<label>construct gestator</label>
+		<description>A containment vat filled with an alchemically charged fluid, enriched with infusion catalysts and support tubes for channeling materials and energy. Artificers can use it to assemble new constructs or reawaken fallen ones by embedding infused soul gems into mechanical frames.</description>
 		<graphicData>
 			<texPath>Things/Building/Production/ArtificeConstructPlatform</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
@@ -74,7 +74,7 @@
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<researchPrerequisites>
-			<li>MB_Artifice</li>
+			<li>MB_BasicArtificeTech</li>
 		</researchPrerequisites>
 		<building>
 			<barDrawData>
@@ -191,7 +191,7 @@
 			<DankPyon_ComponentBasic>3</DankPyon_ComponentBasic>
 		</costList>
 		<researchPrerequisites>
-			<li>MB_Artifice</li>
+			<li>MB_BasicArtificeTech</li>
 		</researchPrerequisites>
 		<hasInteractionCell>true</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
@@ -300,7 +300,7 @@
 	<ThingDef ParentName="MB_SubcoreScannerBase">
 		<defName>MB_SubcoreSoftscanner</defName>
 		<label>amplified gem infuser</label>
-		<description>PLACEHOLDER</description>
+		<description>A metallic capsule lined with thousands of fine aetheric filaments and a high-energy mind scanner. When a living being is placed inside, the device maps their neuro-psychic imprint, using the filaments to extract an ephemeral soul pattern without causing permanent harm. This extracted pattern is then analog-transferred into a standard-tier infused core.</description>
 		<graphicData>
 			<texPath>Things/Building/Production/AmpGemInfuser</texPath>
 			<drawSize>(4,3)</drawSize>
@@ -315,7 +315,7 @@
 			<DankPyon_ComponentBasic>4</DankPyon_ComponentBasic>
 		</costList>
 		<researchPrerequisites>
-			<li>MB_Artifice</li>
+			<li>MB_StandardArtificeTech</li>
 		</researchPrerequisites>
 		<building>
 			<subcoreScannerOutputDef>MB_SoulGemRegular</subcoreScannerOutputDef>
@@ -332,7 +332,7 @@
 	<ThingDef ParentName="MB_SubcoreScannerBase">
 		<defName>MB_SubcoreRipscanner</defName>
 		<label>soul harvester</label>
-		<description>PLACEHOLDER</description>
+		<description>A grim and forbidden machine, the Soul Harvester is an ancient and malevolent device designed to forcibly rip the soul-pattern from a living being. Unlike the Gem Infuser, which merely copies a soul imprint, the Soul Harvester extracts and consumes the soul entirely, leaving behind an empty husk that quickly decays.</description>
 		<graphicData>
 			<texPath>Things/Building/Production/SoulHarvester</texPath>
 			<drawSize>(3,2.5)</drawSize>
@@ -347,7 +347,7 @@
 			<DankPyon_ComponentBasic>6</DankPyon_ComponentBasic>
 		</costList>
 		<researchPrerequisites>
-			<li>MB_Artifice</li>
+			<li>MB_AdvancedArtificeTech</li>
 		</researchPrerequisites>
 		<building>
 			<subcoreScannerOutputDef>MB_SoulGemHigh</subcoreScannerOutputDef>
@@ -364,7 +364,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>MB_BandNode</defName>
 		<label>control amplifier</label>
-		<description>PLACEHOLDER</description>
+		<description>A mechanical signal booster designed to enhance the control capacity of an artificer. Control nodes must be attuned to a specific master, increasing their control bandwidth and allowing them to command additional constructs.</description>
 		<tickerType>Normal</tickerType>
 		<rotatable>false</rotatable>
 		<canOverlapZones>false</canOverlapZones>

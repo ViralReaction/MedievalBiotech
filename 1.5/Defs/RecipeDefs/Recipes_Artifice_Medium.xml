@@ -3,7 +3,7 @@
 
 	<RecipeDef Name="MB_MediumArtificeRecipe" ParentName="MB_BaseArtificeRecipe" Abstract="True">
 		<gestationCycles>2</gestationCycles>
-		<!-- <researchPrerequisite>StandardMechtech</researchPrerequisite> -->
+		<researchPrerequisite>MB_StandardArtificeTech</researchPrerequisite>
 	</RecipeDef>
 
 	<RecipeDef ParentName="MB_MediumArtificeRecipe">

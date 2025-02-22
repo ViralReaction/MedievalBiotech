@@ -153,7 +153,7 @@
 			<DankPyon_ComponentBasic>2</DankPyon_ComponentBasic>
 		</costList>
 		<researchPrerequisites>
-			<li>MB_Artifice</li>
+			<li>MB_StandardArtificeTech</li>
 		</researchPrerequisites>
 		<comps>
 			<li Class="CompProperties_ThingContainer">
