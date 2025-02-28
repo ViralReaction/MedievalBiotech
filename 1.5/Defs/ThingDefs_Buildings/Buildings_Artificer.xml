@@ -402,7 +402,7 @@
 			<DankPyon_ComponentBasic>4</DankPyon_ComponentBasic>
 		</costList>
 		<researchPrerequisites>
-			<li>MB_Artifice</li>
+			<li>MB_BasicArtificeTech</li>
 		</researchPrerequisites>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">

@@ -61,7 +61,6 @@
 		<defName>MB_Artifice_Agrihand</defName>
 		<label>gestate agrihand</label>
 		<description>Gestate an agrihand mechanoid.</description>
-		<researchPrerequisite>MB_Artifice</researchPrerequisite>
 		<products>
 			<MB_Artifice_Agrihand>1</MB_Artifice_Agrihand>
 		</products>
@@ -74,7 +73,6 @@
 		<defName>MB_Artifice_Cleansweeper</defName>
 		<label>gestate cleansweeper</label>
 		<description>Gestate a cleansweeper mechanoid.</description>
-		<researchPrerequisite>MB_Artifice</researchPrerequisite>
 		<products>
 			<MB_Artifice_Cleansweeper>1</MB_Artifice_Cleansweeper>
 		</products>
@@ -87,7 +85,6 @@
 		<defName>MB_Artifice_Paramedic</defName>
 		<label>gestate paramedic</label>
 		<description>Gestate a paramedic mechanoid.</description>
-		<researchPrerequisite>MB_Artifice</researchPrerequisite>
 		<ingredients Inherit="False">
 			<li>
 				<filter>
@@ -119,7 +116,6 @@
 		<defName>MB_Artifice_Militor</defName>
 		<label>gestate militor</label>
 		<description>Gestate a cleansweeper mechanoid.</description>
-		<researchPrerequisite>MB_Artifice</researchPrerequisite>
 		<products>
 			<MB_Artifice_Militor>1</MB_Artifice_Militor>
 		</products>

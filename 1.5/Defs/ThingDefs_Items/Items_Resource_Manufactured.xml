@@ -68,7 +68,7 @@
 			<WorkToMake>3000</WorkToMake>
 		</statBases>
 		<recipeMaker>
-			<researchPrerequisite>MB_Artifice</researchPrerequisite>
+			<researchPrerequisite>MB_BasicArtificeTech</researchPrerequisite>
 			<workSpeedStat>SubcoreEncodingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<recipeUsers>

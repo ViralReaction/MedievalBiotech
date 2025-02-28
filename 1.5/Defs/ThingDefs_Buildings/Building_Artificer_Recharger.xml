@@ -75,7 +75,7 @@
 			<DankPyon_ComponentBasic>1</DankPyon_ComponentBasic>
 		</costList>
 		<researchPrerequisites>
-			<li>MB_Artifice</li>
+			<li>MB_BasicArtificeTech</li>
 		</researchPrerequisites>
 		<comps>
 			<!-- Required due to not being able to override all base things -->
